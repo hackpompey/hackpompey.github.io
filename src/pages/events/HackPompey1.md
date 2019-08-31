@@ -1,0 +1,15 @@
+---
+title: Hack Pompey
+dateText: 22 November 2014 (10:00 - 18:00)
+date: "2014-11-22"
+location: Innovation Space
+eventbrite_link: https://www.eventbrite.co.uk/e/hackpompey-tickets-13526984575#
+writeup_link: https://rosedigital.co.uk/blog/2014/11/24/hackpompey.html
+---
+Event information goes here
+
+Photos
+https://www.facebook.com/pg/upsuphoto/photos/?tab=album&album_id=617191168408881
+
+Showcase
+https://www.youtube.com/watch?v=EMfFKhD6wJw&feature=youtu.be

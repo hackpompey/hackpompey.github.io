@@ -26,12 +26,19 @@ const Event = ({ event }) => {
       </ul>
 
       <ul className={style.hack__links}>
-        <li>
-          <a href={meta.eventbrite_link}>Eventbrite</a>
-        </li>
-        <li>
-          <a href={meta.writeup_link}>Write up</a>
-        </li>
+        {/* Eventbrite link if set */}
+        {meta.eventbrite_link && (
+          <li>
+            <a href={meta.eventbrite_link}>Eventbrite</a>
+          </li>
+        )}
+
+        {/* Writeup link if set */}
+        {meta.writeup_link && (
+          <li>
+            <a href={meta.writeup_link}>Write up</a>
+          </li>
+        )}
       </ul>
     </div>
   )
