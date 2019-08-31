@@ -1,7 +1,7 @@
 # hackpompey.co.uk
 
 ### Development Setup
-This site is built using Gatsby.js and uses NPM for dependency managment.
+This site is built using Gatsby.js and uses NPM for dependency management.
 
 Start by installing [Node/NPM](https://nodejs.org/) if you don't already have it.
 
