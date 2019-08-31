@@ -7,3 +7,5 @@ writeup_link: https://southsealifestyle.com/hackathon/
 ---
 
 Hack Pompey is a social event open to everyone looking to learn, hack and meet new people.
+
+The Hack Pompey team have set five themes to get your brains ticking: Space, Game Jam, Social Good, Wearable Tech, and Smart Cities.
