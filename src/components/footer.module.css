@@ -1,0 +1,13 @@
+footer {
+  padding: 1.45rem 1.0875rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  display: inline;
+  margin: 20px;
+}

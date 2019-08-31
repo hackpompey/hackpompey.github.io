@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Header from "./header"
+import Footer from "./footer"
 
 /**
  * The standard structure used in all pages
@@ -22,6 +23,8 @@ const Layout = ({ children }) => {
         {/* Display inner HTML elements */}
         {children}
       </div>
+
+      <Footer />
     </div>
   )
 }
