@@ -16,30 +16,32 @@ const Event = ({ event }) => {
   return (
     <div className={style.hack}>
       {/* TODO: Change to image? */}
-      <h3 className={style.hack__logo}>
+      <h3 className={style.hack_logo}>
         <Link to={eventPageURL}>{meta.title}</Link>
       </h3>
 
-      <ul className={style.hack_details}>
-        <li>{meta.dateText}</li>
-        <li>{meta.location}</li>
-      </ul>
+      <section className={style.hack_info}>
+        <ul>
+          <li>{meta.dateText}</li>
+          <li>{meta.location}</li>
+        </ul>
 
-      <ul className={style.hack__links}>
-        {/* Eventbrite link if set */}
-        {meta.eventbrite_link && (
-          <li>
-            <a href={meta.eventbrite_link}>Eventbrite</a>
-          </li>
-        )}
+        <ul className={style.hack_links}>
+          {/* Eventbrite link if set */}
+          {meta.eventbrite_link && (
+            <li>
+              <a href={meta.eventbrite_link}>Eventbrite</a>
+            </li>
+          )}
 
-        {/* Writeup link if set */}
-        {meta.writeup_link && (
-          <li>
-            <a href={meta.writeup_link}>Write up</a>
-          </li>
-        )}
-      </ul>
+          {/* Writeup link if set */}
+          {meta.writeup_link && (
+            <li>
+              <a href={meta.writeup_link}>Write up</a>
+            </li>
+          )}
+        </ul>
+      </section>
     </div>
   )
 }

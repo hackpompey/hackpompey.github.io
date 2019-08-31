@@ -1,3 +1,37 @@
-.hack{
-    background-color: lightgray;
+.hack {
+  background-color: lightgray;
+  padding: 1em 2em;
+  overflow: hidden;
+}
+
+.hack_logo {
+  width: 60%;
+  display: inline-block;
+  margin: 0;
+  height:100px;
+  vertical-align: middle;
+}
+
+.hack_logo a {
+  text-transform: capitalize;
+}
+
+.hack a {
+  text-decoration: none;
+}
+
+.hack_info {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+}
+
+.hack_info ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.hack_links li{
+    display: inline;
+    margin-left: 1em;
 }
