@@ -7,5 +7,3 @@ eventbrite_link: https://www.eventbrite.co.uk/e/hack-pompey-6-tickets-2766521741
 ---
 
 Hack Pompey is a social hack day open to everyone looking to learn, hack and meet new people.
-
-The Hack Pompey team have set five themes to get your brains ticking: Space, Game Jam, Social Good, Wearable Tech, and Smart Cities.
