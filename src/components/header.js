@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import style from "./header.module.css"
 
 /**
  * The site header with navigation links
@@ -22,33 +23,14 @@ const Header = ({ siteTitle }) => {
   siteTitle = siteTitle || site.siteMetadata.title
 
   return (
-    <header
-      style={{
-        background: `rebeccapurple`,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <h1 style={{ margin: 0, fontSize: "1em" }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+    <header>
+      <h1>
+        <Link to="/">{siteTitle}</Link>
+      </h1>
 
-        <nav>
-          <Link to="/events">Past Events</Link>
-        </nav>
-      </div>
+      <nav>
+        <Link to="/events">Past Events</Link>
+      </nav>
     </header>
   )
 }

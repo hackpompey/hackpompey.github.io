@@ -1,0 +1,21 @@
+header {
+  background: rebeccapurple;
+  margin-bottom: 1.45rem;
+  padding: 1.45rem 1.0875rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: "1em";
+  display: inline-block;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav {
+  display: inline-block;
+  margin-left: 40px;
+}
