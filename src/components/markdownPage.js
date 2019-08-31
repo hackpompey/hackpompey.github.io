@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
+import SEO from "./seo"
 
 /**
  * Used by gatsby-node to generate pages from any md files in src/pages/
@@ -9,6 +10,8 @@ import Layout from "./layout"
 const MarkdownPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title={data.markdownRemark.frontmatter.title} />
+
       {/* Display Markdown content */}
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>

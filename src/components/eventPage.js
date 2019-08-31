@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 import Event from "./event"
+import SEO from "./seo"
 
 /**
  * Used by gatsby-node to generate pages from md files in src/pages/events/
@@ -9,6 +10,8 @@ import Event from "./event"
 const EventPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title={data.markdownRemark.frontmatter.title} />
+
       <Event event={data.markdownRemark} />
 
       {/* Display Markdown content */}
