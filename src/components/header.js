@@ -29,7 +29,9 @@ const Header = ({ siteTitle }) => {
       </h1>
 
       <nav>
+        <Link to="/soon">Upcoming Events</Link>
         <Link to="/events">Past Events</Link>
+        <Link to="/team">Team</Link>
       </nav>
     </header>
   )
