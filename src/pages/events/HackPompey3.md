@@ -5,7 +5,7 @@ date: "2015-05-16"
 location: Innovation Space
 eventbrite_link: https://www.eventbrite.co.uk/e/hackpompey-3-tickets-16615062098#
 ---
-Event information goes here
 
-Showcase
-https://www.youtube.com/watch?v=urzqs0GdwxE
+Hack Pompey is a social hack day open to everyone looking to learn, hack and meet new people.
+
+[Showcase](https://www.youtube.com/watch?v=urzqs0GdwxE)

@@ -6,10 +6,9 @@ location: Innovation Space
 eventbrite_link: https://www.eventbrite.co.uk/e/hackpompey-tickets-13526984575#
 writeup_link: https://rosedigital.co.uk/blog/2014/11/24/hackpompey.html
 ---
-Event information goes here
 
-Photos
-https://www.facebook.com/pg/upsuphoto/photos/?tab=album&album_id=617191168408881
+Hack Pompey is a social hack day open to everyone looking to learn, hack and meet new people.
 
-Showcase
-https://www.youtube.com/watch?v=EMfFKhD6wJw&feature=youtu.be
+[Photos](https://www.facebook.com/pg/upsuphoto/photos/?tab=album&album_id=617191168408881)
+
+[Showcase](https://www.youtube.com/watch?v=EMfFKhD6wJw&feature=youtu.be)

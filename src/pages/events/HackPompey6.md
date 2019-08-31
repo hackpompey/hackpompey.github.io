@@ -5,4 +5,5 @@ date: "2016-10-29"
 location: Portland Building
 eventbrite_link: https://www.eventbrite.co.uk/e/hack-pompey-6-tickets-27665217410#
 ---
-Event information goes here
+
+Hack Pompey is a social hack day open to everyone looking to learn, hack and meet new people.
