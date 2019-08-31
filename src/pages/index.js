@@ -1,24 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql } from 'gatsby'
 import SEO from "../components/seo"
 
-
+/**
+ * The Homepage
+ */
 const IndexPage = ({ data }) => (
-  <Layout data={data}>
-    <SEO />
-    <h1>Hi this is tom @ {data.site.siteMetadata.title}</h1>
+  <Layout>
+    <SEO title="Hack Pompey" />
+    <h1>Hack Pompey</h1>
   </Layout>
 )
-
-export const query = graphql`
-  query{
-    site{
-      siteMetadata{
-        title
-      }
-    }
-  }
-`
 
 export default IndexPage

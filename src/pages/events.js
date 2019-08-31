@@ -1,25 +1,23 @@
-import React from 'react'
-import { css } from '@emotion/core'
-import { rhythm } from '../utils/typography'
-import { useStaticQuery, graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Event from '../components/event'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Event from "../components/event"
 import SEO from "../components/seo"
 
-const Events = (props) => {
-
+/**
+ * Page listing past events
+ */
+const EventsPage = props => {
   const events = props.data.allMarkdownRemark.edges.map(i => i.node)
 
   return (
     <Layout>
-
       <SEO title="Events" />
 
       {/* List events */}
-      {events.map((event, index) =>
+      {events.map((event, index) => (
         <Event key={index} event={event} />
-      )}
-
+      ))}
     </Layout>
   )
 }
@@ -27,15 +25,15 @@ const Events = (props) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/\/events\//"}},
+      filter: { fileAbsolutePath: { regex: "//events//" } }
       sort: { order: DESC, fields: [frontmatter___date] }
-      ){
-      edges{
-        node{
+    ) {
+      edges {
+        node {
           fileAbsolutePath
           frontmatter {
             title
-            datetext
+            dateText
             location
             eventbrite_link
             writeup_link
@@ -45,5 +43,4 @@ export const query = graphql`
     }
   }
 `
-
-export default Events
+export default EventsPage

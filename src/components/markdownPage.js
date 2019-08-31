@@ -1,17 +1,16 @@
-import React from 'react'
-import { css } from '@emotion/core'
-import { rhythm } from '../utils/typography'
-import { useStaticQuery, graphql } from 'gatsby'
-import Layout from './layout'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "./layout"
 
-const MarkdownLayout = ({ data }) => {
-
+/**
+ * Used by gatsby-node to generate pages from any md files in src/pages/
+ * Does not apply to src/pages/events/
+ */
+const MarkdownPage = ({ data }) => {
   return (
     <Layout>
-
       {/* Display Markdown content */}
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-
     </Layout>
   )
 }
@@ -26,5 +25,4 @@ export const query = graphql`
     }
   }
 `
-
-export default MarkdownLayout
+export default MarkdownPage

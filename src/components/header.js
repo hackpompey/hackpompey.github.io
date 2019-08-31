@@ -3,8 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+/**
+ * The site header with navigation links
+ */
 const Header = ({ siteTitle }) => {
-
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -14,7 +16,7 @@ const Header = ({ siteTitle }) => {
           }
         }
       }
-      `
+    `
   )
 
   siteTitle = siteTitle || site.siteMetadata.title
@@ -31,7 +33,7 @@ const Header = ({ siteTitle }) => {
           padding: `1.45rem 1.0875rem`,
         }}
       >
-        <h1 style={{ margin: 0, fontSize: '1em' }}>
+        <h1 style={{ margin: 0, fontSize: "1em" }}>
           <Link
             to="/"
             style={{
@@ -46,7 +48,6 @@ const Header = ({ siteTitle }) => {
         <nav>
           <Link to="/events">Past Events</Link>
         </nav>
-
       </div>
     </header>
   )

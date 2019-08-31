@@ -39,11 +39,11 @@ exports.createPages = ({ graphql, actions }) => {
     data.allMarkdownRemark.edges.forEach(({ node }) => {
 
       // Default markdown layout
-      let layout = `./src/components/markdownLayout.js`
+      let layout = `./src/components/markdownPage.js`
 
       // Special layout for events
       if (node.fileAbsolutePath.includes('/events/')) {
-        layout = `./src/components/eventLayout.js`
+        layout = `./src/components/eventPage.js`
       }
 
       createPage({

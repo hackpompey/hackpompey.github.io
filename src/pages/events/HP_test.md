@@ -1,6 +1,6 @@
 ---
 title: Hack Pompey TEST
-datetext: 3rd & 4th Nov 2018 (10:00 - 18:30)
+dateText: 3rd & 4th Nov 2018 (10:00 - 18:30)
 date: "2017-11-03"
 location: Future Technology Centre
 eventbrite_link: https://www.eventbrite.co.uk

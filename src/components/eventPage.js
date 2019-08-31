@@ -1,20 +1,18 @@
-import React from 'react'
-import { css } from '@emotion/core'
-import { rhythm } from '../utils/typography'
-import { useStaticQuery, graphql } from 'gatsby'
-import Layout from './layout'
-import Event from './event'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "./layout"
+import Event from "./event"
 
-const EventLayout = ({ data }) => {
-
+/**
+ * Used by gatsby-node to generate pages from md files in src/pages/events/
+ */
+const EventPage = ({ data }) => {
   return (
     <Layout>
-
-      <Event event={data.markdownRemark}/>
+      <Event event={data.markdownRemark} />
 
       {/* Display Markdown content */}
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-
     </Layout>
   )
 }
@@ -26,7 +24,7 @@ export const query = graphql`
       fileAbsolutePath
       frontmatter {
         title
-        datetext
+        dateText
         location
         eventbrite_link
         writeup_link
@@ -34,5 +32,4 @@ export const query = graphql`
     }
   }
 `
-
-export default EventLayout
+export default EventPage
