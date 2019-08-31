@@ -1,35 +1,30 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { rhythm } from '../utils/typography'
-import { useStaticQuery, graphql } from 'gatsby'
+import Header from './header'
 
-const Layout = ({ data }) => {
-  const post = data.markdownRemark
+const Layout = ({ children }) => {
 
-  
   return (
-    <div
-      css={css`
+    <div>
+      <Header />
+
+      <div
+        css={css`
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 50em;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
-    >
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      >
+
+        {/* Display inner HTML elements */}
+        {children}
+
+      </div>
     </div>
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`
 
 export default Layout

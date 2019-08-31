@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout data={data}>
     <SEO />
     <h1>Hi this is tom @ {data.site.siteMetadata.title}</h1>
   </Layout>

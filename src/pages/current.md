@@ -1,3 +1,7 @@
+---
+title: current
+---
+
 # Hack Pompey
 ## This is the biggest hackathon on the South Coast.
 

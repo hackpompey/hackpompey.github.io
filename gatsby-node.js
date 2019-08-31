@@ -20,13 +20,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
-    
-    return graphql(`
+  const { createPage } = actions
+
+  return graphql(`
         {
             allMarkdownRemark {
                 edges {
                     node {
+                        fileAbsolutePath
                         fields {
                             slug
                         }
@@ -34,15 +35,24 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             }
         }`
-    ).then(({ data }) => {
-        data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-              path: node.fields.slug,
-              component: path.resolve(`./src/components/layout.js`),
-              context: {
-                slug: node.fields.slug,
-              },
-            })
-        })
+  ).then(({ data }) => {
+    data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+      // Default markdown layout
+      let layout = `./src/components/markdownLayout.js`
+
+      // Special layout for events
+      if (node.fileAbsolutePath.includes('/events/')) {
+        layout = `./src/components/eventLayout.js`
+      }
+
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve(layout),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
     })
+  })
 }
