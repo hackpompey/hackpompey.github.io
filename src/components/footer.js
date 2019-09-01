@@ -36,6 +36,11 @@ const Footer = () => {
             <span class="social-link__name">Instagram</span>
           </a>
         </li>
+        <li class="social-link">
+          <a href="http://eepurl.com/glFL6H">
+            <span class="social-link__name">Mailing List</span>
+          </a>
+        </li>
       </ul>
     </footer>
   )
