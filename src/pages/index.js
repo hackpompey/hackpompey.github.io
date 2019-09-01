@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -50,8 +51,9 @@ const IndexPage = ({ data }) => (
         <section>
           <h2>When and where is it?</h2>
           <p>
-            The next Hack Pompey will take place during Autumn 2019 with the
-            exact dates and locations yet to be announced.
+            <Link to="/soon">The next Hack Pompey</Link> will take place on the
+            2nd and 3rd of November at the University of Portsmouth's Future
+            Technology Centre. This year's theme will be announced soon.
           </p>
         </section>
 
