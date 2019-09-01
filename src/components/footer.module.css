@@ -11,3 +11,7 @@ footer li {
   display: inline;
   margin: 20px;
 }
+
+footer a {
+  text-decoration: none;
+}
