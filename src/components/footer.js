@@ -1,12 +1,13 @@
 import React from "react"
 import style from "./footer.module.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 /**
  * The site footer with navigation links
  */
 const Footer = () => {
   return (
-    <footer>
+    <footer className={style.footer}>
       <small>
         Hack Pompey LTD is a non-profit organisation funded by partners and
         sponsors. If you would like to support us, please contact us at{" "}
@@ -19,26 +20,27 @@ const Footer = () => {
 
       <ul class="social-links">
         <li class="social-link">
-          <a href="http://www.twitter.com/hackpompey">
-            <i class="fa fa-twitter"></i>
-            <span class="social-link__name">Twitter</span>
+          <a href="http://www.twitter.com/hackpompey" title="Twitter">
+            <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"#000000"}} size="2x"/>
+            {/* <span className={style.social-link-name}>Twitter</span> */}
           </a>
         </li>
         <li class="social-link">
-          <a href="https://www.facebook.com/groups/hackpompey/">
-            <i class="social-link__icon fa fa-facebook-official"></i>
-            <span class="social-link__name">Facebook</span>
+          <a href="https://www.facebook.com/groups/hackpompey/" title="Facebook">
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} style={{color:"#000000"}} size="2x" />
+            {/* <span className={style.social-link-name}>Facebook</span> */}
           </a>
         </li>
         <li class="social-link">
-          <a href="http://www.instagram.com/hackpompey">
-            <i class="social-link__icon fa fa-instagram"></i>
-            <span class="social-link__name">Instagram</span>
+          <a href="http://www.instagram.com/hackpompey" title="Instagram">
+            <FontAwesomeIcon icon={["fab", "instagram"]} style={{color:"#000000"}} size="2x" />
+            {/* <span className={style.social-link-name}>Instagram</span> */}
           </a>
         </li>
         <li class="social-link">
-          <a href="http://eepurl.com/glFL6H">
-            <span class="social-link__name">Mailing List</span>
+          <a href="http://eepurl.com/glFL6H" title="Mailing List">
+            <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"#000000"}} size="2x" />
+            {/* <span className={style.social-link-name}>Mailing List</span> */}
           </a>
         </li>
       </ul>

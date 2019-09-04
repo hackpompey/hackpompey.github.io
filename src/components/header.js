@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => {
   siteTitle = siteTitle || site.siteMetadata.title
 
   return (
-    <header>
+    <header className={style.header}>
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
