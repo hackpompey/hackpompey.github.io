@@ -14,8 +14,8 @@ class GalleryItem extends React.Component {
     const hasThumb = thumbURL && thumbURL !== "none"
 
     const itemStyle = {
-      "grid-column": "span " + spanWidth || 1,
-      "grid-row": "span " + spanHeight || 1,
+      "gridColumn": "span " + spanWidth || 1,
+      "gridRow": "span " + spanHeight || 1,
     }
 
     return (
