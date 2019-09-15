@@ -1,0 +1,50 @@
+.galleryItemSelected {
+  padding: 3em;
+  background: lightgray;
+  position: fixed;
+  width: 100%;
+  max-width: 50em;
+  max-height: 90vh;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.galleryItemSelected h1 {
+  text-decoration: underline;
+}
+
+.galleryItemSelected img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.videoResponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: 1.5em;
+}
+.videoResponsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.dimmer {
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+}

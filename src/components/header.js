@@ -30,6 +30,7 @@ const Header = ({ siteTitle }) => {
 
       <nav>
         <Link to="/soon">Upcoming Events</Link>
+        <Link to="/media">Media</Link>
         <Link to="/events">Past Events</Link>
         <Link to="/team">Team</Link>
       </nav>
