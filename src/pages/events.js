@@ -25,7 +25,7 @@ const EventsPage = props => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//events//" } }
+      filter: { fileAbsolutePath: { regex: "//pages\/events//" } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
