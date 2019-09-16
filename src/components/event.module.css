@@ -1,5 +1,5 @@
 .hack {
-  background-color: lightgray;
+  background-color: #fff;
   padding: 1em 2em;
   overflow: hidden;
 }
@@ -8,7 +8,7 @@
   width: 60%;
   display: inline-block;
   margin: 0;
-  height:100px;
+  height: 100px;
   vertical-align: middle;
 }
 
@@ -31,7 +31,7 @@
   margin: 0;
 }
 
-.hack_links li{
-    display: inline;
-    margin-left: 1em;
+.hack_links li {
+  display: inline;
+  margin-left: 1em;
 }
