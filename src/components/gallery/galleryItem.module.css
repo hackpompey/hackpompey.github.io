@@ -1,9 +1,17 @@
 .galleryItem {
-  background: lightgray;
+  background: #fafafa;
   overflow: hidden;
-  text-align: justify;
+  text-align: left;
   cursor: pointer;
+  border-radius: 3px;
 }
+
+.galleryItem > div > h1 {
+  padding: 0.5em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .galleryItemText {
   padding: 1em;
 }
@@ -14,6 +22,8 @@
   object-fit: cover;
 }
 
-.galleryItem h1 {
-  text-decoration: underline;
+.galleryItem:hover {
+  /* -webkit-filter: blur(1px);
+  filter: blur(1px); */
+  transform: scale(1.02);
 }

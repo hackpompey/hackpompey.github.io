@@ -14,8 +14,8 @@ class GalleryItem extends React.Component {
     const hasThumb = thumbURL && thumbURL !== "none"
 
     const itemStyle = {
-      "gridColumn": "span " + spanWidth || 1,
-      "gridRow": "span " + spanHeight || 1,
+      gridColumn: "span " + spanWidth || 1,
+      gridRow: "span " + spanHeight || 1,
     }
 
     return (
@@ -29,10 +29,14 @@ class GalleryItem extends React.Component {
 
         {/* Otherwise render text */}
         {!hasThumb && (
-          <div
-            className={style.galleryItemText}
-            dangerouslySetInnerHTML={{ __html: item.html }}
-          />
+          <div>
+            {/* Render heading */}
+            <h1>{meta.title}</h1>
+            <div
+              className={style.galleryItemText}
+              dangerouslySetInnerHTML={{ __html: item.html }}
+            />
+          </div>
         )}
       </article>
     )
