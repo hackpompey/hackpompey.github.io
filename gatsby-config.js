@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Hack Pompey | A Portsmouth based social hack event!`,
+    title: `Hack Pompey`,
     description: `Hack Pompey | A Portsmouth based social hack event!`,
     author: `@calmarms`,
   },
