@@ -8,10 +8,10 @@
   padding: 1em;
 }
 
-.galleryItem img,
-.galleryItem iframe {
+.galleryItem img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .galleryItem h1 {
