@@ -1,7 +1,11 @@
 header {
-  background: rebeccapurple;
+  background: #e43a6a;
   margin-bottom: 1.45rem;
   padding: 1.45rem 1.0875rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 header h1 {
@@ -19,4 +23,8 @@ header a {
 header nav {
   display: inline-block;
   margin-left: 40px;
+}
+
+header > h1 {
+  margin-left: 41.5%;
 }
