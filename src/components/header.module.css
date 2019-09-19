@@ -6,6 +6,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1;
+  text-align: center;
 }
 
 header h1 {
@@ -23,8 +24,4 @@ header a {
 header nav {
   display: inline-block;
   margin-left: 40px;
-}
-
-header > h1 {
-  margin-left: 41.5%;
 }

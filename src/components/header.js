@@ -24,13 +24,12 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header className={style.header}>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-
       <nav>
         <Link to="/soon">Upcoming Events</Link>
         <Link to="/media">Media</Link>
+        <h1>
+          <Link to="/">{siteTitle}</Link>
+        </h1>
         <Link to="/events">Past Events</Link>
         <Link to="/team">Team</Link>
       </nav>
