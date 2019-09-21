@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header className={style.header}>
       <nav>
-        <Link to="/soon">Upcoming Events</Link>
+        <Link to="/soon">Next Event</Link>
         <Link to="/media">Media</Link>
         <h1>
           <Link to="/">{siteTitle}</Link>

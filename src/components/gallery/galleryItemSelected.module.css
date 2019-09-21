@@ -13,10 +13,6 @@
   z-index: 9999;
 }
 
-.galleryItemSelected h1 {
-  text-decoration: underline;
-}
-
 .galleryItemSelected img {
   width: 100%;
   max-height: 60vh;
