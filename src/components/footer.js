@@ -21,25 +21,25 @@ const Footer = () => {
       <ul class="social-links">
         <li class="social-link">
           <a href="http://www.twitter.com/hackpompey" title="Twitter">
-            <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"#000000"}} size="2x"/>
+            <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"white"}} size="2x"/>
             {/* <span className={style.social-link-name}>Twitter</span> */}
           </a>
         </li>
         <li class="social-link">
           <a href="https://www.facebook.com/groups/hackpompey/" title="Facebook">
-            <FontAwesomeIcon icon={["fab", "facebook-square"]} style={{color:"#000000"}} size="2x" />
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} style={{color:"white"}} size="2x" />
             {/* <span className={style.social-link-name}>Facebook</span> */}
           </a>
         </li>
         <li class="social-link">
           <a href="http://www.instagram.com/hackpompey" title="Instagram">
-            <FontAwesomeIcon icon={["fab", "instagram"]} style={{color:"#000000"}} size="2x" />
+            <FontAwesomeIcon icon={["fab", "instagram"]} style={{color:"white"}} size="2x" />
             {/* <span className={style.social-link-name}>Instagram</span> */}
           </a>
         </li>
         <li class="social-link">
           <a href="http://eepurl.com/glFL6H" title="Mailing List">
-            <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"#000000"}} size="2x" />
+            <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"white"}} size="2x" />
             {/* <span className={style.social-link-name}>Mailing List</span> */}
           </a>
         </li>

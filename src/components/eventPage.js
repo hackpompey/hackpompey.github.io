@@ -19,7 +19,7 @@ const EventPage = ({ data }) => {
       {/* Display Markdown content */}
       <div
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        style={{ "margin-top": "1em" }}
+        style={{ margin: "3em 1em" }}
       />
 
       <Gallery items={items} />

@@ -1,29 +1,24 @@
 .hack {
-  background-color: #fff;
+  background-color: #fafafa;
+  color: #121212;
   padding: 1em 2em;
   overflow: hidden;
+  border: 1px solid;
 }
 
 .hack_logo {
-  width: 60%;
-  display: inline-block;
+  float: left;
+  padding: 2em 0;
   margin: 0;
-  height: 100px;
-  vertical-align: middle;
 }
 
 .hack_logo a {
   text-transform: capitalize;
 }
 
-.hack a {
-  text-decoration: none;
-}
-
 .hack_info {
-  display: inline-block;
+  float: right;
   text-align: right;
-  width: 40%;
 }
 
 .hack_info ul {

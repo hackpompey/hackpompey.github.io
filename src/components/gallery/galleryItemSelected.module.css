@@ -1,6 +1,7 @@
 .galleryItemSelected {
   padding: 3em;
   background: #fff;
+  color: #121212;
   position: fixed;
   width: 100%;
   max-width: 50em;
