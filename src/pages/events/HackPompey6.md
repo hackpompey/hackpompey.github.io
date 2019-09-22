@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey 6
+banner_background: "linear-gradient(to bottom right, #d0418f, #364596)"
 dateText: 29 Oct 2016 (10:00 - 18:30)
 date: "2016-10-29"
 location: Portland Building

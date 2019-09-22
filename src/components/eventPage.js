@@ -14,7 +14,7 @@ const EventPage = ({ data }) => {
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
 
-      <Event event={data.markdownRemark} />
+      <Event event={data.markdownRemark} banner={data.banner} />
 
       {/* Display Markdown content */}
       <div
@@ -29,11 +29,17 @@ const EventPage = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
+    banner: imageSharp(fields: { slug: { regex: $slug } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fileAbsolutePath
       frontmatter {
         title
+        banner_background
         dateText
         location
         eventbrite_link

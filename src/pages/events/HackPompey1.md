@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey
+banner_background: "#fef7ba"
 dateText: 22 November 2014 (10:00 - 18:00)
 date: "2014-11-22"
 location: Innovation Space

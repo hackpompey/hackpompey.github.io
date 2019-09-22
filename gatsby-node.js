@@ -16,6 +16,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+  } else if (node.internal.type === "ImageSharp"){
+    const slug = createFilePath({ node, getNode, basePath: `images` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
   }
 }
 
@@ -23,26 +30,25 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(`
-        {
-            allMarkdownRemark {
-                edges {
-                    node {
-                        fileAbsolutePath
-                        fields {
-                            slug
-                        }
-                    }
-                }
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fileAbsolutePath
+            fields {
+              slug
             }
-        }`
-  ).then(({ data }) => {
+          }
+        }
+      }
+    }
+  `).then(({ data }) => {
     data.allMarkdownRemark.edges.forEach(({ node }) => {
-
       // Default markdown layout
       let layout = `./src/components/markdownPage.js`
 
       // Special layout for events
-      if (node.fileAbsolutePath.includes('/events/')) {
+      if (node.fileAbsolutePath.includes("/events/")) {
         layout = `./src/components/eventPage.js`
       }
 

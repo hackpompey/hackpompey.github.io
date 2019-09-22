@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey - Fashion Hack
+banner_background: "white"
 dateText: 02 Mar 2016 (13:00 - 20:00)
 date: "2016-03-02"
 location: Eldon Fashion Studio

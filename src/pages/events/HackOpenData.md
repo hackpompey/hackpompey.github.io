@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey - Open Data
+banner_background: "#CAEFCB"
 dateText: 07 February 2015 (09:30 - 18:30)
 date: "2015-02-07"
 location: Innovation Space
