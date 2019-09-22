@@ -1,7 +1,6 @@
 header {
   background: #e43a6a;
   margin-bottom: 1.45rem;
-  padding: 1.45rem 1.0875rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,18 +8,21 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: "1em";
-  display: inline-block;
-}
-
 header a {
   color: white;
   text-decoration: none;
-  margin: 1em;
+  margin: 0 2em;
+  display: inline-block;
+  vertical-align: middle;
+  padding:1em;
 }
 
 header nav {
   display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  width: 6em;
+  margin: 0 2em;
 }
