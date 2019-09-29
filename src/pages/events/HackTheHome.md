@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey - Hack The Home
+banner_background: "linear-gradient(to bottom right, rgba(0, 0, 0, 0.25), hsla(165, 100%, 60%, 1) 100%)"
 dateText: 13 May 2017 (10:00 - 18:30)
 date: "2017-05-13"
 location: Portland Building

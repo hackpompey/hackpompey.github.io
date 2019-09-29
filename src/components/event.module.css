@@ -1,29 +1,17 @@
 .hack {
   background-color: lightgray;
+  color: rgba(0, 0, 0, 0.8);
   padding: 1em 2em;
   overflow: hidden;
 }
 
-.hack_logo {
-  width: 60%;
-  display: inline-block;
-  margin: 0;
-  height:100px;
-  vertical-align: middle;
-}
-
-.hack_logo a {
-  text-transform: capitalize;
-}
-
 .hack a {
-  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .hack_info {
-  display: inline-block;
+  float: right;
   text-align: right;
-  width: 40%;
 }
 
 .hack_info ul {
@@ -31,7 +19,11 @@
   margin: 0;
 }
 
-.hack_links li{
-    display: inline;
-    margin-left: 1em;
+.hack_info li {
+  margin-bottom: 0;
+}
+
+.hack_links li {
+  display: inline;
+  margin-left: 1em;
 }

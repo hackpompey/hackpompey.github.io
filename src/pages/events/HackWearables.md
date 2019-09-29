@@ -1,5 +1,6 @@
 ---
 title: Hack Pompey - Wearables
+banner_background: "linear-gradient(to bottom, rgba(101,155,212,0.85), rgba(0,255,186,0.85))"
 dateText: 21 Nov 2015 (09:30 - 19:00)
 date: "2015-11-21"
 location: Innovation Space
