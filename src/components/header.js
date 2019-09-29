@@ -11,7 +11,7 @@ const Header = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        logo: file(relativePath: { eq: "hack-pompey-logo-white.png" }) {
+        logo: file(relativePath: { eq: "images/hack-pompey-logo-white.png" }) {
           childImageSharp {
             fluid(maxWidth: 100) {
               ...GatsbyImageSharpFluid_noBase64
@@ -21,7 +21,6 @@ const Header = () => {
       }
     `
   )
-  console.log(data)
 
   return (
     <header className={style.header}>
