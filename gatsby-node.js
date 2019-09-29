@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
-  } else if (node.internal.type === "ImageSharp"){
+  } else if (node.internal.type === "ImageSharp") {
     const slug = createFilePath({ node, getNode, basePath: `images` })
     createNodeField({
       node,
@@ -31,7 +31,9 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//src/pages//" } }
+      ) {
         edges {
           node {
             fileAbsolutePath
