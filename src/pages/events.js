@@ -40,8 +40,8 @@ export const query = graphql`
           fields {
             slug
           }
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_noBase64
+          fixed(height: 100) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

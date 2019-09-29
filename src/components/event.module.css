@@ -9,12 +9,6 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.hack_logo {
-  float: left;
-  width: 50%;
-  vertical-align: center;
-}
-
 .hack_info {
   float: right;
   text-align: right;
@@ -23,6 +17,10 @@
 .hack_info ul {
   list-style-type: none;
   margin: 0;
+}
+
+.hack_info li {
+  margin-bottom: 0;
 }
 
 .hack_links li {

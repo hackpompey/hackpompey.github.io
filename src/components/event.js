@@ -17,13 +17,13 @@ const Event = ({ event, banner }) => {
   console.log(meta)
   const customStyle = {}
   if (meta.banner_background) customStyle.background = meta.banner_background
-  console.log(customStyle);
+  console.log(customStyle)
 
   return (
     <div className={style.hack} style={customStyle}>
       <Link to={eventPageURL}>
-        {banner && <Img fluid={banner.fluid} className={style.hack_logo} />}
-        {!banner && <h3 className={style.hack_logo}>{meta.title}</h3>}
+        {banner && <Img fixed={banner.fixed} />}
+        {!banner && <h3>{meta.title}</h3>}
       </Link>
 
       <section className={style.hack_info}>
