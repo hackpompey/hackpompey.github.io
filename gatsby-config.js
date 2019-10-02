@@ -11,6 +11,12 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
       },
     },
     `gatsby-plugin-emotion`,
