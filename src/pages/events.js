@@ -47,8 +47,8 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//pages/events//" } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { tags: { in: "Past Event" } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {

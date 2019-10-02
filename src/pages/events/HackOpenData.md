@@ -6,6 +6,7 @@ date: "2015-02-07"
 location: Innovation Space
 eventbrite_link: https://www.eventbrite.co.uk/e/hackpompey-open-data-tickets-15325330476#
 writeup_link: https://rosedigital.co.uk/blog/2015/02/16/hackpompey-open-data.html
+tags: ["Past Event"]
 ---
 
 Hack Pompey is a social hack day open to everyone looking to learn, hack and meet new people.
