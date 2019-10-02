@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className={style.header}>
       <nav>
-        <Link to="/soon">Next Event</Link>
+        <Link to="/events/HackSustainability">Next Event</Link>
         <Link to="/media">Media</Link>
         <Link to="/" className={style.logo}>
           <Img fluid={data.logo.childImageSharp.fluid} />
