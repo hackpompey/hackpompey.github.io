@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Event from "../components/event"
 import SEO from "../components/seo"
-import layoutStyle from "../components/layout.module.css"
 
 /**
  * Page listing past events

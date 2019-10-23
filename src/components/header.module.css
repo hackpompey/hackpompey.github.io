@@ -1,5 +1,5 @@
 header {
-  background: #e43a6a;
+  background: linear-gradient(270deg, hsl(343, 76%, 56%), hsl(343, 76%, 46%));
   margin-bottom: 1.45rem;
   position: fixed;
   top: 0;

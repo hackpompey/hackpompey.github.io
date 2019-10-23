@@ -7,6 +7,16 @@
   margin: auto;
 }
 
+.hack:first-of-type {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.hack:last-of-type {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
 .hack a {
   color: rgba(0, 0, 0, 0.8);
 }
