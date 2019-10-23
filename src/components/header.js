@@ -11,10 +11,12 @@ const Header = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        logo: file(relativePath: { eq: "images/hack-pompey-logo-white.png" }) {
+        logo: file(
+          relativePath: { eq: "images/hack-pompey-logo-white-inline.png" }
+        ) {
           childImageSharp {
-            fluid(maxWidth: 100) {
-              ...GatsbyImageSharpFluid_noBase64
+            fixed(height: 40) {
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -28,7 +30,7 @@ const Header = () => {
         <Link to="/events/HackSustainability">Next Event</Link>
         <Link to="/media">Media</Link>
         <Link to="/" className={style.logo}>
-          <Img fluid={data.logo.childImageSharp.fluid} />
+          <Img fixed={data.logo.childImageSharp.fixed} style={{ top: "5px" }} />
         </Link>
         <Link to="/events">Past Events</Link>
         <Link to="/team">Team</Link>
