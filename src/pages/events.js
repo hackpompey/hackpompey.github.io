@@ -40,15 +40,15 @@ export const query = graphql`
           fields {
             slug
           }
-          fixed(height: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight:100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//pages/events//" } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { tags: { in: "Past Event" } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -59,6 +59,8 @@ export const query = graphql`
           frontmatter {
             title
             banner_background
+            banner_background_image
+            banner_foreground_color
             dateText
             location
             eventbrite_link

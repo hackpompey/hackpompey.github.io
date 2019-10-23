@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={style.footer}>
       <small>
         Hack Pompey LTD is a non-profit organisation funded by partners and
-        sponsors. If you would like to support us, please contact us at{" "}
+        sponsors.<br/>If you would like to support us, please contact us at{" "}
         <a href="mailto:partners@hackpompey.co.uk">partners@hackpompey.co.uk</a>
       </small>
 

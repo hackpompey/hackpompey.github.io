@@ -1,7 +1,8 @@
 import React from "react"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import layoutStyle from "../components/layout.module.css"
 
 /**
  * The Homepage
@@ -10,9 +11,14 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Hack Pompey" />
 
-    <h1>Hack Pompey</h1>
+    <main className={layoutStyle.text}>
+      <h1>
+        Tickets now available for <br/>
+        <Link to="/events/HackSustainability">
+          Hack Pompey 2019 - Sustainability
+        </Link>
+      </h1>
 
-    <main>
       <article>
         <section>
           <h2>What is Hack Pompey?</h2>
@@ -51,9 +57,10 @@ const IndexPage = ({ data }) => (
         <section>
           <h2>When and where is it?</h2>
           <p>
-            <Link to="/soon">The next Hack Pompey</Link> will take place on the
-            2nd and 3rd of November at the University of Portsmouth's Future
-            Technology Centre. This year's theme will be announced soon.
+            <Link to="/events/HackSustainability">The next Hack Pompey</Link>{" "}
+            will take place on the 2nd and 3rd of November at the University of
+            Portsmouth's Future Technology Centre. This year's theme is
+            sustainability.
           </p>
         </section>
 

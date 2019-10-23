@@ -3,6 +3,28 @@
   color: rgba(0, 0, 0, 0.8);
   padding: 1em 2em;
   overflow: hidden;
+  max-width: 45em;
+  margin: auto;
+}
+
+.hack_logo {
+  width: 50%;
+  height: 100px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+}
+
+.hack:first-of-type {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.hack:last-of-type {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .hack a {

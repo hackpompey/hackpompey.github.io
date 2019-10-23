@@ -1,6 +1,5 @@
 header {
-  background: #e43a6a;
-  margin-bottom: 1.45rem;
+  background: linear-gradient(270deg, hsl(343, 76%, 56%), hsl(343, 76%, 46%));
   position: fixed;
   top: 0;
   width: 100%;
@@ -14,7 +13,7 @@ header a {
   margin: 0 2em;
   display: inline-block;
   vertical-align: middle;
-  padding:1em;
+  padding: 10px;
 }
 
 header nav {
@@ -23,6 +22,6 @@ header nav {
 
 .logo {
   display: inline-block;
-  width: 6em;
+  min-width: 6em;
   margin: 0 2em;
 }
