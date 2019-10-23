@@ -40,8 +40,8 @@ export const query = graphql`
           fields {
             slug
           }
-          fixed(height: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight:100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

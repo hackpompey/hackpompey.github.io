@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import style from "./event.module.css"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 /**
  * Banner displaying metadata about an event, linking to the event page
@@ -22,7 +22,13 @@ const Event = ({ event, banner }) => {
   return (
     <div className={style.hack} style={customStyle}>
       <Link to={eventPageURL}>
-        {banner && <Img fixed={banner.fixed} />}
+        {banner && (
+          <BackgroundImage
+            Tag="h3"
+            className={style.hack_logo}
+            fluid={banner.fluid}
+          />
+        )}
         {!banner && <h3>{meta.title}</h3>}
       </Link>
 

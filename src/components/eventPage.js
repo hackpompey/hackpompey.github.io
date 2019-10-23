@@ -35,8 +35,8 @@ const EventPage = ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     banner: imageSharp(fields: { slug: { regex: $slug } }) {
-      fixed(height: 100) {
-        ...GatsbyImageSharpFixed
+      fluid(maxHeight:100) {
+        ...GatsbyImageSharpFluid
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
