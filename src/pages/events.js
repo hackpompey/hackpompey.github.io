@@ -59,6 +59,8 @@ export const query = graphql`
           frontmatter {
             title
             banner_background
+            banner_background_image
+            banner_foreground_color
             dateText
             location
             eventbrite_link

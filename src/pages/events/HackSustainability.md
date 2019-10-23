@@ -1,6 +1,8 @@
 ---
 title: Hack Pompey 2019 - Sustainability
 banner_background: "green"
+banner_background_image: HackSustainabilityBackground.png
+banner_foreground_color: "white"
 dateText: 2nd and 3rd of November
 date: "2019-11-02T10:00:00"
 location: Future Technology Centre

@@ -14,10 +14,19 @@ const Event = ({ event, banner }) => {
   const mdFileName = mdPathParts[mdPathParts.length - 1].split(".")[0]
   const eventPageURL = "/events/" + mdFileName
 
-  console.log(meta)
   const customStyle = {}
-  if (meta.banner_background) customStyle.background = meta.banner_background
-  console.log(customStyle)
+  if (meta.banner_background) {
+    // Background colour/gradient
+    customStyle['background'] = meta.banner_background
+  }
+  if (meta.banner_background_image) {
+    // Background image
+    customStyle['background-image'] = `url("../${meta.banner_background_image}")`
+  }
+  if (meta.banner_foreground_color) {
+    // Text colour
+    customStyle['color'] = meta.banner_foreground_color
+  }
 
   return (
     <div className={style.hack} style={customStyle}>
