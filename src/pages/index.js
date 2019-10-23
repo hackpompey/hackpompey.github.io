@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import layoutStyle from "../components/layout.module.css"
+import Countdown from "../components/countdown"
 
 /**
  * The Homepage
@@ -13,11 +14,13 @@ const IndexPage = ({ data }) => (
 
     <main className={layoutStyle.text}>
       <h1>
-        Tickets now available for <br/>
+        Tickets now available for <br />
         <Link to="/events/HackSustainability">
           Hack Pompey 2019 - Sustainability
         </Link>
       </h1>
+
+      <Countdown data={data.markdownRemark.frontmatter} />
 
       <article>
         <section>
@@ -114,5 +117,15 @@ const IndexPage = ({ data }) => (
     </main>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    markdownRemark(frontmatter: { tags: { in: "Current Event" } }) {
+      frontmatter {
+        date
+      }
+    }
+  }
+`
 
 export default IndexPage
