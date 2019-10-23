@@ -8,7 +8,6 @@ import SEO from "../components/seo"
  * Page listing past events
  */
 const EventsPage = props => {
-  console.log(props)
   const events = props.data.allMarkdownRemark.edges.map(i => i.node)
   const banners = props.data.banners.edges.map(i => i.node)
 
@@ -40,7 +39,7 @@ export const query = graphql`
           fields {
             slug
           }
-          fluid(maxHeight:100) {
+          fluid(maxHeight: 100) {
             ...GatsbyImageSharpFluid
           }
         }
