@@ -4,6 +4,7 @@ import Layout from "./layout"
 import Event from "./event"
 import SEO from "./seo"
 import Gallery from "./gallery/gallery"
+import style from "./markdown.module.css"
 
 /**
  * Used by gatsby-node to generate pages from md files in src/pages/events/
@@ -20,6 +21,7 @@ const EventPage = ({ data }) => {
       <div
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         style={{ margin: "3em 1em" }}
+        className={style.md}
       />
 
       <Gallery items={items} />
