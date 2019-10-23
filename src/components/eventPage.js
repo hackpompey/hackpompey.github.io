@@ -5,6 +5,7 @@ import Event from "./event"
 import SEO from "./seo"
 import Gallery from "./gallery/gallery"
 import style from "./markdown.module.css"
+import layoutStyle from "./layout.module.css"
 
 /**
  * Used by gatsby-node to generate pages from md files in src/pages/events/
@@ -17,12 +18,14 @@ const EventPage = ({ data }) => {
 
       <Event event={data.markdownRemark} banner={data.banner} />
 
-      {/* Display Markdown content */}
-      <div
-        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        style={{ margin: "3em 1em" }}
-        className={style.md}
-      />
+      <main className={layoutStyle.text}>
+        {/* Display Markdown content */}
+        <div
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          style={{ margin: "3em 1em" }}
+          className={style.md}
+        />
+      </main>
 
       <Gallery items={items} />
     </Layout>

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import layoutStyle from "../components/layout.module.css"
 
 /**
  * The Homepage
@@ -10,14 +11,14 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Hack Pompey" />
 
-    <h1>
-      Sign up now for{" "}
-      <Link to="/events/HackSustainability">
-        Hack Pompey 2019 - Sustainability
-      </Link>
-    </h1>
+    <main className={layoutStyle.text}>
+      <h1>
+        Tickets now available for <br/>
+        <Link to="/events/HackSustainability">
+          Hack Pompey 2019 - Sustainability
+        </Link>
+      </h1>
 
-    <main>
       <article>
         <section>
           <h2>What is Hack Pompey?</h2>

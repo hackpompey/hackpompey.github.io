@@ -3,6 +3,8 @@
   color: rgba(0, 0, 0, 0.8);
   padding: 1em 2em;
   overflow: hidden;
+  max-width: 50em;
+  margin: auto;
 }
 
 .hack a {
