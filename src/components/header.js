@@ -13,7 +13,6 @@ const Header = () => {
         logo: file(
           relativePath: { eq: "images/hack-pompey-logo-white-inline.svg" }
         ) {
-          relativePath
           publicURL
         }
       }
