@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import style from "./event.module.css"
+import style from "./eventBanner.module.css"
 import BackgroundImage from "gatsby-background-image"
 
 /**
  * Banner displaying metadata about an event, linking to the event page
  */
-const Event = ({ event, bannerSVG, banner }) => {
+const EventBanner = ({ event, bannerSVG, banner }) => {
   const meta = event.frontmatter
 
   // Determine URL of event page
@@ -84,4 +84,4 @@ const Event = ({ event, bannerSVG, banner }) => {
   )
 }
 
-export default Event
+export default EventBanner

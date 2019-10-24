@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Event from "../components/event"
+import EventBanner from "../components/eventBanner"
 import SEO from "../components/seo"
 
 /**
@@ -18,7 +18,7 @@ const EventsPage = ({ data }) => {
 
       {/* List events */}
       {events.map((event, index) => (
-        <Event
+        <EventBanner
           key={index}
           event={event}
           bannerSVG={bannersSVG.find(banner =>

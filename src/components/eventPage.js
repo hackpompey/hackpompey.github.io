@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
-import Event from "./event"
+import EventBanner from "./eventBanner"
 import SEO from "./seo"
 import Gallery from "./gallery/gallery"
 import style from "./markdown.module.css"
@@ -16,7 +16,7 @@ const EventPage = ({ data }) => {
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
 
-      <Event
+      <EventBanner
         event={data.markdownRemark}
         bannerSVG={data.bannerSVG}
         banner={data.banner}
