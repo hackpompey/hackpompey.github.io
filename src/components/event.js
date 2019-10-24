@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import style from "./event.module.css"
 import BackgroundImage from "gatsby-background-image"
 
@@ -17,15 +18,17 @@ const Event = ({ event, banner }) => {
   const customStyle = {}
   if (meta.banner_background) {
     // Background colour/gradient
-    customStyle['background'] = meta.banner_background
+    customStyle["background"] = meta.banner_background
   }
   if (meta.banner_background_image) {
     // Background image
-    customStyle['background-image'] = `url("../${meta.banner_background_image}")`
+    customStyle[
+      "background-image"
+    ] = `url("../${meta.banner_background_image}")`
   }
   if (meta.banner_foreground_color) {
     // Text colour
-    customStyle['color'] = meta.banner_foreground_color
+    customStyle["color"] = meta.banner_foreground_color
   }
 
   return (
@@ -51,14 +54,18 @@ const Event = ({ event, banner }) => {
           {/* Eventbrite link if set */}
           {meta.eventbrite_link && (
             <li>
-              <a href={meta.eventbrite_link}>Eventbrite</a>
+              <a href={meta.eventbrite_link}>
+                <FontAwesomeIcon icon={["fas", "ticket-alt"]} /> Eventbrite
+              </a>
             </li>
           )}
 
           {/* Writeup link if set */}
           {meta.writeup_link && (
             <li>
-              <a href={meta.writeup_link}>Write up</a>
+              <a href={meta.writeup_link}>
+                <FontAwesomeIcon icon={["fas", "newspaper"]} /> Write up
+              </a>
             </li>
           )}
         </ul>
