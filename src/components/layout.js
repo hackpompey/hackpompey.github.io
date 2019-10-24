@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     query {
       background: file(relativePath: { eq: "images/background.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
