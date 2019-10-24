@@ -118,7 +118,6 @@ const IndexPage = ({ data }) => (
 export const query = graphql`
   query {
     partners: file(relativePath: { eq: "partners.svg" }) {
-      name
       relativePath
       publicURL
     }
