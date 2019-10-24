@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
-import Event from "./event"
+import EventBanner from "./eventBanner"
 import SEO from "./seo"
 import Gallery from "./gallery/gallery"
 import style from "./markdown.module.css"
@@ -16,7 +16,11 @@ const EventPage = ({ data }) => {
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
 
-      <Event event={data.markdownRemark} banner={data.banner} />
+      <EventBanner
+        event={data.markdownRemark}
+        bannerSVG={data.bannerSVG}
+        banner={data.banner}
+      />
 
       <main className={layoutStyle.text}>
         {/* Display Markdown content */}
@@ -34,9 +38,12 @@ const EventPage = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
+    bannerSVG: file(fields: { slug: { regex: $slug } }, ext: { eq: ".svg" }) {
+      publicURL
+    }
     banner: imageSharp(fields: { slug: { regex: $slug } }) {
-      fluid(maxHeight:100) {
-        ...GatsbyImageSharpFluid
+      fluid(maxHeight: 100) {
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

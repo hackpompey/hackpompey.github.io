@@ -1,15 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Event from "../components/event"
+import EventBanner from "../components/eventBanner"
 import SEO from "../components/seo"
 
 /**
  * Page listing past events
  */
-const EventsPage = props => {
-  const events = props.data.allMarkdownRemark.edges.map(i => i.node)
-  const banners = props.data.banners.edges.map(i => i.node)
+const EventsPage = ({ data }) => {
+  const events = data.allMarkdownRemark.edges.map(i => i.node)
+  const bannersSVG = data.bannersSVG.edges.map(i => i.node)
+  const banners = data.banners.edges.map(i => i.node)
 
   return (
     <Layout>
@@ -17,9 +18,12 @@ const EventsPage = props => {
 
       {/* List events */}
       {events.map((event, index) => (
-        <Event
+        <EventBanner
           key={index}
           event={event}
+          bannerSVG={bannersSVG.find(banner =>
+            banner.fields.slug.endsWith(event.fields.slug)
+          )}
           banner={banners.find(banner =>
             banner.fields.slug.endsWith(event.fields.slug)
           )}
@@ -31,6 +35,21 @@ const EventsPage = props => {
 
 export const query = graphql`
   query {
+    bannersSVG: allFile(
+      filter: {
+        fields: { slug: { regex: "//banners/events//" } }
+        ext: { eq: ".svg" }
+      }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          publicURL
+        }
+      }
+    }
     banners: allImageSharp(
       filter: { fields: { slug: { regex: "//banners/events//" } } }
     ) {
@@ -40,7 +59,7 @@ export const query = graphql`
             slug
           }
           fluid(maxHeight: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }

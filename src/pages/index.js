@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import layoutStyle from "../components/layout.module.css"
@@ -117,9 +117,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    partners: file(relativePath: { eq: "partners.svg" }) {
-      name
-      relativePath
+    partners: file(relativePath: { eq: "images/partners.svg" }) {
       publicURL
     }
     markdownRemark(frontmatter: { tags: { in: "Current Event" } }) {

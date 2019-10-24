@@ -23,6 +23,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+  } else if (
+    node.internal.type === "File" &&
+    node.relativePath.startsWith("images")
+  ) {
+    const slug = createFilePath({ node, getNode, basePath: "images" })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
   }
 }
 

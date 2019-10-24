@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import style from "./header.module.css"
 
 /**
@@ -12,13 +11,9 @@ const Header = () => {
     graphql`
       query {
         logo: file(
-          relativePath: { eq: "images/hack-pompey-logo-white-inline.png" }
+          relativePath: { eq: "images/hack-pompey-logo-white-inline.svg" }
         ) {
-          childImageSharp {
-            fixed(height: 40) {
-              ...GatsbyImageSharpFixed_noBase64
-            }
-          }
+          publicURL
         }
       }
     `
@@ -29,8 +24,12 @@ const Header = () => {
       <nav>
         <Link to="/events/HackSustainability">Next Event</Link>
         <Link to="/media">Media</Link>
-        <Link to="/" className={style.logo}>
-          <Img fixed={data.logo.childImageSharp.fixed} style={{ top: "5px" }} />
+        <Link to="/">
+          <img
+            src={data.logo.publicURL}
+            className={style.logo}
+            alt="Hack Pompey Logo"
+          />
         </Link>
         <Link to="/events">Past Events</Link>
         <Link to="/team">Team</Link>
