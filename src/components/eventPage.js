@@ -16,7 +16,11 @@ const EventPage = ({ data }) => {
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
 
-      <Event event={data.markdownRemark} banner={data.banner} />
+      <Event
+        event={data.markdownRemark}
+        bannerSVG={data.bannerSVG}
+        banner={data.banner}
+      />
 
       <main className={layoutStyle.text}>
         {/* Display Markdown content */}
@@ -34,8 +38,11 @@ const EventPage = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
+    bannerSVG: file(fields: { slug: { regex: $slug } }, ext: { eq: ".svg" }) {
+      publicURL
+    }
     banner: imageSharp(fields: { slug: { regex: $slug } }) {
-      fluid(maxHeight:100) {
+      fluid(maxHeight: 100) {
         ...GatsbyImageSharpFluid
       }
     }

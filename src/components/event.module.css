@@ -15,6 +15,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0;
+  vertical-align: middle;
 }
 
 .hack:first-of-type {
@@ -28,7 +29,7 @@
 }
 
 .hack a {
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .hack_info {

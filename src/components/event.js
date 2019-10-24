@@ -7,7 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 /**
  * Banner displaying metadata about an event, linking to the event page
  */
-const Event = ({ event, banner }) => {
+const Event = ({ event, bannerSVG, banner }) => {
   const meta = event.frontmatter
 
   // Determine URL of event page
@@ -34,14 +34,23 @@ const Event = ({ event, banner }) => {
   return (
     <div className={style.hack} style={customStyle}>
       <Link to={eventPageURL}>
-        {banner && (
+        {/* Prefer SVG */}
+        {bannerSVG && (
+          <h3
+            className={style.hack_logo}
+            style={{ "background-image": `url(${bannerSVG.publicURL})` }}
+          />
+        )}
+        {/* Otherwise optimised image */}
+        {!bannerSVG && banner && (
           <BackgroundImage
             Tag="h3"
             className={style.hack_logo}
             fluid={banner.fluid}
           />
         )}
-        {!banner && <h3>{meta.title}</h3>}
+        {/* Otherwise event title */}
+        {!bannerSVG && !banner && <h3>{meta.title}</h3>}
       </Link>
 
       <section className={style.hack_info}>
