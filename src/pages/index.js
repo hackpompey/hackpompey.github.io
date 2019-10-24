@@ -102,12 +102,12 @@ const IndexPage = ({ data }) => (
         </address>
 
         <section>
-          <h2>Previous Sponsors</h2>
+          <h2>Partners</h2>
           <p>The events just wouldn't be possible without these legends!</p>
           <img
             src={data.partners.publicURL}
             width="100%"
-            alt="Sponsor Logos"
+            alt="Partner Logos"
           ></img>
         </section>
       </article>
