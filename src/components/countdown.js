@@ -38,7 +38,7 @@ class Countdown extends React.Component {
 
   render() {
     return (
-      <div style={{ "margin-bottom": "4em" }}>
+      <div style={{ "marginBottom": "4em" }}>
         <h3>Only {this.remaining()} to go!</h3>
       </div>
     )
