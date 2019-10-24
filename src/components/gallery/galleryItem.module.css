@@ -28,3 +28,9 @@
   filter: blur(1px); */
   transform: scale(1.02);
 }
+
+@media only screen and (max-width: 50em) {
+  .galleryItem {
+    margin: 1em 0;
+  }
+}

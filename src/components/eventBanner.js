@@ -23,7 +23,7 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
   if (meta.banner_background_image) {
     // Background image
     customStyle[
-      "background-image"
+      "backgroundImage"
     ] = `url("../${meta.banner_background_image}")`
   }
   if (meta.banner_foreground_color) {
@@ -39,7 +39,7 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
           <h3
             className={style.hack_logo}
             style={{
-              "background-image": `url(${bannerSVG.publicURL})`,
+              "backgroundImage": `url(${bannerSVG.publicURL})`,
               color: "rgba(0,0,0,0)",
             }}
           >
