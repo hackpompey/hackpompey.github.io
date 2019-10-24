@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hackpompey.co.uk",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The official website for Hack Pompey",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David Ralph <David.M.L.Ralph@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -35,9 +35,6 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -49,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/gatsbyjs/hackpompey.co.uk"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/gatsbyjs/hackpompey.co.uk/issues"
   }
 }
