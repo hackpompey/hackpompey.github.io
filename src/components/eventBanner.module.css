@@ -50,3 +50,13 @@
   display: inline;
   margin-left: 1em;
 }
+
+@media only screen and (max-width: 50em) {
+  .hack_logo {
+    width: 100%;
+  }
+  .hack_info {
+    float: none;
+    text-align: center;
+  }
+}
