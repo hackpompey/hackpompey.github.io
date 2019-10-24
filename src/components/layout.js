@@ -28,18 +28,18 @@ const Layout = ({ children }) => {
     }
   `)
   return (
-    <div className={style.layout}>
+    <div className={style.layout} id="outer-container">
       <Header />
       <BackgroundImage
         Tag="section"
         className={style.background}
         fluid={data.background.childImageSharp.fluid}
       >
-        <div className={style.content}>
+        <div className={style.content} id="page-wrap">
           {/* Display inner HTML elements */}
           {children}
+          <Footer />
         </div>
-        <Footer />
       </BackgroundImage>
     </div>
   )
