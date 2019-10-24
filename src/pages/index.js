@@ -85,41 +85,43 @@ const IndexPage = ({ data }) => (
               your hacking/making!
             </li>
             <li>
-              <strong>Free food and drink.</strong> Lunch, snacks and dinner
-              y'all. Gotta keep you fueled throughout.
-            </li>
-            <li>
-              <strong>Don't wanna hack or make?</strong> We'll have some areas
-              to chill and play with cool tech.
+              <strong>Free food and drink.</strong> Breakfast, lunch, snacks.
+              Gotta keep you fueled throughout.
             </li>
           </ul>
         </section>
+
+        <address>
+          <p>
+            If you have any other questions, please drop us a line at{" "}
+            <a href="mailto:contact@hackpompey.co.uk">
+              contact@hackpompey.co.uk
+            </a>{" "}
+            or reach out on social media (links below).
+          </p>
+        </address>
+
+        <section>
+          <h2>Previous Sponsors</h2>
+          <p>The events just wouldn't be possible without these legends!</p>
+          <img
+            src={data.partners.publicURL}
+            width="100%"
+            alt="Sponsor Logos"
+          ></img>
+        </section>
       </article>
-
-      <address>
-        <p>
-          If you have any other questions, please drop us a line at{" "}
-          <a href="mailto:hackpompey@gmail.com">hackpompey@gmail.com</a> or{" "}
-          <a href="http://twitter.com/hackpompey">tweet us</a>.
-        </p>
-      </address>
-
-      {/* TODO: Add sponsor info
-				<section>
-					<h2>Previous Sponsors</h2>
-					<span>The events just wouldn't be possible without these legends!</span>
-				</section>
-
-				<section>
-					<img src="img/partners.svg" width="100%"></img>
-        </section> 
-        */}
     </main>
   </Layout>
 )
 
 export const query = graphql`
   query {
+    partners: file(relativePath: { eq: "partners.svg" }) {
+      name
+      relativePath
+      publicURL
+    }
     markdownRemark(frontmatter: { tags: { in: "Current Event" } }) {
       frontmatter {
         date
