@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    partners: file(relativePath: { eq: "partners.svg" }) {
+    partners: file(relativePath: { eq: "images/partners.svg" }) {
       publicURL
     }
     markdownRemark(frontmatter: { tags: { in: "Current Event" } }) {

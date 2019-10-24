@@ -47,6 +47,7 @@ const Event = ({ event, bannerSVG, banner }) => {
             Tag="h3"
             className={style.hack_logo}
             fluid={banner.fluid}
+            fadeIn={false}
           />
         )}
         {/* Otherwise event title */}

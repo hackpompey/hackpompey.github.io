@@ -43,7 +43,7 @@ export const query = graphql`
     }
     banner: imageSharp(fields: { slug: { regex: $slug } }) {
       fluid(maxHeight: 100) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

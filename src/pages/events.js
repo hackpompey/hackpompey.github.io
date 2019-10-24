@@ -59,7 +59,7 @@ export const query = graphql`
             slug
           }
           fluid(maxHeight: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
