@@ -38,8 +38,13 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
         {bannerSVG && (
           <h3
             className={style.hack_logo}
-            style={{ "background-image": `url(${bannerSVG.publicURL})` }}
-          />
+            style={{
+              "background-image": `url(${bannerSVG.publicURL})`,
+              color: "rgba(0,0,0,0)",
+            }}
+          >
+            {meta.title}
+          </h3>
         )}
         {/* Otherwise optimised image */}
         {!bannerSVG && banner && (

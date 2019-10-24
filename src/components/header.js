@@ -25,7 +25,11 @@ const Header = () => {
         <Link to="/events/HackSustainability">Next Event</Link>
         <Link to="/media">Media</Link>
         <Link to="/">
-          <img src={data.logo.publicURL} className={style.logo} />
+          <img
+            src={data.logo.publicURL}
+            className={style.logo}
+            alt="Hack Pompey Logo"
+          />
         </Link>
         <Link to="/events">Past Events</Link>
         <Link to="/team">Team</Link>
