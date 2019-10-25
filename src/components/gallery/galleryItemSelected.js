@@ -17,21 +17,26 @@ class GalleryItemSelected extends React.Component {
         <div className={style.dimmer} onClick={() => setSelected(null)} />
 
         <article className={style.galleryItemSelected}>
-          {/* Render image if image-item */}
-          {mediaType === "IMAGE" && <img src={mediaURL} alt={title} />}
-
-          {/* Render video if video-item */}
-          {mediaType === "VIDEO" && (
-            <div className={style.videoResponsive}>
-              <iframe src={mediaURL} title={title} />
-            </div>
-          )}
-
           {/* Render heading */}
           <h1>{meta.title}</h1>
 
-          {/* Render text */}
-          <div dangerouslySetInnerHTML={{ __html: item.html }} />
+          <div className={style.scrollable}>
+            {/* Render image if image-item */}
+            {mediaType === "IMAGE" && <img src={mediaURL} alt={title} />}
+
+            {/* Render video if video-item */}
+            {mediaType === "VIDEO" && (
+              <div className={style.videoResponsive}>
+                <iframe src={mediaURL} title={title} />
+              </div>
+            )}
+
+            {/* Render text */}
+            {item.html.length>0 && (<div
+              className={style.description}
+              dangerouslySetInnerHTML={{ __html: item.html }}
+            />)}
+            </div>
         </article>
       </div>
     )
