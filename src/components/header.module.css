@@ -23,7 +23,7 @@ header nav {
 }
 
 .logo {
-  margin: 1em 1em 0.5em 5em;
+  margin: 1em 5em 0.5em 5em;
   height: 4em;
   max-width: calc(100% - 6em);
 }
