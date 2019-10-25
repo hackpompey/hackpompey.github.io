@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       background: file(relativePath: { eq: "images/background.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
