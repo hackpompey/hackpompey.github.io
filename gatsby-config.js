@@ -40,10 +40,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `hackpompey.co.uk`,
-        short_name: `starter`,
+        short_name: `hackpompey`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#e43a6a`,
+        theme_color: `#e43a6a`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
