@@ -8,24 +8,29 @@ import SEO from "../components/seo"
  * Page listing past events
  */
 const EventsPage = ({ data }) => {
-  const events = data.allMarkdownRemark.edges.map(i => i.node)
-  const bannersSVG = data.bannersSVG.edges.map(i => i.node)
-  const banners = data.banners.edges.map(i => i.node)
+  const events = data.events.edges.map(i => i.node)
+  const bannerSVGs = data.bannerSVGs.edges.map(i => i.node)
+  const bannerIMGs = data.bannerIMGs.edges.map(i => i.node)
 
   return (
     <Layout>
       <SEO title="Events" />
 
       {/* List events */}
-      {events.map((event, index) => (
+      {events.map((details, index) => (
         <EventBanner
           key={index}
-          event={event}
-          bannerSVG={bannersSVG.find(banner =>
-            banner.fields.slug.endsWith(event.fields.slug)
+          details={details}
+          bannerSVG={bannerSVGs.find(banner =>
+            banner.fields.slug.endsWith(details.fields.slug)
           )}
-          banner={banners.find(banner =>
-            banner.fields.slug.endsWith(event.fields.slug)
+          bannerIMG={bannerIMGs.find(banner =>
+            banner.fields.slug.endsWith(details.fields.slug)
+          )}
+          bannerBG={bannerIMGs.find(banner =>
+            banner.fields.slug.endsWith(
+              details.fields.slug.slice(0, -1) + "BG/"
+            )
           )}
         />
       ))}
@@ -35,7 +40,7 @@ const EventsPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    bannersSVG: allFile(
+    bannerSVGs: allFile(
       filter: {
         fields: { slug: { regex: "//banners/events//" } }
         ext: { eq: ".svg" }
@@ -50,7 +55,7 @@ export const query = graphql`
         }
       }
     }
-    banners: allImageSharp(
+    bannerIMGs: allImageSharp(
       filter: { fields: { slug: { regex: "//banners/events//" } } }
     ) {
       edges {
@@ -58,13 +63,13 @@ export const query = graphql`
           fields {
             slug
           }
-          fluid(maxHeight: 100) {
+          fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
     }
-    allMarkdownRemark(
+    events: allMarkdownRemark(
       filter: { frontmatter: { tags: { in: "Past Event" } } }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
@@ -77,7 +82,6 @@ export const query = graphql`
           frontmatter {
             title
             banner_background
-            banner_background_image
             banner_foreground_color
             dateText
             location

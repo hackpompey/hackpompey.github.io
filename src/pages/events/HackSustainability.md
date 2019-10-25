@@ -1,7 +1,6 @@
 ---
 title: Hack Pompey 2019 - Sustainability
 banner_background: "black"
-banner_background_image: HackSustainabilityBackground.png
 banner_foreground_color: "white"
 dateText: 2nd and 3rd of November (10:00 - 18:00)
 date: "2019-11-02T10:00:00"

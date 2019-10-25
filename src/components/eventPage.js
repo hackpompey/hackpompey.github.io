@@ -11,27 +11,34 @@ import layoutStyle from "./layout.module.css"
  * Used by gatsby-node to generate pages from md files in src/pages/events/
  */
 const EventPage = ({ data }) => {
-  const items = data.allMarkdownRemark.edges.map(i => i.node)
+  const media = data.media.edges.map(i => i.node)
+  const bannerIMGs = data.bannerIMGs.edges.map(i => i.node)
+  const details = data.details
   return (
     <Layout>
-      <SEO title={data.markdownRemark.frontmatter.title} />
+      <SEO title={details.frontmatter.title} />
 
       <EventBanner
-        event={data.markdownRemark}
+        details={details}
         bannerSVG={data.bannerSVG}
-        banner={data.banner}
+        bannerIMG={bannerIMGs.find(banner =>
+          banner.fields.slug.endsWith(details.fields.slug)
+        )}
+        bannerBG={bannerIMGs.find(banner =>
+          banner.fields.slug.endsWith(details.fields.slug.slice(0, -1) + "BG/")
+        )}
       />
 
       <main className={layoutStyle.text}>
         {/* Display Markdown content */}
         <div
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          dangerouslySetInnerHTML={{ __html: details.html }}
           style={{ margin: "3em 1em" }}
           className={style.md}
         />
       </main>
 
-      <Gallery items={items} />
+      <Gallery items={media} />
     </Layout>
   )
 }
@@ -41,18 +48,27 @@ export const query = graphql`
     bannerSVG: file(fields: { slug: { regex: $slug } }, ext: { eq: ".svg" }) {
       publicURL
     }
-    banner: imageSharp(fields: { slug: { regex: $slug } }) {
-      fluid(maxHeight: 100) {
-        ...GatsbyImageSharpFluid_noBase64
+    bannerIMGs: allImageSharp(filter: { fields: { slug: { regex: $slug } } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          fluid(maxHeight: 400) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    details: markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       html
       fileAbsolutePath
       frontmatter {
         title
         banner_background
-        banner_background_image
         banner_foreground_color
         dateText
         location
@@ -60,7 +76,7 @@ export const query = graphql`
         writeup_link
       }
     }
-    allMarkdownRemark(
+    media: allMarkdownRemark(
       filter: {
         fields: { slug: { regex: $slug } }
         fileAbsolutePath: { regex: "//media//" }

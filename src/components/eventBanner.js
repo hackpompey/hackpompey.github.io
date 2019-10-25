@@ -7,11 +7,11 @@ import BackgroundImage from "gatsby-background-image"
 /**
  * Banner displaying metadata about an event, linking to the event page
  */
-const EventBanner = ({ event, bannerSVG, banner }) => {
-  const meta = event.frontmatter
+const EventBanner = ({ details, bannerSVG, bannerIMG, bannerBG }) => {
+  const meta = details.frontmatter
 
   // Determine URL of event page
-  const mdPathParts = event.fileAbsolutePath.split("/")
+  const mdPathParts = details.fileAbsolutePath.split("/")
   const mdFileName = mdPathParts[mdPathParts.length - 1].split(".")[0]
   const eventPageURL = "/events/" + mdFileName
 
@@ -20,11 +20,12 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
     // Background colour/gradient
     customStyle["background"] = meta.banner_background
   }
-  if (meta.banner_background_image) {
+  if (bannerBG) {
     // Background image
-    customStyle[
-      "backgroundImage"
-    ] = `url("../${meta.banner_background_image}")`
+    customStyle["backgroundImage"] = `url("..${bannerBG.fluid.src}")`
+    customStyle["backgroundSize"] = "cover"
+    customStyle["backgroundPosition"] = "center"
+    customStyle["backgroundRepeat"] = "no-repeat"
   }
   if (meta.banner_foreground_color) {
     // Text colour
@@ -39,7 +40,7 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
           <h3
             className={style.hack_logo}
             style={{
-              "backgroundImage": `url(${bannerSVG.publicURL})`,
+              backgroundImage: `url(${bannerSVG.publicURL})`,
               color: "rgba(0,0,0,0)",
             }}
           >
@@ -47,16 +48,16 @@ const EventBanner = ({ event, bannerSVG, banner }) => {
           </h3>
         )}
         {/* Otherwise optimised image */}
-        {!bannerSVG && banner && (
+        {!bannerSVG && bannerIMG && (
           <BackgroundImage
             Tag="h3"
             className={style.hack_logo}
-            fluid={banner.fluid}
+            fluid={bannerIMG.fluid}
             fadeIn={false}
           />
         )}
         {/* Otherwise event title */}
-        {!bannerSVG && !banner && <h3>{meta.title}</h3>}
+        {!bannerSVG && !bannerIMG && <h3>{meta.title}</h3>}
       </Link>
 
       <section className={style.hack_info}>
