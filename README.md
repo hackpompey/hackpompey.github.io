@@ -6,6 +6,7 @@ This site is built using Gatsby.js and uses NPM for dependency management.
 Start by installing [Node/NPM](https://nodejs.org/) if you don't already have it.
 
 If you are new to Gatsby.js then start by installing the CLI.
+
 ```
 npm install -g gatsby-cli
 ```
