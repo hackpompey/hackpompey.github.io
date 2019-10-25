@@ -17,6 +17,14 @@ header nav a {
   margin: 0.5em 0;
 }
 
+header nav a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+header nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 header nav {
   overflow: hidden;
   text-align: left;

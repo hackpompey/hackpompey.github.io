@@ -47,7 +47,7 @@ const Header = () => {
     },
     bmMenu: {
       background: "#a62b4e",
-      padding: "2.5em 1.5em 0",
+      padding: "2.5em 0 0 0",
       fontSize: "1.15em",
     },
     bmMorphShape: {
@@ -55,10 +55,12 @@ const Header = () => {
     },
     bmItemList: {
       color: "#b8b7ad",
-      padding: "0.8em",
+      padding: "0.8em 0",
     },
     bmItem: {
       display: "inline-block",
+      padding: "1em 1em 1em 2.5em",
+      margin: "0",
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.3)",
@@ -75,7 +77,7 @@ const Header = () => {
         />
       </Link>
       <Menu
-        width={ '15em'}
+        width={"15em"}
         styles={styles}
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
