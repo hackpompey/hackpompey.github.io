@@ -36,9 +36,9 @@ class Gallery extends React.Component {
 
         <section className={style.gallery}>
           {/* List items */}
-          {items.map((item, index) => (
+          {items.map((item) => (
             <GalleryItem
-              key={index}
+              key={item.fileAbsolutePath}
               item={item}
               setSelected={this.setSelected}
             />
