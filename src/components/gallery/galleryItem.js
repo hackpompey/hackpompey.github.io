@@ -18,15 +18,19 @@ class GalleryItem extends React.Component {
       gridRow: "span " + spanHeight || 1,
     }
 
+    if (hasThumb) {
+      itemStyle["backgroundImage"] = `url(${thumbURL})`
+      itemStyle["backgroundPosition"] = "center"
+      itemStyle["backgroundRepeat"] = "no-repeat"
+      itemStyle["backgroundSize"] = "cover"
+    }
+
     return (
       <article
         className={style.galleryItem}
         style={itemStyle}
         onClick={() => setSelected(item)}
       >
-        {/* Render thumbnail if provided */}
-        {hasThumb && <img src={thumbURL} alt={title} />}
-
         {/* Otherwise render text */}
         {!hasThumb && (
           <div>

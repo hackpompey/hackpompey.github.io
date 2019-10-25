@@ -5,6 +5,7 @@
   text-align: left;
   cursor: pointer;
   border-radius: 3px;
+  min-height: 20em;
 }
 
 .galleryItem > div > h1 {
@@ -15,12 +16,6 @@
 
 .galleryItemText {
   padding: 1em;
-}
-
-.galleryItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .galleryItem:hover {
