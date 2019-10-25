@@ -1,6 +1,7 @@
 .layout {
   color: white;
   min-height: 100vh;
+  background-color: black;
 }
 
 .content {
