@@ -25,6 +25,8 @@ class Countdown extends React.Component {
     // Find the distance between now and the count down date
     const distance = this.end - this.state.date
 
+    if (distance < 1000) return ""
+
     // Time calculations for days, hours, minutes and seconds
     const days = Math.floor(distance / (1000 * 60 * 60 * 24))
     const hours = Math.floor(
@@ -33,13 +35,13 @@ class Countdown extends React.Component {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
-    return `${days} days ${hours} hours ${minutes} minutes and ${seconds} seconds`
+    return `Only ${days} days ${hours} hours ${minutes} minutes and ${seconds} seconds to go!`
   }
 
   render() {
     return (
-      <div style={{ "marginBottom": "4em" }}>
-        <h3>Only {this.remaining()} to go!</h3>
+      <div style={{ marginBottom: "4em" }}>
+        <h3>{this.remaining()}</h3>
       </div>
     )
   }
