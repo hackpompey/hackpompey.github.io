@@ -17,9 +17,9 @@ const EventsPage = ({ data }) => {
       <SEO title="Events" />
 
       {/* List events */}
-      {events.map((details, index) => (
+      {events.map(details => (
         <EventBanner
-          key={index}
+          key={details.fileAbsolutePath}
           details={details}
           bannerSVG={bannerSVGs.find(banner =>
             banner.fields.slug.endsWith(details.fields.slug)
