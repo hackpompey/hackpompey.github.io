@@ -15,7 +15,6 @@ const IndexPage = ({ data }) => {
     const mdFileName = mdPathParts[mdPathParts.length - 1].split(".")[0]
     currentEventURL = "/events/" + mdFileName
   }
-  console.log(data)
   return (
     <Layout>
       <SEO title="Hack Pompey" />
