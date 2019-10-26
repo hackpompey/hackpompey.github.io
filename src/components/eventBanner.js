@@ -61,7 +61,7 @@ const EventBanner = ({ details, bannerSVG, bannerIMG, bannerBG }) => {
             {meta.registration_link && (
               <li>
                 <a href={meta.registration_link}>
-                  <FontAwesomeIcon icon={["fas", "ticket-alt"]} /> Eventbrite
+                  <FontAwesomeIcon icon={["fas", "ticket-alt"]} /> Tickets
                 </a>
               </li>
             )}
