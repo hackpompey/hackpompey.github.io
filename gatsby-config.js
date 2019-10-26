@@ -39,13 +39,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `hackpompey.co.uk`,
-        short_name: `hackpompey`,
+        name: `HackPompey`,
+        short_name: `HackPompey`,
         start_url: `/`,
         background_color: `#e43a6a`,
         theme_color: `#e43a6a`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
