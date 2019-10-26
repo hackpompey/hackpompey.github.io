@@ -10,33 +10,32 @@ const EventBannerBackground = ({
   backgroundStyle,
   backgroundIMG,
 }) => {
-  return (
-    <div>
-      {/* Use background image is provided */}
-      {backgroundIMG && (
-        <BackgroundImage
-          Tag="section"
-          className={style.hack}
-          style={{
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          backgroundColor={backgroundStyle}
-          fluid={backgroundIMG.fluid}
-          fadeIn={false}
-        >
-          {children}
-        </BackgroundImage>
-      )}
-      {/* Otherwise use styling */}
-      {!backgroundIMG && (
-        <section className={style.hack} style={{ background: backgroundStyle }}>
-          {children}
-        </section>
-      )}
-    </div>
-  )
+  if (backgroundIMG) {
+    // Use background image if provided
+    return (
+      <BackgroundImage
+        Tag="section"
+        className={style.hack}
+        style={{
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        backgroundColor={backgroundStyle}
+        fluid={backgroundIMG.fluid}
+        fadeIn={false}
+      >
+        {children}
+      </BackgroundImage>
+    )
+  } else {
+    // Otherwise use styling
+    return (
+      <section className={style.hack} style={{ background: backgroundStyle }}>
+        {children}
+      </section>
+    )
+  }
 }
 
 export default EventBannerBackground
