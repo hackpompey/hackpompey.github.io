@@ -44,19 +44,18 @@ Our reception area where you can pick up your wristband will be open 9:30 - 18:0
 
 #### _Times Subject To Change_
 
-| **Saturday**   |                                          |
-| -------------- | ---------------------------------------- |
-| 10:00          | Arrival & Breakfast                      |
-| 10:30          | Opening Talk                             |
-| 11:00          | Team and Idea forming session (optional) |
-| 13:00          | Lunch                                    |
-| 18:00          | End of day 1                             |
-| 18:30          | Social at Brewhouse & Kitchen (optional) |
-| <br>**Sunday** |                                          |
-| 10:00          | Arrival & Breakfast                      |
-| 13:00          | Lunch                                    |
-| 16:00          | Project demonstrations (optional)        |
-| 18:00          | End of event                             |
+| **Saturday**   |                       |
+| -------------- | --------------------- |
+| 10:00          | Arrival & Breakfast   |
+| 10:30          | Opening Talk          |
+| 13:00          | Lunch                 |
+| 18:00          | End of day One        |
+| 18:30          | Social (Location TBA) |
+| <br>**Sunday** |                       |
+| 10:00          | Arrival & Breakfast   |
+| 13:00          | Lunch                 |
+| 16:00          | Show & Tell           |
+| 18:00          | End of event          |
 
 # Frequently asked questions <a name="faq"></a>
 
@@ -70,9 +69,9 @@ Bring your tools and equipment. Laptops, craft supplies, pen & paper, raspberry 
 
 ### I can't think of a project idea
 
-That's not a question, but also not a problem! There will be a team-forming and idea generation session at the start of the event.
+That's not a question, but also not a problem! Many of our attendees come up with ideas or join a team during the event.
 While we encourage you to pick a project related to our sustainability theme, you are free to work on whatever you like.
-You can also find some theme related project ideas and resources to get you started below.
+You can also find some theme related [challenges](#challanges) and [resources](#resources) to get you started below.
 
 ### Where do I sign up?
 
