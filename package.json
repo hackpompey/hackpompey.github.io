@@ -11,7 +11,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
-    "gatsby": "^2.17.2",
+    "gatsby": "^2.17.4",
     "gatsby-background-image": "^0.8.15",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-emotion": "^4.1.12",
@@ -30,8 +30,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
