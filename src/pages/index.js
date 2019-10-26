@@ -17,16 +17,8 @@ const IndexPage = ({ data }) => {
 
       <main className={layoutStyle.text}>
         <article>
+          <span name="about" className={layoutStyle.anchor} />
           <section>
-            <a
-              id="about"
-              style={{
-                display: "block",
-                position: "relative",
-                top: "-150px",
-                visibility: "hidden",
-              }}
-            />
             <h2>What is Hack Pompey?</h2>
             <p>
               Hack Pompey is the biggest hackathon on the South coast. We'll see
