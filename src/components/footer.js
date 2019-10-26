@@ -18,7 +18,7 @@ const Footer = () => {
         <small>UK Company Number 11486057 (England & Wales)</small>
       </aside>
 
-      <ul className="social-links">
+      <ul className={style.social}>
         <li>
           <a href="http://www.twitter.com/hackpompey" title="Twitter">
             <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"white"}} size="2x"/>

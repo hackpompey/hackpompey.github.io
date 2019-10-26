@@ -1,18 +1,33 @@
-footer {
+.footer {
   padding: 1.45rem 1.0875rem;
   text-align: center;
 }
 
-footer ul {
+.footer ul {
   list-style-type: none;
   margin-top:1em;
 }
 
-footer li {
+.footer li {
   display: inline;
   margin: 20px;
 }
 
-footer a {
+.footer a {
   text-decoration: none;
+}
+
+.social {
+  margin: 2rem 0 0 0;
+}
+
+.social > li + li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+  .social li {
+    font-size: 0.8rem;
+  }
 }
