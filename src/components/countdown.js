@@ -40,7 +40,7 @@ class Countdown extends React.Component {
 
   render() {
     return (
-      <div style={{ marginBottom: "4em" }}>
+      <div>
         <h3>{this.remaining()}</h3>
       </div>
     )

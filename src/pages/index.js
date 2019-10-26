@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import layoutStyle from "../components/layout.module.css"
@@ -19,21 +20,51 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Hack Pompey" />
 
-      <main className={layoutStyle.text}>
+      <div className={layoutStyle.splash}>
         {data.currentEvent && (
           <div>
             <h1>
-              Tickets now available for <br />
-              <Link to={currentEventURL}>
+              Tickets now available for{" "}
+              <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72">
                 {data.currentEvent.frontmatter.title}
-              </Link>
+              </a>
             </h1>
             <Countdown data={data.currentEvent.frontmatter} />
           </div>
         )}
 
+        <Link to={currentEventURL}>
+          <Img fluid={data.splash.childImageSharp.fluid} className={layoutStyle.splashimg} />
+        </Link>
+
+        <Link to="#about" className={layoutStyle.splashlink}>
+          <h3>About Hack Pompey</h3>
+        </Link>
+        {data.currentEvent && (
+          <Link to={currentEventURL} className={layoutStyle.splashlink}>
+            <h3>Next Event</h3>
+          </Link>
+        )}
+        <a
+          href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72"
+          className={layoutStyle.splashlink}
+        >
+          <h3>Get Tickets</h3>
+        </a>
+      </div>
+
+      <main className={layoutStyle.text}>
         <article>
           <section>
+            <a
+              id="about"
+              style={{
+                display: "block",
+                position: "relative",
+                top: "-150px",
+                visibility: "hidden",
+              }}
+            />
             <h2>What is Hack Pompey?</h2>
             <p>
               Hack Pompey is the biggest hackathon on the South coast. We'll see
@@ -139,6 +170,13 @@ export const query = graphql`
       frontmatter {
         date
         title
+      }
+    }
+    splash: file(relativePath: { eq: "splash.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 400) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
       }
     }
   }
