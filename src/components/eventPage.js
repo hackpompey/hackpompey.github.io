@@ -72,7 +72,7 @@ export const query = graphql`
         banner_foreground_color
         dateText
         location
-        eventbrite_link
+        registration_link
         writeup_link
       }
     }

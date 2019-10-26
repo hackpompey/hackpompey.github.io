@@ -68,9 +68,9 @@ const EventBanner = ({ details, bannerSVG, bannerIMG, bannerBG }) => {
 
         <ul className={style.hack_links}>
           {/* Eventbrite link if set */}
-          {meta.eventbrite_link && (
+          {meta.registration_link && (
             <li>
-              <a href={meta.eventbrite_link}>
+              <a href={meta.registration_link}>
                 <FontAwesomeIcon icon={["fas", "ticket-alt"]} /> Eventbrite
               </a>
             </li>

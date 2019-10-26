@@ -11,30 +11,58 @@ import Countdown from "../components/countdown"
  */
 const IndexPage = ({ data }) => {
   let currentEventURL
+  let registrationURL
   if (data.currentEvent) {
     const mdPathParts = data.currentEvent.fileAbsolutePath.split("/")
     const mdFileName = mdPathParts[mdPathParts.length - 1].split(".")[0]
     currentEventURL = "/events/" + mdFileName
+    registrationURL = data.currentEvent.frontmatter.registration_link
   }
   return (
     <Layout>
       <SEO title="Hack Pompey" />
 
       <div className={layoutStyle.splash}>
+        {/* If there's an upcoming event, display basic event info */}
         {data.currentEvent && (
           <div>
-            <h1>
-              Tickets now available for{" "}
-              <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72">
-                {data.currentEvent.frontmatter.title}
-              </a>
-            </h1>
+            {/* Ticket link if available */}
+            {registrationURL && (
+              <h1>
+                Tickets now available for{" "}
+                <a href={registrationURL}>
+                  {data.currentEvent.frontmatter.title}
+                </a>
+              </h1>
+            )}
+            {/* Otherwise just event name */}
+            {!registrationURL && (
+              <h1>
+                Up Next{" "}
+                <Link to={currentEventURL}>
+                  {data.currentEvent.frontmatter.title}
+                </Link>
+              </h1>
+            )}
             <Countdown data={data.currentEvent.frontmatter} />
+          </div>
+        )}
+        {/* If there's no upcoming event, use generic tagline */}
+        {!data.currentEvent && (
+          <div>
+            <h1>Hack Pompey | A Portsmouth based social hack event!</h1>
+            <h3>
+              For announcements and future events{" "}
+              <a href="http://eepurl.com/glFL6H">Join our mailing list</a>
+            </h3>
           </div>
         )}
 
         <Link to={currentEventURL}>
-          <Img fluid={data.splash.childImageSharp.fluid} className={layoutStyle.splashimg} />
+          <Img
+            fluid={data.splash.childImageSharp.fluid}
+            className={layoutStyle.splashimg}
+          />
         </Link>
 
         <Link to="#about" className={layoutStyle.splashlink}>
@@ -42,15 +70,14 @@ const IndexPage = ({ data }) => {
         </Link>
         {data.currentEvent && (
           <Link to={currentEventURL} className={layoutStyle.splashlink}>
-            <h3>Next Event</h3>
+            <h3>Event Info</h3>
           </Link>
         )}
-        <a
-          href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72"
-          className={layoutStyle.splashlink}
-        >
-          <h3>Get Tickets</h3>
-        </a>
+        {registrationURL && (
+          <a href={registrationURL} className={layoutStyle.splashlink}>
+            <h3>Get Tickets</h3>
+          </a>
+        )}
       </div>
 
       <main className={layoutStyle.text}>
@@ -170,6 +197,7 @@ export const query = graphql`
       frontmatter {
         date
         title
+        registration_link
       }
     }
     splash: file(relativePath: { eq: "splash.png" }) {
