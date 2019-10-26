@@ -1,84 +1,19 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import layoutStyle from "../components/layout.module.css"
-import Countdown from "../components/countdown"
+import Splash from "../components/splash"
 
 /**
  * The Homepage
  */
 const IndexPage = ({ data }) => {
-  let currentEventURL
-  let registrationURL
-  if (data.currentEvent) {
-    const mdPathParts = data.currentEvent.fileAbsolutePath.split("/")
-    const mdFileName = mdPathParts[mdPathParts.length - 1].split(".")[0]
-    currentEventURL = "/events/" + mdFileName
-    registrationURL = data.currentEvent.frontmatter.registration_link
-  }
   return (
     <Layout>
       <SEO title="Hack Pompey" />
 
-      <div className={layoutStyle.splash}>
-        {/* If there's an upcoming event, display basic event info */}
-        {data.currentEvent && (
-          <div>
-            {/* Ticket link if available */}
-            {registrationURL && (
-              <h1>
-                Tickets now available for{" "}
-                <a href={registrationURL}>
-                  {data.currentEvent.frontmatter.title}
-                </a>
-              </h1>
-            )}
-            {/* Otherwise just event name */}
-            {!registrationURL && (
-              <h1>
-                Up Next{" "}
-                <Link to={currentEventURL}>
-                  {data.currentEvent.frontmatter.title}
-                </Link>
-              </h1>
-            )}
-            <Countdown data={data.currentEvent.frontmatter} />
-          </div>
-        )}
-        {/* If there's no upcoming event, use generic tagline */}
-        {!data.currentEvent && (
-          <div>
-            <h1>Hack Pompey | A Portsmouth based social hack event!</h1>
-            <h3>
-              For announcements and future events{" "}
-              <a href="http://eepurl.com/glFL6H">Join our mailing list</a>
-            </h3>
-          </div>
-        )}
-
-        <Link to={currentEventURL}>
-          <Img
-            fluid={data.splash.childImageSharp.fluid}
-            className={layoutStyle.splashimg}
-          />
-        </Link>
-
-        <Link to="#about" className={layoutStyle.splashlink}>
-          <h3>About Hack Pompey</h3>
-        </Link>
-        {data.currentEvent && (
-          <Link to={currentEventURL} className={layoutStyle.splashlink}>
-            <h3>Event Info</h3>
-          </Link>
-        )}
-        {registrationURL && (
-          <a href={registrationURL} className={layoutStyle.splashlink}>
-            <h3>Get Tickets</h3>
-          </a>
-        )}
-      </div>
+      <Splash currentEvent={data.currentEvent} />
 
       <main className={layoutStyle.text}>
         <article>
@@ -122,16 +57,6 @@ const IndexPage = ({ data }) => {
             <p>
               If you don't yet have a team, don't worry! There will be plenty of
               opportunity to form a team at the event.
-            </p>
-          </section>
-
-          <section>
-            <h2>When and where is it?</h2>
-            <p>
-              <Link to="/events/HackSustainability">The next Hack Pompey</Link>{" "}
-              will take place on the 2nd and 3rd of November at the University
-              of Portsmouth's Future Technology Centre. This year's theme is
-              sustainability.
             </p>
           </section>
 
@@ -193,18 +118,14 @@ export const query = graphql`
     currentEvent: markdownRemark(
       frontmatter: { tags: { in: "Current Event" } }
     ) {
+      fields {
+        slug
+      }
       fileAbsolutePath
       frontmatter {
         date
         title
         registration_link
-      }
-    }
-    splash: file(relativePath: { eq: "splash.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
       }
     }
   }

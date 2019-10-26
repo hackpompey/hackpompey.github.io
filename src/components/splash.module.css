@@ -1,0 +1,28 @@
+.splash {
+  text-align: center;
+  height: 100vh;
+}
+.splash h3 {
+  margin: 1em 0;
+}
+.splash img {
+  margin: 0;
+}
+.splashlink {
+  display: inline-block;
+  width: 30%;
+  padding: 3em 1em;
+}
+
+@media only screen and (max-width: 50em) {
+  .splashlink {
+    width: 100%;
+    padding: 2vh 0.5em;
+  }
+  .splashlink h3 {
+    margin: 0;
+  }
+  .splashimg {
+    margin-bottom: 2vh;
+  }
+}
