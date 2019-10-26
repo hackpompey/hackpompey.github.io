@@ -11,7 +11,7 @@ tags: ["Current Event"]
 
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
 
-[**_Get Your Free Tickets Now_**](https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72)
+## [**Get Your Free Tickets Now**](https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72)
 
 Jump To:
 | [**Key info**](#info)
