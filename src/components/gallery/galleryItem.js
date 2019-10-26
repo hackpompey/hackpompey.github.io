@@ -35,7 +35,7 @@ class GalleryItem extends React.Component {
         {!hasThumb && (
           <div>
             {/* Render heading */}
-            <h1>{meta.title}</h1>
+            <h1>{title}</h1>
             <div
               className={style.galleryItemText}
               dangerouslySetInnerHTML={{ __html: item.html }}
