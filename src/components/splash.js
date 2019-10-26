@@ -8,7 +8,7 @@ const Splash = ({ currentEvent }) => {
   const { splashIMG } = useStaticQuery(
     graphql`
       query {
-        splashIMG: file(relativePath: { eq: "splash.png" }) {
+        splashIMG: file(relativePath: { eq: "images/splash.png" }) {
           childImageSharp {
             fluid(maxHeight: 400) {
               ...GatsbyImageSharpFluid_noBase64
