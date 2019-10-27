@@ -108,13 +108,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .smaller {
-  height: 4em;
+  height: 3em;
 }
 .smaller .logo {
   margin: 0.5em 5em 0.25em 5em;
-  height: 3em;
+  height: 2em;
   max-width: calc(100% - 6em);
 }
 .smaller .bm-burger-button {
-  top: 20px;
+  top: 12px;
 }
