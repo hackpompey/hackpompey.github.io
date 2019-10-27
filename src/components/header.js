@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import style from "./header.module.css"
 import Menu from "react-burger-menu/lib/menus/push"
@@ -20,8 +20,24 @@ const Header = () => {
     `
   )
 
+  const [state, setState] = useState({ className: "" })
+
+  const getWindowHeight = () => {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop
+    const shrinkOn = 200
+    const className = distanceY > shrinkOn ? style.smaller : ""
+    setState({ className })
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", getWindowHeight)
+    return function cleanup() {
+      window.removeEventListener("scroll", getWindowHeight)
+    }
+  })
+
   return (
-    <header className={style.header}>
+    <header className={`${style.header} ${state.className}`}>
       <Link to="/">
         <img
           src={data.logo.publicURL}
