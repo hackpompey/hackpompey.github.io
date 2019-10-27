@@ -11,7 +11,7 @@ tags: ["Current Event"]
 
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
 
-## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank">**Get Your Free Tickets Now**</a>
+## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 Jump To:
 | [**Key info**](#info)
@@ -76,9 +76,9 @@ You can also find some theme related [challenges](#challanges) and [resources](#
 
 ### Where do I sign up?
 
-## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank">**Get Your Free Tickets Now**</a>
+## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
-For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank">**Join our mailing list**</a>.
+For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
 
 # Challenges <a name="challenges"></a>
 
@@ -106,26 +106,26 @@ Sustainability is a key area for improvement in a huge range of sectors includin
 
 For all your Earth, environment, and sustainability data needs we've put together this list of publicly available datasets and data providers.
 
-<a href="https://www.eea.europa.eu/data-and-maps/" target="_blank">European Environment Agency </a>
+<a href="https://www.eea.europa.eu/data-and-maps/" target="_blank" rel="noopener noreferrer">European Environment Agency </a>
 
-<a href="https://data.worldbank.org/indicator" target="_blank">World Bank Datasets </a>
+<a href="https://data.worldbank.org/indicator" target="_blank" rel="noopener noreferrer">World Bank Datasets </a>
 
-<a href="https://www.aboutamazon.com/sustainability/amazon-sustainability-data-initiative" target="_blank">Amazon Sustainability Data Initiative </a>
+<a href="https://www.aboutamazon.com/sustainability/amazon-sustainability-data-initiative" target="_blank" rel="noopener noreferrer">Amazon Sustainability Data Initiative </a>
 
-<a href="https://registry.opendata.aws/tag/sustainability" target="_blank">AWS Open Datasets </a>
+<a href="https://registry.opendata.aws/tag/sustainability" target="_blank" rel="noopener noreferrer">AWS Open Datasets </a>
 
-<a href="https://www.wri.org/resources/data_sets" target="_blank">World Resources Institute</a>
+<a href="https://www.wri.org/resources/data_sets" target="_blank" rel="noopener noreferrer">World Resources Institute</a>
 
-<a href="https://resourcewatch.org/data/explore" target="_blank">Resource Watch</a>
+<a href="https://resourcewatch.org/data/explore" target="_blank" rel="noopener noreferrer">Resource Watch</a>
 
-<a href="https://search.earthdata.nasa.gov/search" target="_blank">NASA Earth Data</a>
+<a href="https://search.earthdata.nasa.gov/search" target="_blank" rel="noopener noreferrer">NASA Earth Data</a>
 
-<a href="http://data.globalforestwatch.org/" target="_blank">Global Forest Watch</a>
+<a href="http://data.globalforestwatch.org/" target="_blank" rel="noopener noreferrer">Global Forest Watch</a>
 
-<a href="http://data.un.org/Explorer.aspx" target="_blank">UN Data</a>
+<a href="http://data.un.org/Explorer.aspx" target="_blank" rel="noopener noreferrer">UN Data</a>
 
-<a href="https://databasin.org/datasets/" target="_blank">Data Basin</a>
+<a href="https://databasin.org/datasets/" target="_blank" rel="noopener noreferrer">Data Basin</a>
 
-<a href="https://www.google.com/publicdata/directory#!q=environment" target="_blank">Google Public Data</a>
+<a href="https://www.google.com/publicdata/directory#!q=environment" target="_blank" rel="noopener noreferrer">Google Public Data</a>
 
-<a href="https://www.kaggle.com/datasets?search=climate" target="_blank">Kaggle</a>
+<a href="https://www.kaggle.com/datasets?search=climate" target="_blank" rel="noopener noreferrer">Kaggle</a>

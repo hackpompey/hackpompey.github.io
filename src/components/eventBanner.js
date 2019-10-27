@@ -60,7 +60,7 @@ const EventBanner = ({ details, bannerSVG, bannerIMG, bannerBG }) => {
             {/* Eventbrite link if set */}
             {meta.registration_link && (
               <li>
-                <a href={meta.registration_link} target="_blank">
+                <a href={meta.registration_link} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={["fas", "ticket-alt"]} /> Tickets
                 </a>
               </li>
@@ -69,7 +69,7 @@ const EventBanner = ({ details, bannerSVG, bannerIMG, bannerBG }) => {
             {/* Writeup link if set */}
             {meta.writeup_link && (
               <li>
-                <a href={meta.writeup_link} target="_blank">
+                <a href={meta.writeup_link} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={["fas", "newspaper"]} /> Write up
                 </a>
               </li>
