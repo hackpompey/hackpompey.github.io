@@ -66,9 +66,9 @@ const Splash = ({ currentEvent }) => {
         />
       </Link>
 
-      <Link to="#about" className={style.splashlink}>
+      <a href="#about" className={style.splashlink}>
         <h3>About Hack Pompey</h3>
-      </Link>
+      </a>
       {currentEvent && (
         <Link to={currentEventURL} className={style.splashlink}>
           <h3>Event Info</h3>
