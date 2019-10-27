@@ -35,7 +35,7 @@ const Splash = ({ currentEvent }) => {
           {registrationURL && (
             <h1>
               Tickets now available for{" "}
-              <a href={registrationURL}>{currentEvent.frontmatter.title}</a>
+              <a href={registrationURL} target="_blank">{currentEvent.frontmatter.title}</a>
             </h1>
           )}
           {/* Otherwise just event name */}
@@ -54,7 +54,7 @@ const Splash = ({ currentEvent }) => {
           <h1>Hack Pompey | A Portsmouth based social hack event!</h1>
           <h3>
             For announcements and future events{" "}
-            <a href="http://eepurl.com/glFL6H">Join our mailing list</a>
+            <a href="http://eepurl.com/glFL6H" target="_blank">Join our mailing list</a>
           </h3>
         </div>
       )}
@@ -75,7 +75,7 @@ const Splash = ({ currentEvent }) => {
         </Link>
       )}
       {registrationURL && (
-        <a href={registrationURL} className={style.splashlink}>
+        <a href={registrationURL} className={style.splashlink} target="_blank">
           <h3>Get Tickets</h3>
         </a>
       )}

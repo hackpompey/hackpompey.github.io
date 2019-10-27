@@ -20,22 +20,22 @@ const Footer = () => {
 
       <ul className={style.social}>
         <li>
-          <a href="http://www.twitter.com/hackpompey" title="Twitter">
+          <a href="http://www.twitter.com/hackpompey" title="Twitter" target="_blank">
             <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"white"}} size="2x"/>
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/groups/hackpompey/" title="Facebook">
+          <a href="https://www.facebook.com/groups/hackpompey/" title="Facebook" target="_blank">
             <FontAwesomeIcon icon={["fab", "facebook-square"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
         <li>
-          <a href="http://www.instagram.com/hackpompey" title="Instagram">
+          <a href="http://www.instagram.com/hackpompey" title="Instagram" target="_blank">
             <FontAwesomeIcon icon={["fab", "instagram"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
         <li>
-          <a href="http://eepurl.com/glFL6H" title="Mailing List">
+          <a href="http://eepurl.com/glFL6H" title="Mailing List" target="_blank">
             <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"white"}} size="2x" />
           </a>
         </li>

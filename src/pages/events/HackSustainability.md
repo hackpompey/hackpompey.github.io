@@ -11,7 +11,7 @@ tags: ["Current Event"]
 
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
 
-## [**Get Your Free Tickets Now**](https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72)
+## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank">**Get Your Free Tickets Now**</a>
 
 Jump To:
 | [**Key info**](#info)
@@ -76,9 +76,9 @@ You can also find some theme related [challenges](#challanges) and [resources](#
 
 ### Where do I sign up?
 
-[**_Get Your Free Tickets Now_**](https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72)
+## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank">**Get Your Free Tickets Now**</a>
 
-For announcements and future events [**Join our mailing list**](http://eepurl.com/glFL6H)
+For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank">**Join our mailing list**</a>.
 
 # Challenges <a name="challenges"></a>
 
@@ -106,38 +106,26 @@ Sustainability is a key area for improvement in a huge range of sectors includin
 
 For all your Earth, environment, and sustainability data needs we've put together this list of publicly available datasets and data providers.
 
-European Environment Agency  
-https://www.eea.europa.eu/data-and-maps/
+<a href="https://www.eea.europa.eu/data-and-maps/" target="_blank">European Environment Agency </a>
 
-World Bank Datasets  
-https://data.worldbank.org/indicator
+<a href="https://data.worldbank.org/indicator" target="_blank">World Bank Datasets </a>
 
-Amazon Sustainability Data Initiative  
-https://www.aboutamazon.com/sustainability/amazon-sustainability-data-initiative
+<a href="https://www.aboutamazon.com/sustainability/amazon-sustainability-data-initiative" target="_blank">Amazon Sustainability Data Initiative </a>
 
-AWS Open Datasets  
-https://registry.opendata.aws/tag/sustainability
+<a href="https://registry.opendata.aws/tag/sustainability" target="_blank">AWS Open Datasets </a>
 
-World Resources Institute  
-https://www.wri.org/resources/data_sets
+<a href="https://www.wri.org/resources/data_sets" target="_blank">World Resources Institute</a>
 
-Resource Watch  
-https://resourcewatch.org/data/explore
+<a href="https://resourcewatch.org/data/explore" target="_blank">Resource Watch</a>
 
-NASA Earth Data  
-https://search.earthdata.nasa.gov/search
+<a href="https://search.earthdata.nasa.gov/search" target="_blank">NASA Earth Data</a>
 
-Global Forest Watch  
-http://data.globalforestwatch.org/
+<a href="http://data.globalforestwatch.org/" target="_blank">Global Forest Watch</a>
 
-UN Data  
-http://data.un.org/Explorer.aspx
+<a href="http://data.un.org/Explorer.aspx" target="_blank">UN Data</a>
 
-Data Basin  
-https://databasin.org/datasets/
+<a href="https://databasin.org/datasets/" target="_blank">Data Basin</a>
 
-Google Public Data  
-https://www.google.com/publicdata/directory#!q=environment
+<a href="https://www.google.com/publicdata/directory#!q=environment" target="_blank">Google Public Data</a>
 
-Kaggle  
-https://www.kaggle.com/datasets?search=climate
+<a href="https://www.kaggle.com/datasets?search=climate" target="_blank">Kaggle</a>
