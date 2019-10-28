@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import layoutStyle from "../components/layout.module.css"
@@ -49,6 +49,19 @@ const IndexPage = ({ data }) => {
             <p>
               If you don't yet have a team, don't worry! There will be plenty of
               opportunity to form a team at the event.
+            </p>
+          </section>
+
+          <section>
+            <h2>Code of Conduct</h2>
+            <p>
+              Our hackathon is dedicated to providing a safe and comfortable
+              environment and harassment-free experience for everyone regardless
+              of their background.
+            </p>
+            <p>
+              All attendees are bound by our{" "}
+              <Link to="/conduct">Code of Conduct</Link>.
             </p>
           </section>
 
