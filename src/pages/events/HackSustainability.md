@@ -74,11 +74,55 @@ That's not a question, but also not a problem! Many of our attendees come up wit
 While we encourage you to pick a project related to our sustainability theme, you are free to work on whatever you like.
 You can also find some theme related [challenges](#challanges) and [resources](#resources) to get you started below.
 
-### Where do I sign up?
+### How do I get there?
 
-## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
+The event is based in the University of Portsmouth's Future Technology Centre. 
+
+**Venue Address:**  
+Portland Building, 
+Portland St, 
+Portsmouth, 
+PO1 3AH
+
+**Train:**  
+Portsmouth and Southsea Station: 11 mins walk  
+Portsmouth Harbour Station: 9 mins walk
+
+**Walk:**  
+From the City Centre: 14 mins via Commercial Road
+
+**Taxi Services:**  
+Aqua Cars: 023 9281 8123  
+Uber: available on iOS and Android
+
+**Parking:**  
+£2 at Mildam Car Park (weekends only)
+
+### Where can I stay overnight?
+
+The venue closes at 6pm on both days. There are several hotels in Portsmouth if you need somewhere to stay overnight.
+The following suggestions are given for convenience only and are not affiliated with Hack Pompey.
+
+**Premier Inn**  
+Premier Inn Portsmouth City Centre,  
+1 Isambard Brunel Road, 
+Portsmouth, 
+PO1 2TR  
+Phone: 0871 527 9522
+
+**Ibis**  
+Hotel Ibis Portsmouth Centre,  
+Winston Churchill Avenue, 
+Portsmouth, 
+PO1 2LX  
+Phone: 023 9264 0000
+
+## Where do I sign up?
+
+### <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
+
 
 # Challenges <a name="challenges"></a>
 
