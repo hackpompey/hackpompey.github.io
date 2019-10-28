@@ -43,20 +43,19 @@ We have a great team of volunteers on hand to help bridge any gaps of knowledge 
 
 Our reception area where you can pick up your wristband will be open 9:30 - 18:00 both days.
 
-#### _Times Subject To Change_
-
-| **Saturday**   |                       |
-| -------------- | --------------------- |
-| 10:00          | Arrival & Breakfast   |
-| 10:30          | Opening Talk          |
-| 13:00          | Lunch                 |
-| 18:00          | End of day One        |
-| 18:30          | Social (Location TBA) |
-| <br>**Sunday** |                       |
-| 10:00          | Arrival & Breakfast   |
-| 13:00          | Lunch                 |
-| 16:00          | Show & Tell           |
-| 18:00          | End of event          |
+| **Saturday**   |                             |
+| -------------- | --------------------------- |
+| 10:00          | Arrival & Breakfast         |
+| 10:30          | Opening Talk                |
+| 10:45          | Idea & Team Forming Session |
+| 13:00          | Lunch                       |
+| 18:00          | End of Day One              |
+| 18:15          | Social (Location TBA)       |
+| <br>**Sunday** |                             |
+| 10:00          | Arrival & Breakfast         |
+| 13:00          | Lunch                       |
+| 16:00          | Show & Tell                 |
+| 18:00          | End of event                |
 
 # Frequently asked questions <a name="faq"></a>
 
@@ -76,12 +75,12 @@ You can also find some theme related [challenges](#challanges) and [resources](#
 
 ### How do I get there?
 
-The event is based in the University of Portsmouth's Future Technology Centre. 
+The event is based in the University of Portsmouth's Future Technology Centre.
 
 **Venue Address:**  
-Portland Building, 
-Portland St, 
-Portsmouth, 
+Portland Building,
+Portland St,
+Portsmouth,
 PO1 3AH
 
 **Train:**  
@@ -105,15 +104,15 @@ The following suggestions are given for convenience only and are not affiliated 
 
 **Premier Inn**  
 Premier Inn Portsmouth City Centre,  
-1 Isambard Brunel Road, 
-Portsmouth, 
+1 Isambard Brunel Road,
+Portsmouth,
 PO1 2TR  
 Phone: 0871 527 9522
 
 **Ibis**  
 Hotel Ibis Portsmouth Centre,  
-Winston Churchill Avenue, 
-Portsmouth, 
+Winston Churchill Avenue,
+Portsmouth,
 PO1 2LX  
 Phone: 023 9264 0000
 
@@ -122,7 +121,6 @@ Phone: 023 9264 0000
 ### <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
-
 
 # Challenges <a name="challenges"></a>
 
