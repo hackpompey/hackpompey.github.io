@@ -35,7 +35,7 @@ No matter the project size and scale, we can all do our little bit to make this 
 
 # Key info <a name="info"></a>
 
-The event will take place over the weekend with each day beginning at 10am and finishing at 6pm. There will be free breakfast and lunch served both days, and we’re very excited to announce that the team from Harbour Coffee will return (this time with coffee truck in tow) to provide the finest coffee for our makers. There will also be free hot and cold beverages available all day to keep everyone fuelled.
+The event will take place over the weekend with each day beginning at 10am and finishing at 6pm. There will be free breakfast and lunch served both days. There will also be free hot and cold beverages available all day to keep everyone fuelled.
 
 We have a great team of volunteers on hand to help bridge any gaps of knowledge and be generally helpful throughout. If you don’t know something, we probably know someone who does!
 
