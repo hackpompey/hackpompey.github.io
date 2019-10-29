@@ -41,7 +41,7 @@ We have a great team of volunteers on hand to help bridge any gaps of knowledge 
 
 # Schedule <a name="schedule"></a>
 
-Our reception area where you can pick up your wristband will be open 9:30 - 18:00 both days.
+Our reception area where you can pick up your wristband will be open 10:00 - 18:00 both days.
 
 | **Saturday**   |                             |
 | -------------- | --------------------------- |
