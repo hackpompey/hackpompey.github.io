@@ -1,30 +1,46 @@
 import React from "react"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
+import style from "./layout.module.css"
 import Header from "./header"
 import Footer from "./footer"
+
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+
+// Make FontAwesome icons available without specific imports
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+library.add(fab, fas)
 
 /**
  * The standard structure used in all pages
  */
 const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      background: file(relativePath: { eq: "images/background.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `)
   return (
-    <div>
+    <div className={style.layout} id="outer-container">
       <Header />
-
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 50em;
-          padding: ${rhythm(2)};
-          padding-top: ${rhythm(1.5)};
-        `}
+      <BackgroundImage
+        Tag="section"
+        className={style.background}
+        fluid={data.background.childImageSharp.fluid}
       >
-        {/* Display inner HTML elements */}
-        {children}
-      </div>
-
-      <Footer />
+        <div className={style.content} id="page-wrap">
+          {/* Display inner HTML elements */}
+          {children}
+          <Footer />
+        </div>
+      </BackgroundImage>
     </div>
   )
 }

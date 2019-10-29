@@ -1,22 +1,120 @@
-header {
-  background: rebeccapurple;
-  margin-bottom: 1.45rem;
-  padding: 1.45rem 1.0875rem;
+.header {
+  background: linear-gradient(270deg, hsl(343, 76%, 56%), hsl(343, 76%, 46%));
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  box-shadow: inset 0 -3px 3px -3px #000000;
+  height: 6em;
+  transition: 0.4s;
 }
 
-header h1 {
-  margin: 0;
-  font-size: "1em";
-  display: inline-block;
-}
-
-header a {
+.header nav a {
   color: white;
   text-decoration: none;
-  margin: 1em;
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
 }
 
-header nav {
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header nav {
+  overflow: hidden;
+  text-align: left;
+}
+
+.logo {
+  margin: 1em 5em 0.5em 5em;
+  height: 4em;
+  max-width: calc(100% - 6em);
+  transition: 0.4s;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+  transition: 0.4s;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #a62b4e;
+  padding: 2.5em 0 0 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em 0;
+}
+
+/* Individual item */
+.bm-item {
   display: inline-block;
-  margin-left: 40px;
+  padding: 1em 1em 1em 2.5em;
+  margin: 0;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.smaller {
+  height: 3.2em;
+}
+.smaller .logo {
+  margin: 0.55em 5em 0.25em 5em;
+  height: 2em;
+  max-width: calc(100% - 6em);
+}
+.smaller .bm-burger-button {
+  top: 13px;
 }

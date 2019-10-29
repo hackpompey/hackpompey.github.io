@@ -1,15 +1,16 @@
 import React from "react"
 import style from "./footer.module.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 /**
  * The site footer with navigation links
  */
 const Footer = () => {
   return (
-    <footer>
+    <footer className={style.footer}>
       <small>
         Hack Pompey LTD is a non-profit organisation funded by partners and
-        sponsors. If you would like to support us, please contact us at{" "}
+        sponsors.<br/>If you would like to support us, please contact us at{" "}
         <a href="mailto:partners@hackpompey.co.uk">partners@hackpompey.co.uk</a>
       </small>
 
@@ -17,28 +18,25 @@ const Footer = () => {
         <small>UK Company Number 11486057 (England & Wales)</small>
       </aside>
 
-      <ul class="social-links">
-        <li class="social-link">
-          <a href="http://www.twitter.com/hackpompey">
-            <i class="fa fa-twitter"></i>
-            <span class="social-link__name">Twitter</span>
+      <ul className={style.social}>
+        <li>
+          <a href="http://www.twitter.com/hackpompey" title="Twitter" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"white"}} size="2x"/>
           </a>
         </li>
-        <li class="social-link">
-          <a href="https://www.facebook.com/groups/hackpompey/">
-            <i class="social-link__icon fa fa-facebook-official"></i>
-            <span class="social-link__name">Facebook</span>
+        <li>
+          <a href="https://www.facebook.com/groups/hackpompey/" title="Facebook" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
-        <li class="social-link">
-          <a href="http://www.instagram.com/hackpompey">
-            <i class="social-link__icon fa fa-instagram"></i>
-            <span class="social-link__name">Instagram</span>
+        <li>
+          <a href="http://www.instagram.com/hackpompey" title="Instagram" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "instagram"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
-        <li class="social-link">
-          <a href="http://eepurl.com/glFL6H">
-            <span class="social-link__name">Mailing List</span>
+        <li>
+          <a href="http://eepurl.com/glFL6H" title="Mailing List" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
       </ul>

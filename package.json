@@ -1,36 +1,40 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hackpompey.co.uk",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The official website for Hack Pompey",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David Ralph <David.M.L.Ralph@gmail.com>",
   "dependencies": {
-    "@emotion/core": "^10.0.14",
-    "gatsby": "^2.13.6",
-    "gatsby-image": "^2.2.4",
-    "gatsby-plugin-emotion": "^4.1.0",
-    "gatsby-plugin-manifest": "^2.2.1",
-    "gatsby-plugin-offline": "^2.2.1",
-    "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-sharp": "^2.2.3",
-    "gatsby-plugin-typography": "^2.3.0",
-    "gatsby-source-filesystem": "^2.1.2",
-    "gatsby-transformer-remark": "^2.6.1",
-    "gatsby-transformer-sharp": "^2.2.1",
+    "@emotion/core": "^10.0.22",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "gatsby": "^2.17.4",
+    "gatsby-background-image": "^0.8.15",
+    "gatsby-image": "^2.2.29",
+    "gatsby-plugin-emotion": "^4.1.12",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-typography": "^2.3.14",
+    "gatsby-remark-images": "^3.1.28",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-sharp": "^2.3.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.11.0",
+    "react-burger-menu": "^2.6.11",
+    "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -42,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/gatsbyjs/hackpompey.co.uk"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/gatsbyjs/hackpompey.co.uk/issues"
   }
 }

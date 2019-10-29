@@ -1,0 +1,31 @@
+.galleryItem {
+  background: #fafafa;
+  color: #121212;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 3px;
+  min-height: 20em;
+}
+
+.galleryItem > div > h1 {
+  padding: 0.5em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.galleryItemText {
+  padding: 1em;
+}
+
+.galleryItem:hover {
+  /* -webkit-filter: blur(1px);
+  filter: blur(1px); */
+  transform: scale(1.02);
+}
+
+@media only screen and (max-width: 50em) {
+  .galleryItem {
+    margin: 1em 0;
+  }
+}

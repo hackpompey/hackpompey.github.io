@@ -1,22 +1,38 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Event from "../components/event"
+import EventBanner from "../components/eventBanner"
 import SEO from "../components/seo"
 
 /**
  * Page listing past events
  */
-const EventsPage = props => {
-  const events = props.data.allMarkdownRemark.edges.map(i => i.node)
+const EventsPage = ({ data }) => {
+  const events = data.events.edges.map(i => i.node)
+  const bannerSVGs = data.bannerSVGs.edges.map(i => i.node)
+  const bannerIMGs = data.bannerIMGs.edges.map(i => i.node)
 
   return (
     <Layout>
       <SEO title="Events" />
 
       {/* List events */}
-      {events.map((event, index) => (
-        <Event key={index} event={event} />
+      {events.map(details => (
+        <EventBanner
+          key={details.fileAbsolutePath}
+          details={details}
+          bannerSVG={bannerSVGs.find(banner =>
+            banner.fields.slug.endsWith(details.fields.slug)
+          )}
+          bannerIMG={bannerIMGs.find(banner =>
+            banner.fields.slug.endsWith(details.fields.slug)
+          )}
+          bannerBG={bannerIMGs.find(banner =>
+            banner.fields.slug.endsWith(
+              details.fields.slug.slice(0, -1) + "BG/"
+            )
+          )}
+        />
       ))}
     </Layout>
   )
@@ -24,18 +40,52 @@ const EventsPage = props => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//events//" } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+    bannerSVGs: allFile(
+      filter: {
+        fields: { slug: { regex: "//banners/events//" } }
+        ext: { eq: ".svg" }
+      }
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
+          publicURL
+        }
+      }
+    }
+    bannerIMGs: allImageSharp(
+      filter: { fields: { slug: { regex: "//banners/events//" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          fluid(maxHeight: 400) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+    events: allMarkdownRemark(
+      filter: { frontmatter: { tags: { in: "Past Event" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
           fileAbsolutePath
           frontmatter {
             title
+            banner_background
+            banner_foreground_color
             dateText
             location
-            eventbrite_link
+            registration_link
             writeup_link
           }
         }

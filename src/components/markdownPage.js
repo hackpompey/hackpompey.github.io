@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 import SEO from "./seo"
+import style from "./markdown.module.css"
+import layoutStyle from "./layout.module.css"
 
 /**
  * Used by gatsby-node to generate pages from any md files in src/pages/
@@ -13,7 +15,12 @@ const MarkdownPage = ({ data }) => {
       <SEO title={data.markdownRemark.frontmatter.title} />
 
       {/* Display Markdown content */}
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <main className={layoutStyle.text}>
+        <div
+          className={style.md}
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
+      </main>
     </Layout>
   )
 }
