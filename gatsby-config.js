@@ -3,6 +3,7 @@ module.exports = {
     title: `Hack Pompey`,
     description: `Hack Pompey | A Portsmouth based social hack event!`,
     author: `@calmarms`,
+    siteUrl: `https://hackpompey.co.uk/`,
   },
   plugins: [
     `gatsby-transformer-remark`,

@@ -9,8 +9,8 @@ import { useStaticQuery, graphql } from "gatsby"
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-const SEO = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
+const SEO = ({ description, lang, meta, title, image }) => {
+  const { site, splashIMG } = useStaticQuery(
     graphql`
       query {
         site {
@@ -18,6 +18,14 @@ const SEO = ({ description, lang, meta, title }) => {
             title
             description
             author
+            siteUrl
+          }
+        }
+        splashIMG: file(relativePath: { eq: "images/splash.png" }) {
+          childImageSharp {
+            fixed {
+              src
+            }
           }
         }
       }
@@ -25,6 +33,9 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
+  const ogImageUrl =
+    site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.fixed.src)
 
   return (
     <Helmet
@@ -65,6 +76,18 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `twitter:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `image`,
+          content: ogImageUrl,
         },
       ].concat(meta)}
     />
