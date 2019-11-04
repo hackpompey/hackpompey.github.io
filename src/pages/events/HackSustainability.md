@@ -6,7 +6,7 @@ dateText: 2nd and 3rd of November (10:00 - 18:00)
 date: "2019-11-02T10:00:00"
 location: Future Technology Centre
 registration_link: https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72
-tags: ["Current Event"]
+tags: ["Past Event"]
 ---
 
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
