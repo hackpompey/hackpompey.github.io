@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
           <section>
             <h2>What is Hack Pompey?</h2>
             <p>
-              Hack Pompey is the biggest hackathon on the South coast. We'll see
+              Hack Pompey is a social hack weekend on the South coast. We see
               people from all backgrounds and disciplines join together to learn
               something new, work together, and build something{" "}
               <strong>awesome!</strong>
