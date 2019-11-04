@@ -62,7 +62,6 @@ const Header = () => {
         overlayClassName={style["bmOverlay"]}
       >
         <Link to="/">About</Link>
-        <Link to="/events/HackSustainability">Next Event</Link>
         <Link to="/events">Past Events</Link>
         <Link to="/media">Media</Link>
         <Link to="/team">Team</Link>
