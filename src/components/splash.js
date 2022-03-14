@@ -51,11 +51,11 @@ const Splash = ({ currentEvent }) => {
       {/* If there's no upcoming event, use generic tagline */}
       {!currentEvent && (
         <div>
-          <h1>Hack Pompey | A Portsmouth based social hack event!</h1>
-          <h3>
+          <h1>Hack Pompey | Meet New People, Make Something Awesome!</h1>
+          {/* <h3>
             For announcements and future events{" "}
             <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">Join our mailing list</a>
-          </h3>
+          </h3> */}
         </div>
       )}
 
