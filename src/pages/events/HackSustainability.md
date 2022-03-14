@@ -11,12 +11,15 @@ tags: ["Past Event"]
 
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
 
-## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
+<!-- ## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> -->
 
+<!-- 
 Jump To:
 | [**Key info**](#info)
 | [**Schedule**](#schedule)
-| [**FAQ**](#faq)
+| [**FAQ**](#faq) 
+-->
+Jump To:
 | [**Challenges**](#challenges)
 | [**Resources**](#resources)
 |
@@ -32,7 +35,7 @@ The number of areas this year’s projects might encompass is staggering; improv
 Over the weekend of the 2nd and 3rd November we will open the doors to the University’s Future Tech Centre for people from all backgrounds and disciplines to join together, learn something new, collaborate, and build something truly remarkable at Hack Pompey. Best of all, as always, it’s completely free!
 
 No matter the project size and scale, we can all do our little bit to make this world that little bit better for generations to come and we can’t wait to see you there!
-
+<!-- 
 # Key info <a name="info"></a>
 
 The event will take place over the weekend with each day beginning at 10am and finishing at 6pm. There will be free breakfast and lunch served both days. There will also be free hot and cold beverages available all day to keep everyone fuelled.
@@ -120,8 +123,8 @@ Phone: 023 9264 0000
 
 ### <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
-For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
-
+For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>. 
+-->
 # Challenges <a name="challenges"></a>
 
 We love to see all the creative, and often unexpected, project ideas our attendees come up with;
