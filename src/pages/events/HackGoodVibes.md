@@ -5,13 +5,13 @@ banner_foreground_color: "black"
 dateText: 2nd of April (09:00 - 17:00)
 date: "2022-04-02T09:00:00"
 location: Future Technology Centre
-# registration_link: 
+registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
 tags: ["Past Event", "Current Event"]
 ---
 
-Hack Pompey is back April 2nd at the Future Tech Centre in Portsmouth and this year it's all about Good Vibes. 
+Hack Pompey is back April 2nd at the Future Tech Centre in Portsmouth and this year it's all about Good Vibes.
 
-<!-- ## <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> -->
+## <a href="https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 Jump To:
 | [**Key info**](#info)
@@ -33,15 +33,15 @@ We have a great team of volunteers on hand to help bridge any gaps of knowledge 
 
 Our reception area where you can pick up your wristband will be open 9:00 - 17:00.
 
-|                |                             |
-| -------------- | --------------------------- |
-| 08:30          | Arrival & Breakfast         |
-| 09:00          | Opening Talk                |
-| 09:15          | Idea & Team Forming Session |
-| 13:00          | Lunch                       |
-| 16:00          | Show & Tell                 |
-| 17:30          | End of event                |
-| 18:15          | Social (Location TBA)       |
+|       |                             |
+| ----- | --------------------------- |
+| 08:30 | Arrival & Breakfast         |
+| 09:00 | Opening Talk                |
+| 09:15 | Idea & Team Forming Session |
+| 13:00 | Lunch                       |
+| 16:00 | Show & Tell                 |
+| 17:30 | End of event                |
+| 18:15 | Social (Location TBA)       |
 
 # Frequently asked questions <a name="faq"></a>
 
@@ -104,9 +104,8 @@ Phone: 023 9264 0000
 
 ## Where do I sign up?
 
-Check back Soon!
-<!-- 
-### <a href="https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> 
+### <a href="https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
+<!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
 -->
