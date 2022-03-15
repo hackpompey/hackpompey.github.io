@@ -29,7 +29,7 @@
 }
 
 .hack a {
-  color: rgba(0, 0, 0, 0.5);
+  color: inherit;
 }
 
 .hack_info {
