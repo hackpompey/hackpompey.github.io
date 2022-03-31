@@ -16,6 +16,7 @@ Hack Pompey is back April 2nd at the Future Tech Centre in Portsmouth and this y
 Jump To:
 | [**Key info**](#info)
 | [**Schedule**](#schedule)
+| [**Jetsam Challenge**](#jetsam)
 | [**FAQ**](#faq)
 |
 
@@ -42,6 +43,14 @@ Our reception area where you can pick up your wristband will be open 8:30 - 17:3
 | 16:00 | Show & Tell                 |
 | 17:30 | End of event                |
 | 18:15 | Social (Location TBA)       |
+
+# Jetsam Challenge <a name="jetsam"></a>
+
+Stuck for ideas? Here's a challenge from our sponsor Jetsam, who are interested in environmental citizen science and tracking waste around the city.
+
+Their challenge is to make something cool using the Jetsam API. Check out the challenge on their website for everything you need to get started (chicken not included)
+
+## <a href="https://jetsam.tech/challenges/hack-pompey-10" target="_blank" rel="noopener noreferrer">**Jetsam Challenge**</a>
 
 # Frequently asked questions <a name="faq"></a>
 
