@@ -6,7 +6,7 @@ dateText: 2nd of April (08:30 - 17:30)
 date: "2022-04-02T08:30:00"
 location: Future Technology Centre
 registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
-tags: ["Past Event", "Current Event"]
+tags: ["Past Event"]
 ---
 
 Hack Pompey is back April 2nd at the Future Tech Centre in Portsmouth and this year it's all about Good Vibes.
