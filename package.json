@@ -21,7 +21,7 @@
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-typography": "^2.12.0",
     "gatsby-remark-images": "^3.11.1",
-    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-source-filesystem": "2.1.33",
     "gatsby-transformer-remark": "^2.16.1",
     "gatsby-transformer-sharp": "^2.12.1",
     "prop-types": "^15.8.1",
@@ -33,7 +33,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "license": "MIT",
   "scripts": {
