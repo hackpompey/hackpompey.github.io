@@ -5,12 +5,12 @@
   "version": "0.1.0",
   "author": "David Ralph <David.M.L.Ralph@gmail.com>",
   "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-regular-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
+    "@emotion/core": "^10.3.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.19",
     "gatsby": "^2.32.13",
     "gatsby-background-image": "^0.8.19",
     "gatsby-image": "^2.11.0",
@@ -24,13 +24,13 @@
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-remark": "^2.16.1",
     "gatsby-transformer-sharp": "^2.12.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-burger-menu": "^2.6.11",
-    "react-dom": "^16.11.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-burger-menu": "^2.9.2",
+    "react-dom": "^16.14.0",
     "react-helmet-async": "^1.3.0",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19"
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
