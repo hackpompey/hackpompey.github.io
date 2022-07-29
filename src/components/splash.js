@@ -1,22 +1,18 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import style from "./splash.module.css"
+import { GatsbyImage } from "gatsby-plugin-image"
+import * as style from "./splash.module.css"
 import Countdown from "./countdown"
 
 const Splash = ({ currentEvent }) => {
-  const { splashIMG } = useStaticQuery(
-    graphql`
-      query {
-        splashIMG: file(relativePath: { eq: "images/splash.png" }) {
-          childImageSharp {
-            fluid(maxHeight: 400) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
-          }
-        }
-      }
-    `
+  const data = useStaticQuery(graphql`{
+  splashIMG: file(relativePath: {eq: "images/splash.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 400, placeholder: NONE, layout: FULL_WIDTH)
+    }
+  }
+}
+`
   )
 
   let currentEventURL
@@ -60,8 +56,8 @@ const Splash = ({ currentEvent }) => {
       )}
 
       <Link to={currentEventURL || "#about"}>
-        <Img
-          fluid={splashIMG.childImageSharp.fluid}
+        <GatsbyImage 
+          image={data.splashIMG.childImageSharp.gatsbyImageData}
           className={style.splashimg}
         />
       </Link>
@@ -80,7 +76,7 @@ const Splash = ({ currentEvent }) => {
         </a>
       )}
     </div>
-  )
+  );
 }
 
 export default Splash

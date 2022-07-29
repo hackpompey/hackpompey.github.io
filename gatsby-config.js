@@ -12,12 +12,12 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {},
-          },
-        ],
+        // plugins: [
+        //   {
+        //     resolve: `gatsby-remark-images`,
+        //     options: {},
+        //   },
+        // ],
       },
     },
     `gatsby-plugin-emotion`,
@@ -35,6 +35,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import layoutStyle from "../components/layout.module.css"
+import * as layoutStyle from "../components/layout.module.css"
 import Splash from "../components/splash"
 
 /**

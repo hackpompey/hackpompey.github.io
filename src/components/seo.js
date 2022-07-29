@@ -11,31 +11,28 @@ import { useStaticQuery, graphql } from "gatsby"
  */
 const SEO = ({ description, lang, meta, title, image }) => {
   const { site, splashIMG } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-        splashIMG: file(relativePath: { eq: "images/splash.png" }) {
-          childImageSharp {
-            fixed {
-              src
-            }
-          }
-        }
-      }
-    `
+    graphql`{
+  site {
+    siteMetadata {
+      title
+      description
+      author
+      siteUrl
+    }
+  }
+  splashIMG: file(relativePath: {eq: "images/splash.png"}) {
+    childImageSharp {
+      gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+    }
+  }
+}
+`
   )
 
   const metaDescription = description || site.siteMetadata.description
 
   const ogImageUrl =
-    site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.fixed.src)
+    site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.gatsbyImageData.src)
 
   return (
     <HelmetProvider>

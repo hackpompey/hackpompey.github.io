@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./gallery.module.css"
+import * as style from "./gallery.module.css"
 import GalleryItem from "./galleryItem.js"
 import GalleryItemSelected from "./galleryItemSelected"
 

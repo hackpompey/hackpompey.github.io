@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./layout.module.css"
+import * as style from "./layout.module.css"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -16,24 +16,21 @@ library.add(fab, fas)
  * The standard structure used in all pages
  */
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      background: file(relativePath: { eq: "images/background.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  background: file(relativePath: {eq: "images/background.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
   return (
     <div className={style.layout} id="outer-container">
       <Header />
       <BackgroundImage
         Tag="section"
         className={style.background}
-        fluid={data.background.childImageSharp.fluid}
+        fluid={data.background.childImageSharp.gatsbyImageData}
       >
         <div className={style.content} id="page-wrap">
           {/* Display inner HTML elements */}
@@ -42,7 +39,7 @@ const Layout = ({ children }) => {
         </div>
       </BackgroundImage>
     </div>
-  )
+  );
 }
 
 export default Layout
