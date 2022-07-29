@@ -12,12 +12,6 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
-        // plugins: [
-        //   {
-        //     resolve: `gatsby-remark-images`,
-        //     options: {},
-        //   },
-        // ],
       },
     },
     `gatsby-plugin-emotion`,
@@ -54,4 +48,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
-}
+};
