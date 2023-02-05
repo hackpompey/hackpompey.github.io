@@ -1,8 +1,9 @@
 module.exports = {
+  pathPrefix: "/hackpompey.co.uk",
   siteMetadata: {
     title: `Hack Pompey`,
     description: `Hack Pompey | A Portsmouth based social hack event!`,
-    author: `@calmarms`,
+    author: `@hackpompey`,
     siteUrl: `https://hackpompey.co.uk/`,
   },
   plugins: [
