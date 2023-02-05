@@ -16,21 +16,24 @@ library.add(fab, fas)
  * The standard structure used in all pages
  */
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`{
-  background: file(relativePath: {eq: "images/background.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
+  const data = useStaticQuery(graphql`
+    {
+      background: file(relativePath: { eq: "images/background.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
     }
-  }
-}
-`)
+  `)
   return (
     <div className={style.layout} id="outer-container">
       <Header />
       <BackgroundImage
         Tag="section"
         className={style.background}
-        fluid={data.background.childImageSharp.gatsbyImageData}
+        fluid={data.background.childImageSharp.fluid}
       >
         <div className={style.content} id="page-wrap">
           {/* Display inner HTML elements */}
@@ -39,7 +42,7 @@ const Layout = ({ children }) => {
         </div>
       </BackgroundImage>
     </div>
-  );
+  )
 }
 
 export default Layout
