@@ -1,5 +1,5 @@
 {
-  "name": "hackpompey.co.uk",
+  "name": "hackpompey.github.io",
   "private": true,
   "description": "The official website for Hack Pompey",
   "version": "0.1.0",
@@ -44,13 +44,13 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -f -d public"
+    "deploy": "gatsby build && gh-pages -f -d public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/hackpompey.co.uk"
+    "url": "https://github.com/hackpompey/hackpompey.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/hackpompey.co.uk/issues"
+    "url": "https://github.com/hackpompey/hackpompey.github.io/issues"
   }
 }

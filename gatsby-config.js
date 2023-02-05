@@ -1,7 +1,4 @@
 module.exports = {
-  pathPrefix:
-    // Needed when hosting on a subdomain
-    process.env.gatsby_executing_command === "build" ? "/hackpompey.co.uk" : "",
   siteMetadata: {
     title: `Hack Pompey`,
     description: `Hack Pompey | A Portsmouth based social hack event!`,
