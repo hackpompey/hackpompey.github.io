@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
 
       <main className={layoutStyle.text}>
         <article>
-          <span name="about" className={layoutStyle.anchor} />
+          <span id="about" className={layoutStyle.anchor} />
           <section>
             <h2>What is Hack Pompey?</h2>
             <p>
