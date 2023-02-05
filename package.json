@@ -33,6 +33,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "prettier": "^2.7.1"
   },
   "license": "MIT",
@@ -42,7 +43,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -f -d public"
   },
   "repository": {
     "type": "git",
