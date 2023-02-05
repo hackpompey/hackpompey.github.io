@@ -70,6 +70,11 @@ const Splash = ({ currentEvent }) => {
           <h3>Event Info</h3>
         </Link>
       )}
+      {!currentEvent && (
+        <Link to="/events" className={style.splashlink}>
+          <h3>Past Events</h3>
+        </Link>
+      )}
       {registrationURL && (
         <a href={registrationURL} className={style.splashlink} target="_blank" rel="noopener noreferrer">
           <h3>Get Tickets</h3>
