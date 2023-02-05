@@ -34,7 +34,7 @@ const Header = () => {
     return function cleanup() {
       window.removeEventListener("scroll", getWindowHeight)
     }
-  })
+  },[])
 
   return (
     <header className={`${style.header} ${state.className}`}>
