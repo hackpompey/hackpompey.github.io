@@ -1,6 +1,6 @@
 .splash {
   text-align: center;
-  height: 100vh;
+  height: calc(100vh - 10rem);
 }
 .splash h3 {
   margin: 1em 0;
