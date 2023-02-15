@@ -18,7 +18,7 @@ Jump To:
 | [**FAQ**](#faq)
 |
 
-# Hack Pompey 2022 - Good Vibes
+# Hack The Unexpected
 
 Unleash Your Creativity and Embrace the Unexpected at this year's Hack Pompey!
 
