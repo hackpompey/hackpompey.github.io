@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import { useStaticQuery, graphql } from "gatsby"
 
 /**
@@ -11,86 +11,85 @@ import { useStaticQuery, graphql } from "gatsby"
  */
 const SEO = ({ description, lang, meta, title, image }) => {
   const { site, splashIMG } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-        splashIMG: file(relativePath: { eq: "images/splash.png" }) {
-          childImageSharp {
-            fixed {
-              src
-            }
-          }
-        }
-      }
-    `
+    graphql`{
+  site {
+    siteMetadata {
+      title
+      description
+      author
+      siteUrl
+    }
+  }
+  splashIMG: file(relativePath: {eq: "images/splash.png"}) {
+    childImageSharp {
+      gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+    }
+  }
+}
+`
   )
 
   const metaDescription = description || site.siteMetadata.description
 
   const ogImageUrl =
-    site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.fixed.src)
+    site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.gatsbyImageData.src)
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:image`,
-          content: ogImageUrl,
-        },
-        {
-          property: `twitter:image`,
-          content: ogImageUrl,
-        },
-        {
-          property: `image`,
-          content: ogImageUrl,
-        },
-      ].concat(meta)}
-    />
+    <HelmetProvider>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={title}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+        meta={[
+          {
+            name: `description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:title`,
+            content: title,
+          },
+          {
+            property: `og:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata.author,
+          },
+          {
+            name: `twitter:title`,
+            content: title,
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:image`,
+            content: ogImageUrl,
+          },
+          {
+            property: `twitter:image`,
+            content: ogImageUrl,
+          },
+          {
+            property: `image`,
+            content: ogImageUrl,
+          },
+        ].concat(meta)}
+      />
+    </HelmetProvider>
   )
 }
 

@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import style from "./header.module.css"
+import * as style from "./header.module.css"
 import Menu from "react-burger-menu/lib/menus/push"
 
 /**
@@ -34,7 +34,7 @@ const Header = () => {
     return function cleanup() {
       window.removeEventListener("scroll", getWindowHeight)
     }
-  })
+  },[])
 
   return (
     <header className={`${style.header} ${state.className}`}>

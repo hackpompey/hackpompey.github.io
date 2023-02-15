@@ -27,7 +27,7 @@ html {
   background-attachment: fixed;
   min-height: 100vh;
   background-blend-mode: multiply;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: rgb(0, 0, 0, 0.85);
 }
 
 .rounded {

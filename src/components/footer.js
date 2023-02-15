@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./footer.module.css"
+import * as style from "./footer.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 /**

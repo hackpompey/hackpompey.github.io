@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./galleryItem.module.css"
+import * as style from "./galleryItem.module.css"
 
 /**
  * Image, Video, or Text to display in a gallery.

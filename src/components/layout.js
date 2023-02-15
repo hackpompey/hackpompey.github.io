@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./layout.module.css"
+import * as style from "./layout.module.css"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -17,10 +17,10 @@ library.add(fab, fas)
  */
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       background: file(relativePath: { eq: "images/background.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }

@@ -1,11 +1,11 @@
 .galleryItem {
-  background: #fafafa;
-  color: #121212;
+  background: #2A3439;
   overflow: hidden;
   text-align: left;
   cursor: pointer;
   border-radius: 3px;
   min-height: 20em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .galleryItem > div > h1 {
