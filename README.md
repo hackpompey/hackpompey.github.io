@@ -6,8 +6,6 @@ Requires Node.js >=14.15.0
 
 # Setup
 
-**Note: Gatsby behaves inconsistently when run in the integrated terminal in VSCode, try running outside of VSCode if you get build errors.**
-
 ## Development
 
 This site is built using Gatsby.js and uses NPM for dependency management.
@@ -50,6 +48,12 @@ npm run serve
 ```
 
 You can then view the site at http://localhost:9000/
+
+When happy with the changes, deploy publicly by running:
+
+```
+npm run deploy
+```
 
 # Site Structure
 
