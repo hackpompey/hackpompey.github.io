@@ -4,8 +4,8 @@ import Layout from "./layout"
 import EventBanner from "./eventBanner"
 import SEO from "./seo"
 import Gallery from "./gallery/gallery"
-import style from "./markdown.module.css"
-import layoutStyle from "./layout.module.css"
+import * as style from "./markdown.module.css"
+import * as layoutStyle from "./layout.module.css"
 
 /**
  * Used by gatsby-node to generate pages from md files in src/pages/events/

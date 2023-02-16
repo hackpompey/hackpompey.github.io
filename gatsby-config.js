@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Hack Pompey`,
     description: `Hack Pompey | A Portsmouth based social hack event!`,
-    author: `@calmarms`,
+    author: `@hackpompey`,
     siteUrl: `https://hackpompey.co.uk/`,
   },
   plugins: [
@@ -12,12 +12,6 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {},
-          },
-        ],
       },
     },
     `gatsby-plugin-emotion`,
@@ -27,7 +21,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,6 +29,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

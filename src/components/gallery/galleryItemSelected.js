@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./galleryItemSelected.module.css"
+import * as style from "./galleryItemSelected.module.css"
 
 /**
  * Image, Video, or Text to display expanded over a gallery.

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import BackgroundImage from "gatsby-background-image"
-import style from "./eventBanner.module.css"
+import * as style from "./eventBanner.module.css"
 import EventBannerBackground from "./eventBannerBackground"
 
 /**

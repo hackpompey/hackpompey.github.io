@@ -1,40 +1,42 @@
 ---
-title: Hack Pompey 2022 - Good Vibes
-banner_background: "orange"
-banner_foreground_color: "black"
-dateText: 2nd of April (08:30 - 17:30)
-date: "2022-04-02T08:30:00"
+title: Hack The Unexpected
+banner_background: "black"
+banner_foreground_color: "white"
+dateText: 25th of March (09:00 - 17:00)
+date: "2023-03-25T09:00:00"
 location: Future Technology Centre
-registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
-tags: ["Past Event"]
+registration_link: https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded
+tags: ["Current Event", "Past Event"]
 ---
 
-Hack Pompey is back April 2nd at the Future Tech Centre in Portsmouth and this year it's all about Good Vibes.
+We're back March 25th at the Future Tech Centre in Portsmouth. Unleash Your Creativity and Embrace the Unexpected at this year's Hack Pompey!
 
-<!-- ## <a href="https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> -->
+## <a href="https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
-<!-- 
 Jump To:
 | [**Key info**](#info)
-| [**Schedule**](#schedule)
-| [**Jetsam Challenge**](#jetsam)
 | [**FAQ**](#faq)
--->
-Jump To:
-| [**Jetsam Challenge**](#jetsam)
+|
 
-# Hack Pompey 2022 - Good Vibes
+# Hack The Unexpected
 
-We want to see your most fun, upbeat, and positivity inspiring ideas. Hack Pompey has seen some great projects in the past from party fridges and automated Etch-a-Sketches to constellation mapping games and hackathon simulators. We just want you to make whatever you think will have a positive effect on the world, big or small. There is no limit on what you can make, just make sure it’s fun.
+Unleash Your Creativity and Embrace the Unexpected at this year's Hack Pompey!
 
-<!-- 
+Join us for an exciting day of innovation, collaboration, and out-of-the-box thinking. At this hackathon, we challenge you to create a software and/or hardware project that will surprise and inspire everyone. Whether you're a seasoned hacker or a first-time attendee, this is the perfect opportunity to showcase your skills, learn new ones, and connect with like-minded individuals.
+
+The theme "Hack the Unexpected" is open to interpretation, so let your imagination run wild. It could be anything from unexpected outcomes and breakthroughs to novel ideas and surprise twists! We want to see the creative solutions you come up with, the only limit is your own ingenuity.
+
+In addition to the great learning and networking opportunities there will be free food and beverages throughout the event!
+
+So what are you waiting for? Get ready for a wild ride of inspiration and innovation at Hack Pompey. Register now to secure your spot and get ready to embrace the unexpected!
+
 # Key info <a name="info"></a>
 
-The event will take place April 2nd beginning at 9am and finishing at 5pm. There will be free breakfast and lunch. There will also be free hot and cold beverages available all day to keep everyone fuelled.
+The event will take place March 25th beginning at 9am and finishing at 5pm. There will be free breakfast and lunch. There will also be free hot and cold beverages available all day to keep everyone fuelled.
 
 We have a great team of volunteers on hand to help bridge any gaps of knowledge and be generally helpful throughout. If you don’t know something, we probably know someone who does!
 
-# Schedule <a name="schedule"></a>
+<!-- # Schedule <a name="schedule"></a>
 
 Our reception area where you can pick up your wristband will be open 8:30 - 17:30.
 
@@ -46,16 +48,9 @@ Our reception area where you can pick up your wristband will be open 8:30 - 17:3
 | 13:00 | Lunch                       |
 | 16:00 | Show & Tell                 |
 | 17:30 | End of event                |
-| 18:15 | Social (Location TBA)       |
- -->
-# Jetsam Challenge <a name="jetsam"></a>
+| 18:15 | Social (Location TBA)       | 
+-->
 
-Stuck for ideas? Here's a challenge from our sponsor Jetsam, who are interested in environmental citizen science and tracking waste around the city.
-
-Their challenge is to make something cool using the Jetsam API. Check out the challenge on their website for everything you need to get started (chicken not included)
-
-## <a href="https://jetsam.tech/challenges/hack-pompey-10" target="_blank" rel="noopener noreferrer">**Jetsam Challenge**</a>
-<!-- 
 # Frequently asked questions <a name="faq"></a>
 
 ### Can I attend as a team?
@@ -117,8 +112,7 @@ Phone: 023 9264 0000
 
 ## Where do I sign up?
 
-### <a href="https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> 
--->
+### <a href="https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 <!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.

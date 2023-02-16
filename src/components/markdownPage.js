@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 import SEO from "./seo"
-import style from "./markdown.module.css"
-import layoutStyle from "./layout.module.css"
+import * as style from "./markdown.module.css"
+import * as layoutStyle from "./layout.module.css"
 
 /**
  * Used by gatsby-node to generate pages from any md files in src/pages/

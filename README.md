@@ -2,6 +2,8 @@
 
 This is the new (as of 2019) website for Hack Pompey. A Portsmouth based social hack event.
 
+Requires Node.js >=14.15.0
+
 # Setup
 
 ## Development
@@ -10,13 +12,7 @@ This site is built using Gatsby.js and uses NPM for dependency management.
 
 Start by installing [Node/NPM](https://nodejs.org/) if you don't already have it.
 
-If you are new to Gatsby.js then start by installing the CLI.
-
-```
-npm install -g gatsby-cli
-```
-
-Next, to install the project dependencies navigate to the project directory (where `package.json` is located) and run:
+To install the project dependencies navigate to the project directory (where `package.json` is located) and run:
 
 ```
 npm install
@@ -25,7 +21,7 @@ npm install
 To build and deploy the site locally, run:
 
 ```
-gatsby develop
+npm run develop
 ```
 
 Once Gatsby is ready, you can view the site at http://localhost:8000/
@@ -35,23 +31,29 @@ You can also interact with the GraphQL via http://localhost:8000/___graphql
 Gatsby will watch for any file changes and automatically rebuild as needed.
 If you do not see your changes take effect, check the CLI for build errors.
 
-Changes to the Gatsby config files may require you to stop and restart `gatsby develop`
+Changes to the Gatsby config files may require you to stop and restart `npm run develop`
 
 ## Deployment
 
 To build an optimised bundle, run:
 
 ```
-gatsby build
+npm run build
 ```
 
 You can test this locally by running:
 
 ```
-gatsby serve
+npm run serve
 ```
 
 You can then view the site at http://localhost:9000/
+
+When happy with the changes, deploy publicly by running:
+
+```
+npm run deploy
+```
 
 # Site Structure
 

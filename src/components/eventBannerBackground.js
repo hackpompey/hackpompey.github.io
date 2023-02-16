@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./eventBanner.module.css"
+import * as style from "./eventBanner.module.css"
 import BackgroundImage from "gatsby-background-image"
 
 /**

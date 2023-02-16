@@ -1,6 +1,6 @@
 .galleryItemSelected {
-  background: #fff;
-  color: #121212;
+  background: #2A3439;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: fixed;
   width: 100%;
   max-width: 50em;
@@ -14,7 +14,7 @@
 }
 
 .galleryItemSelected .scrollable {
-  height: calc( 70vh - 4em );
+  height: calc(70vh - 4em);
   padding: 1em;
   overflow: auto;
 }
