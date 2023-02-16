@@ -4,7 +4,13 @@ html {
 
 .layout {
   color: white;
-  min-height: 100vh;
+  background-image: url('/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgb(0, 0, 0, 0.85);
 }
 
 .content {
@@ -17,17 +23,6 @@ html {
 .text {
   max-width: 40em;
   margin: auto;
-}
-
-.background {
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  background-blend-mode: multiply;
-  background-color: rgb(0, 0, 0, 0.85);
 }
 
 .rounded {

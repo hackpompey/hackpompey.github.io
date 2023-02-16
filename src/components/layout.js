@@ -1,10 +1,8 @@
-import React from "react"
-import * as style from "./layout.module.css"
-import Header from "./header"
-import Footer from "./footer"
-
 import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import * as style from "./layout.module.css"
+import Footer from "./footer"
+import Header from "./header"
+import React from "react"
 
 // Make FontAwesome icons available without specific imports
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -28,19 +26,12 @@ const Layout = ({ children }) => {
     }
   `)
   return (
-    <div className={style.layout} id="outer-container">
+    <div id="outer-container" className={style.layout}>
       <Header />
-      <BackgroundImage
-        Tag="section"
-        className={style.background}
-        fluid={data.background.childImageSharp.fluid}
-      >
-        <div className={style.content} id="page-wrap">
-          {/* Display inner HTML elements */}
-          {children}
-          <Footer />
-        </div>
-      </BackgroundImage>
+      <div id="page-wrap" className={style.content}>
+        {children}
+        <Footer />
+      </div>
     </div>
   )
 }

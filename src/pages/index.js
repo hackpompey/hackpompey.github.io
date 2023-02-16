@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
           <section>
             <h2>What is Hack Pompey?</h2>
             <p>
-              Hack Pompey is a social hack weekend on the South coast. We see
+              Hack Pompey is a social hackathon on the South coast. We see
               people from all backgrounds and disciplines join together to learn
               something new, work together, and build something{" "}
               <strong>awesome!</strong>
@@ -30,13 +30,15 @@ const IndexPage = ({ data }) => {
 
           <section>
             <h2>What can I build?</h2>
+            <p><strong>Anything you want!</strong></p>
             <p>
-              You can build <strong>anything you want!</strong>
+              People typically come together to collaborate on solving problems,
+              or work on an idea like a new product, service or game.
             </p>
             <p>
-              But we know how daunting that can be, so we'll make things a
+              We know how daunting coming up with ideas can be though, so we'll make things a
               little easier by setting themes to help get your brain ticking.
-              Stay tuned for those announcements!
+              Stay tuned for those theme announcements!
             </p>
           </section>
 
