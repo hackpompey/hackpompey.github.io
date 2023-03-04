@@ -29,10 +29,12 @@ const Splash = ({ currentEvent }) => {
         <div>
           {/* Ticket link if available */}
           {registrationURL && (
-            <h1>
-              Tickets now available for{" "}
-              <a href={registrationURL} target="_blank" rel="noopener noreferrer">{currentEvent.frontmatter.title}</a>
-            </h1>
+            <>
+              <Countdown data={currentEvent.frontmatter} />
+              <h1>
+                <strong>Hack Pompey: Hack the Unexpected</strong>
+              </h1>
+            </>
           )}
           {/* Otherwise just event name */}
           {!registrationURL && (
@@ -41,7 +43,6 @@ const Splash = ({ currentEvent }) => {
               <Link to={currentEventURL}>{currentEvent.frontmatter.title}</Link>
             </h1>
           )}
-          <Countdown data={currentEvent.frontmatter} />
         </div>
       )}
       {/* If there's no upcoming event, use generic tagline */}

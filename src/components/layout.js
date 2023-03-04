@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import * as style from "./layout.module.css"
+import Banner from "./banner"
 import Footer from "./footer"
 import Header from "./header"
 import React from "react"
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
   return (
     <div id="outer-container" className={style.layout}>
       <Header />
+      <Banner />
       <div id="page-wrap" className={style.content}>
         {children}
         <Footer />

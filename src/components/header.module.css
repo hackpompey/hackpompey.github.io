@@ -1,6 +1,6 @@
 .header {
   background: linear-gradient(270deg, hsl(343, 76%, 56%), hsl(343, 76%, 46%));
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
