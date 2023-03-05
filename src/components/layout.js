@@ -1,4 +1,3 @@
-import { useStaticQuery, graphql } from "gatsby"
 import * as style from "./layout.module.css"
 import Banner from "./banner"
 import Footer from "./footer"
@@ -15,17 +14,6 @@ library.add(fab, fas)
  * The standard structure used in all pages
  */
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    {
-      background: file(relativePath: { eq: "images/background.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
-    }
-  `)
   return (
     <div id="outer-container" className={style.layout}>
       <Header />

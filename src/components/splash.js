@@ -24,22 +24,17 @@ const Splash = ({ currentEvent }) => {
 
   return (
     <div className={style.splash}>
-      {/* If there's an upcoming event, display basic event info */}
-      {currentEvent && (
-        <div>
-          <Countdown data={currentEvent.frontmatter} />
-        </div>
-      )}
-      {/* If there's no upcoming event, use generic tagline */}
-      {!currentEvent && (
-        <div>
-          <h1>Meet New People, Make Something Awesome!</h1>
-          {/* <h3>
-            For announcements and future events{" "}
-            <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">Join our mailing list</a>
-          </h3> */}
-        </div>
-      )}
+      <div className={style.tagline}>
+        {/* If there's an upcoming event, display countdown */}
+        {currentEvent && (
+          <Countdown
+            data={currentEvent.frontmatter}
+            className={style.tagline}
+          />
+        )}
+        {/* If there's no upcoming event, use generic tagline */}
+        {!currentEvent && <h3>Meet New People, Make Something Awesome!</h3>}
+      </div>
 
       <Link to={currentEventURL || "#about"}>
         <GatsbyImage
