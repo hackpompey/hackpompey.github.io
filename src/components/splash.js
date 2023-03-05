@@ -5,15 +5,15 @@ import * as style from "./splash.module.css"
 import Countdown from "./countdown"
 
 const Splash = ({ currentEvent }) => {
-  const data = useStaticQuery(graphql`{
-  splashIMG: file(relativePath: {eq: "images/splash.png"}) {
-    childImageSharp {
-      gatsbyImageData(height: 400, placeholder: NONE, layout: FULL_WIDTH)
+  const data = useStaticQuery(graphql`
+    {
+      splashIMG: file(relativePath: { eq: "images/splash.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 400, placeholder: NONE, layout: FULL_WIDTH)
+        }
+      }
     }
-  }
-}
-`
-  )
+  `)
 
   let currentEventURL
   let registrationURL
@@ -27,22 +27,7 @@ const Splash = ({ currentEvent }) => {
       {/* If there's an upcoming event, display basic event info */}
       {currentEvent && (
         <div>
-          {/* Ticket link if available */}
-          {registrationURL && (
-            <>
-              <Countdown data={currentEvent.frontmatter} />
-              <h1>
-                <strong>Hack Pompey: Hack the Unexpected</strong>
-              </h1>
-            </>
-          )}
-          {/* Otherwise just event name */}
-          {!registrationURL && (
-            <h1>
-              Up Next{" "}
-              <Link to={currentEventURL}>{currentEvent.frontmatter.title}</Link>
-            </h1>
-          )}
+          <Countdown data={currentEvent.frontmatter} />
         </div>
       )}
       {/* If there's no upcoming event, use generic tagline */}
@@ -57,7 +42,7 @@ const Splash = ({ currentEvent }) => {
       )}
 
       <Link to={currentEventURL || "#about"}>
-        <GatsbyImage 
+        <GatsbyImage
           image={data.splashIMG.childImageSharp.gatsbyImageData}
           className={style.splashimg}
         />
@@ -77,12 +62,17 @@ const Splash = ({ currentEvent }) => {
         </Link>
       )}
       {registrationURL && (
-        <a href={registrationURL} className={style.splashlink} target="_blank" rel="noopener noreferrer">
+        <a
+          href={registrationURL}
+          className={style.splashlink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <h3>Get Tickets</h3>
         </a>
       )}
     </div>
-  );
+  )
 }
 
 export default Splash

@@ -1,5 +1,5 @@
 ---
-title: Hack The Unexpected
+title: "Hack Pompey - Hack The Unexpected"
 banner_background: "black"
 banner_foreground_color: "white"
 dateText: 25th of March (09:00 - 17:00)

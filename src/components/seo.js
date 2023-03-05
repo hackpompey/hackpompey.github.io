@@ -34,6 +34,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
   const ogImageUrl =
     site.siteMetadata.siteUrl + (image || splashIMG.childImageSharp.gatsbyImageData.src)
 
+  if (!title.startsWith("Hack Pompey")) {
+    title = "Hack Pompey - " + title
+  }
+
   return (
     <HelmetProvider>
       <Helmet
@@ -41,7 +45,6 @@ const SEO = ({ description, lang, meta, title, image }) => {
           lang,
         }}
         title={title}
-        titleTemplate={`%s | ${site.siteMetadata.title}`}
         meta={[
           {
             name: `description`,
