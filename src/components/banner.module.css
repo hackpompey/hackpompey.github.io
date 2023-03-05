@@ -1,0 +1,109 @@
+.banner {
+    background-color: hsl(343, 76%, 10%);
+    position: sticky;
+    transition: 0.4s;
+    border-bottom: 2px solid hsl(343, 76%, 56%);
+    font-family: "Varela Round";
+    z-index: 999;
+}
+
+.bannerInner {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    align-items: center;
+}
+
+.text {
+    display: block;
+    font-size: 1rem;
+}
+
+.bookButton {
+    background-color: hsl(343, 76%, 40%);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 320px;
+}
+
+.bookButton:after {
+    background-clip: padding-box;
+    background-color: hsl(343, 76%, 56%);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.bookButton:main,
+.bookButton:focus {
+    user-select: auto;
+}
+
+.bookButton:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.bookButton:disabled {
+    cursor: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .bannerInner {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 560px) {
+    .bannerInner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        display: inline;
+        font-size: 0.875rem;
+    }
+
+    .text {
+        margin-bottom: 4px;
+    }
+}

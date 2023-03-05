@@ -16,12 +16,11 @@ html {
 .content {
   margin: 0 auto;
   max-width: 75em;
-  padding: 1em;
-  padding-top: 10em;
+  padding: 1rem;
 }
 
 .text {
-  max-width: 40em;
+  max-width: 40rem;
   margin: auto;
 }
 
@@ -37,16 +36,9 @@ a {
 .anchor {
   display: block;
   position: relative;
-  top: -10rem;
   visibility: hidden;
 }
 
 h2 {
-  margin-top: 2em;
-}
-
-@media only screen and (max-width: 50em) {
-  .content {
-    padding-top: 8em;
-  }
+  margin-top: 2rem;
 }
