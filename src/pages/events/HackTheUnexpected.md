@@ -36,20 +36,19 @@ The event will take place March 25th beginning at 9am and finishing at 5pm. Ther
 
 We have a great team of volunteers on hand to help bridge any gaps of knowledge and be generally helpful throughout. If you don’t know something, we probably know someone who does!
 
-<!-- # Schedule <a name="schedule"></a>
+# Schedule <a name="schedule"></a>
 
-Our reception area where you can pick up your wristband will be open 8:30 - 17:30.
+Our reception area where you can pick up your wristband will be open 9:00 - 17:00.
 
 |       |                             |
 | ----- | --------------------------- |
-| 08:30 | Arrival & Breakfast         |
-| 09:00 | Opening Talk                |
-| 09:15 | Idea & Team Forming Session |
+| 09:00 | Arrival & Breakfast         |
+| 09:30 | Opening Talk                |
+| 09:45 | Idea & Team Forming Session |
 | 13:00 | Lunch                       |
 | 16:00 | Show & Tell                 |
-| 17:30 | End of event                |
-| 18:15 | Social (Location TBA)       | 
--->
+| 17:00 | End of event                |
+
 
 # Frequently asked questions <a name="faq"></a>
 
