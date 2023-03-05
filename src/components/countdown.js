@@ -35,7 +35,7 @@ class Countdown extends React.Component {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
-    return `Only ${days} days ${hours} hours ${minutes} minutes and ${seconds} seconds to go until`
+    return `Only ${days} days ${hours} hours ${minutes} minutes and ${seconds} seconds to go!`
   }
 
   render() {
