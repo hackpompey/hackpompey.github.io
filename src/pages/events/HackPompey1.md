@@ -1,7 +1,7 @@
 ---
 title: Hack Pompey
 banner_background: "#fef7ba"
-dateText: 22 November 2014 (10:00 - 18:00)
+dateText: 22nd Nov 2014 (10:00 - 18:00)
 date: "2014-11-22"
 location: Innovation Space
 registration_link: https://www.eventbrite.co.uk/e/hackpompey-tickets-13526984575#
