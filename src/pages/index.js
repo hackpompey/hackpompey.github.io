@@ -104,9 +104,9 @@ const IndexPage = ({ data }) => {
 
           <section>
             <h2>Partners</h2>
-            <p>The events just wouldn't be possible without these legends!</p>
+            <p>Hack Pompey just wouldn't be possible without these legends!</p>
             <img
-              src={data.partners.publicURL}
+              src="/unexpected-partners.svg"
               width="100%"
               alt="Partner Logos"
             ></img>
