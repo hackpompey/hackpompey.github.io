@@ -123,3 +123,12 @@ Phone: 023 9264 0000
 <!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
 -->
+
+<section style="margin-top: 4.5rem;">
+    <h2 style="text-align: center;">Sponsored by</h2>
+    <img
+        src="/good-vibes-partners.svg"
+        width="100%"
+        alt="Partner Logos"
+    ></img>
+</section>
