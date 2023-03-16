@@ -30,15 +30,17 @@ const IndexPage = ({ data }) => {
 
           <section>
             <h2>What can I build?</h2>
-            <p><strong>Anything you want!</strong></p>
+            <p>
+              <strong>Anything you want!</strong>
+            </p>
             <p>
               People typically come together to collaborate on solving problems,
               or work on an idea like a new product, service or game.
             </p>
             <p>
-              We know how daunting coming up with ideas can be though, so we'll make things a
-              little easier by setting themes to help get your brain ticking.
-              Stay tuned for those theme announcements!
+              We know how daunting coming up with ideas can be though, so we'll
+              make things a little easier by setting themes to help get your
+              brain ticking. Stay tuned for those theme announcements!
             </p>
           </section>
 
@@ -119,9 +121,6 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    partners: file(relativePath: { eq: "images/partners.svg" }) {
-      publicURL
-    }
     currentEvent: markdownRemark(
       frontmatter: { tags: { in: "Current Event" } }
     ) {
