@@ -2,7 +2,7 @@
 title: Hack Pompey - Hack The Home
 banner_background: "linear-gradient(to bottom right, rgba(0, 0, 0, 0.25), hsla(165, 100%, 60%, 1) 100%)"
 banner_foreground_color: "white"
-dateText: 13 May 2017 (10:00 - 18:30)
+dateText: 13th May 2017 (10:00 - 18:30)
 date: "2017-05-13"
 location: Portland Building
 registration_link: https://www.eventbrite.co.uk/e/hack-pompey-7-hack-the-home-tickets-32981355121#

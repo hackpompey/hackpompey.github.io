@@ -2,7 +2,7 @@
 title: Hack Pompey 2022 - Good Vibes
 banner_background: "orange"
 banner_foreground_color: "black"
-dateText: 2nd of April (08:30 - 17:30)
+dateText: 2nd April 2022 (08:30 - 17:30)
 date: "2022-04-02T08:30:00"
 location: Future Technology Centre
 registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
@@ -123,3 +123,12 @@ Phone: 023 9264 0000
 <!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
 -->
+
+<section style="margin-top: 4.5rem;">
+    <h2 style="text-align: center;">Sponsored by</h2>
+    <img
+        src="/good-vibes-partners.svg"
+        width="100%"
+        alt="Partner Logos"
+    ></img>
+</section>

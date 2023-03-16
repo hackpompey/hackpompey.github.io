@@ -1,8 +1,8 @@
 ---
-title: Hack The Unexpected
+title: "Hack Pompey - Hack The Unexpected"
 banner_background: "black"
 banner_foreground_color: "white"
-dateText: 25th of March (09:00 - 17:00)
+dateText: Sat 25th March (09:00 - 17:00)
 date: "2023-03-25T09:00:00"
 location: Future Technology Centre
 registration_link: https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded
@@ -15,6 +15,8 @@ We're back March 25th at the Future Tech Centre in Portsmouth. Unleash Your Crea
 
 Jump To:
 | [**Key info**](#info)
+| [**Schedule**](#schedule)
+| [**Synote Challenge**](#challenge)
 | [**FAQ**](#faq)
 |
 
@@ -36,20 +38,56 @@ The event will take place March 25th beginning at 9am and finishing at 5pm. Ther
 
 We have a great team of volunteers on hand to help bridge any gaps of knowledge and be generally helpful throughout. If you don’t know something, we probably know someone who does!
 
-<!-- # Schedule <a name="schedule"></a>
+# Schedule <a name="schedule"></a>
 
-Our reception area where you can pick up your wristband will be open 8:30 - 17:30.
+Our reception area where you can pick up your wristband will be open 9:00 - 17:00.
 
 |       |                             |
 | ----- | --------------------------- |
-| 08:30 | Arrival & Breakfast         |
-| 09:00 | Opening Talk                |
-| 09:15 | Idea & Team Forming Session |
+| 09:00 | Arrival & Breakfast         |
+| 09:30 | Opening Talk                |
+| 09:45 | Idea & Team Forming Session |
 | 13:00 | Lunch                       |
 | 16:00 | Show & Tell                 |
-| 17:30 | End of event                |
-| 18:15 | Social (Location TBA)       | 
--->
+| 17:00 | End of event                |
+
+# Synote Challenge <a name="challenge"></a>
+
+Ever wondered how Netflix, YouTube, and TikTok know exactly what you should watch next? Or maybe they don't and you think you could do better?
+
+Well our sponsor Synote have a challenge for YOU! They want to see YOUR novel solutions for recommending short videos.
+
+Search and Recommender Systems are one of the key technologies of the modern age that everyone interacts with every day. They may seem complicated but getting started might be easier than you think, and WE think that YOU have what it takes! Tried and true technologies are out there for inspiration, but YOUR novel ideas and unique perspectives are what we'd love to see. Netflix wasn't built in a day, but we're confident you'll have fun and learn valuable skills in this challenge!
+
+Our resident AI expert Dr Ralph has put together some resources and will be on hand and on Discord to help guide your journey of discovery!
+
+[**Join us on Discord to share your ideas and questions**](https://discord.gg/QuSCczME7H?event=1075406096828731412)
+
+## Search & Recommender System Resources
+
+There are lots of approaches and datasets for search and recommendation, and lots of good tutorials online.
+It's completely possible to write your own code and algorithms for recommending items how ever you think best!
+But if you want to build on existing research lots of algorithms, models, and data are freely available online, mostly as Python libraries and tutorials.
+
+### Tools
+
+- [Google Colab](https://colab.research.google.com/) lets you run Python scripts in the cloud using a GPU for free. Lots of tutorials and libraries provide Jupyter notebooks you can open, run, and customise in Colab.
+
+- [Surprise](https://surpriselib.com/) is a Python library for using, training, and benchmarking popular recommender system techniques. It comes with some popular datasets and supports making custom datasets.
+
+- [Microsoft Recommenders](https://github.com/microsoft/recommenders) is a great resource for best practices and has lots of example Jupyter notebooks for state-of-the-art algorithms. They have examples covering everything from data preparation to deploying models on the cloud.
+
+- [Sentence Transformers](https://www.sbert.net/examples/applications/semantic-search/README.html) is another Python library that makes it simple to work with powerful pre-trained Deep Learning models for understanding text. You can use semantic search and paraphrase mining to make content-based and hybrid recommender systems.
+
+- [TensorFlow](https://github.com/tensorflow/recommenders) is a general Deep Learning framework, but provides some tutorials for building recommender systems. If you're new to machine learning this might be harder to follow, but is an option if you're interested in hands-on implementation of Deep Learning models.
+
+### Datasets
+
+- [MovieLens](https://grouplens.org/datasets/movielens/) is a huge dataset of user ratings and tags applied to movies. Probably the most popular dataset for research on large-scale recommender systems. If you're using a library they will probably have this dataset built-in.
+
+- [Netflix Prize Dataset](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data) is similar to MovieLens but also includes the date ratings were made, so we know what order people watch things in.
+
+- [Trending YouTube Video Statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new) has content information and stats about trending YouTube videos in different regions over time. There are no user ids so can't be used for collaborative recommendations but a great resource for search and content-based recommendations.
 
 # Frequently asked questions <a name="faq"></a>
 
@@ -117,3 +155,12 @@ Phone: 023 9264 0000
 <!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
 -->
+
+<section style="margin-top: 4.5rem;">
+    <h2 style="text-align: center;">Sponsored by</h2>
+    <img
+        src="/unexpected-partners.svg"
+        width="100%"
+        alt="Partner Logos"
+    />
+</section>

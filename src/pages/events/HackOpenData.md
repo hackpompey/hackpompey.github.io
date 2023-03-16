@@ -1,7 +1,7 @@
 ---
 title: Hack Pompey - Open Data
 banner_background: "#CAEFCB"
-dateText: 07 February 2015 (09:30 - 18:30)
+dateText: 7th Feb 2015 (09:30 - 18:30)
 date: "2015-02-07"
 location: Innovation Space
 registration_link: https://www.eventbrite.co.uk/e/hackpompey-open-data-tickets-15325330476#

@@ -1,8 +1,8 @@
 .splash {
   text-align: center;
 }
-.splash h3 {
-  margin: 1em 0;
+.tagline h3 {
+  margin: 1rem 0 2rem 0;
 }
 .splash img {
   margin: 0;

@@ -1,7 +1,7 @@
 ---
 title: Hack Pompey 3
 banner_background: "#f5f5f5"
-dateText: 16 May 2015 (09:30 - 19:00)
+dateText: 16th May 2015 (09:30 - 19:00)
 date: "2015-05-16"
 location: Innovation Space
 registration_link: https://www.eventbrite.co.uk/e/hackpompey-3-tickets-16615062098#
