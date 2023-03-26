@@ -6,19 +6,21 @@ dateText: Sat 25th March (09:00 - 17:00)
 date: "2023-03-25T09:00:00"
 location: Future Technology Centre
 registration_link: https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded
-tags: ["Current Event", "Past Event"]
+tags: ["Past Event"]
 ---
 
 We're back March 25th at the Future Tech Centre in Portsmouth. Unleash Your Creativity and Embrace the Unexpected at this year's Hack Pompey!
 
+<!-- 
 ## <a href="https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
 
 Jump To:
 | [**Key info**](#info)
-| [**Schedule**](#schedule)
+| [**Schedule**](#schedule) 
 | [**Synote Challenge**](#challenge)
 | [**FAQ**](#faq)
-|
+| 
+-->
 
 # Hack The Unexpected
 
@@ -32,6 +34,7 @@ In addition to the great learning and networking opportunities there will be fre
 
 So what are you waiting for? Get ready for a wild ride of inspiration and innovation at Hack Pompey. Register now to secure your spot and get ready to embrace the unexpected!
 
+<!-- 
 # Key info <a name="info"></a>
 
 The event will take place March 25th beginning at 9am and finishing at 5pm. There will be free breakfast and lunch. There will also be free hot and cold beverages available all day to keep everyone fuelled.
@@ -49,7 +52,8 @@ Our reception area where you can pick up your wristband will be open 9:00 - 17:0
 | 09:45 | Idea & Team Forming Session |
 | 13:00 | Lunch                       |
 | 16:00 | Show & Tell                 |
-| 17:00 | End of event                |
+| 17:00 | End of event                | 
+-->
 
 # Synote Challenge <a name="challenge"></a>
 
@@ -88,7 +92,7 @@ But if you want to build on existing research lots of algorithms, models, and da
 - [Netflix Prize Dataset](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data) is similar to MovieLens but also includes the date ratings were made, so we know what order people watch things in.
 
 - [Trending YouTube Video Statistics](https://www.kaggle.com/datasets/datasnaek/youtube-new) has content information and stats about trending YouTube videos in different regions over time. There are no user ids so can't be used for collaborative recommendations but a great resource for search and content-based recommendations.
-
+<!-- 
 # Frequently asked questions <a name="faq"></a>
 
 ### Can I attend as a team?
@@ -150,7 +154,8 @@ Phone: 023 9264 0000
 
 ## Where do I sign up?
 
-### <a href="https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a>
+### <a href="https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded" target="_blank" rel="noopener noreferrer">**Get Your Free Tickets Now**</a> 
+-->
 
 <!--
 For announcements and future events <a href="http://eepurl.com/glFL6H" target="_blank" rel="noopener noreferrer">**Join our mailing list**</a>.
