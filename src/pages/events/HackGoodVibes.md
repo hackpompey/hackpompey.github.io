@@ -5,7 +5,7 @@ banner_foreground_color: "black"
 dateText: 2nd April 2022 (08:30 - 17:30)
 date: "2022-04-02T08:30:00"
 location: Future Technology Centre
-registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
+# registration_link: https://hackerfest.co.uk/e/c2d502fc-a3d1-11ec-a78c-4350aa8f16d9
 tags: ["Past Event"]
 ---
 

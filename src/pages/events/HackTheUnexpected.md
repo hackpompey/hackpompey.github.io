@@ -5,7 +5,7 @@ banner_foreground_color: "white"
 dateText: 25th March 2023 (09:00 - 17:00)
 date: "2023-03-25T09:00:00"
 location: Future Technology Centre
-registration_link: https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded
+# registration_link: https://hackerfest.co.uk/e/4812fe6b-1dc7-4ec4-9e53-feb54a0f6ded
 tags: ["Past Event"]
 ---
 

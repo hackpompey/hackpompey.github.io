@@ -5,7 +5,7 @@ banner_foreground_color: "white"
 dateText: 2nd & 3rd Nov 2020 (10:00 - 18:00)
 date: "2019-11-02T10:00:00"
 location: Future Technology Centre
-registration_link: https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72
+# registration_link: https://hackerfest.co.uk/events/cd8a07c8-bf75-4bfe-935c-9c288151ee72
 tags: ["Past Event"]
 ---
 
