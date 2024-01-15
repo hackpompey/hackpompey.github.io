@@ -4,9 +4,9 @@ This is the new (as of 2019) website for Hack Pompey. A Portsmouth based social 
 
 Requires Node.js >=14.15.0
 
-# Setup
+**Changes merged to the master branch are deployed automatically**
 
-## Development
+# Development
 
 This site is built using Gatsby.js and uses NPM for dependency management.
 
@@ -26,14 +26,12 @@ npm run develop
 
 Once Gatsby is ready, you can view the site at http://localhost:8000/
 
-You can also interact with the GraphQL via http://localhost:8000/___graphql
+You can also interact with the GraphQL via http://localhost:8000/\_\_\_graphql
 
 Gatsby will watch for any file changes and automatically rebuild as needed.
 If you do not see your changes take effect, check the CLI for build errors.
 
 Changes to the Gatsby config files may require you to stop and restart `npm run develop`
-
-## Deployment
 
 To build an optimised bundle, run:
 
@@ -49,11 +47,7 @@ npm run serve
 
 You can then view the site at http://localhost:9000/
 
-When happy with the changes, deploy publicly by running:
-
-```
-npm run deploy
-```
+When changes are merged to the master branch they will be deployed automatically.
 
 # Site Structure
 
