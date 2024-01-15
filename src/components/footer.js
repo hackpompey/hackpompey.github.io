@@ -20,6 +20,11 @@ const Footer = () => {
 
       <ul className={style.social}>
         <li>
+          <a href="https://discord.gg/QuSCczME7H" title="Discord" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "discord"]} style={{color:"white"}} size="2x"/>
+          </a>
+        </li>
+        <li>
           <a href="http://www.twitter.com/hackpompey" title="Twitter" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={["fab", "twitter"]} style={{color:"white"}} size="2x"/>
           </a>
@@ -35,7 +40,7 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a href="http://eepurl.com/glFL6H" title="Mailing List" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:contact@hackpompey.co.uk" title="Contact Email" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"white"}} size="2x" />
           </a>
         </li>
