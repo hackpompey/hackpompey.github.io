@@ -4,7 +4,7 @@ banner_background: "#fef7ba"
 dateText: 22nd Nov 2014 (10:00 - 18:00)
 date: "2014-11-22"
 location: Innovation Space
-registration_link: https://www.eventbrite.co.uk/e/hackpompey-tickets-13526984575#
+registration_link: ""
 writeup_link: https://rosedigital.co.uk/blog/2014/11/24/hackpompey.html
 tags: ["Past Event"]
 ---
