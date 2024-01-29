@@ -35,9 +35,49 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END CSS RESET */
 
+@font-face {
+    font-family: 'Shantell Sans';
+    src: url('./shantell-sans_vf_regular.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('./Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: italic;
+    src: url('./Rubik-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 800;
+    src: url('./Rubik-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: bold;
+    src: url('./Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: italic;
+    font-weight: bold;
+    src: url('./Rubik-BoldItalic.ttf');
+}
+
 main {
     margin: 2rem auto;
+}
+
+.gutter {
+    padding-inline: 1rem;
     max-width: 40rem;
+    margin-inline: auto;
 }
 
 main > * + * {
@@ -66,10 +106,206 @@ footer {
     text-align: center;
 }
 
+.title {
+    font-family: Rubik;
+
+    & h1 {
+        background-color: black;
+        color: white;
+        padding-block: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.tagline {
+    font-family: Rubik;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    & span {
+        display: block;
+    }
+}
+
 .tickets-banner {
+    & div {
+        max-width: 40rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: auto;
+        padding-inline: 1rem;
+    }
+
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    font-family: Rubik;
+
+    /* background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px); /* For compatibility with some browsers */
+    -webkit-backdrop-filter: blur(15px); */
+
+    padding-block: 1rem;
+    background-color: white;
+
+    & p {
+        font-size: 16px;
+    }
+
+    & a {
+        font-size: 14px;
+        display: block;
+        text-decoration: none;
+        background-color: black;
+        border-radius: 50px;
+        padding-block: 4px;
+        padding-inline: 12px;
+        color: white;
+
+        &:hover {
+
+        }
+    }
+}
+
+section {
+    font-family: Rubik;
+    padding-inline: 1rem;
+    line-height: 1.25;
+
+    & > * + * {
+        margin-top: 1rem;
+    }
+
+    & h2 {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-size: 16px;
+    }
+
+    & a {
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 1px;
+    }
+
+    & ul {
+        list-style: none;
+        padding: 0;
+        list-style-position: outside;
+
+        & li {
+            margin-top: 0.75rem;
+        }
+    }
+
+    /* & blockquote {
+        quotes: "\201C""\201D";
+    } */
+
+    & blockquote {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 20px;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    & blockquote:nth-child(2n) {
+        border-bottom-right-radius: 5px;
+        text-align: right;
+    }
+
+    & blockquote:nth-child(2n + 1) {
+        border-bottom-left-radius: 5px;
+        text-align: left;
+    }
+}
+
+
+section#what-is-hp p:first-of-type,
+section#faq-build p:first-of-type {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+section#write-ups {
+    & span {
+        display: block;
+    }
+
+    & span:last-child {
+        margin-top: 0.25rem;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    & a {
+        font-weight: bold;
+    }
+}
+
+.spacer-shoutout {
+    margin-block: 3rem;
+    padding-inline: 1rem;
+    font-family: Rubik;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    /* border-top: 2px solid black; */
+    /* border-bottom: 2px solid black; */
+
+    & small {
+        font-size: 12px;
+    }
+}
+
+footer {
+    margin-top: 3rem;
+    font-family: Rubik;
+    font-size: 14px;
+
+    & > * + * {
+        margin-top: 0.875rem;
+    }
+}
+
+@media screen and (width < 768px) {
+    main {
+        /* background-color: hsla(115, 88%, 45%, 0.2); */
+    }
+
+    .tagline {
+        font-size: 1.75rem;
+        line-height: 1;
+        text-align: center;
+
+        & span:last-child {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+@media screen and (width >= 768px) and (width < 1024px) {
+    main {
+        background-color: hsla(205, 88%, 45%, 0.2);
+    }
+}
+
+@media screen and (width >= 1024px) {
+    main {
+        background-color: hsla(295, 88%, 45%, 0.2);
+    }
 }
