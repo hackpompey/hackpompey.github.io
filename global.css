@@ -35,6 +35,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END CSS RESET */
 
+/* CUSTOM PROPERTIES */
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: rgba(0, 0, 0, 0.5);
+
+    --primary-text-color-inverted: rgba(255, 255, 255, 1);
+    --secondary-text-color-inverted: rgba(255, 255, 255, 0.7);
+}
+
+
 @font-face {
     font-family: 'Shantell Sans';
     src: url('./shantell-sans_vf_regular.ttf');
@@ -71,7 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-    margin: 2rem auto;
+    
 }
 
 .gutter {
@@ -81,7 +91,7 @@ main {
 }
 
 main > * + * {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .title, .tickets-banner {
@@ -100,10 +110,6 @@ blockquote {
 marquee > p {
     display: inline-block;
     margin-left: 2rem;
-}
-
-footer {
-    text-align: center;
 }
 
 .title {
@@ -272,13 +278,75 @@ section#write-ups {
     }
 }
 
+section#code-of-conduct {
+    padding-top: 2rem;
+    background-color: black;
+    color: var(--primary-text-color-inverted);
+
+    & h2 {
+        font-size: 14px;
+    }
+
+    & p {
+        font-size: 14px;
+    }
+
+    & a {
+        color: var(--primary-text-color-inverted);
+    }
+}
+
 footer {
-    margin-top: 3rem;
+    background-color: black;
+    color: var(--secondary-text-color-inverted);
     font-family: Rubik;
     font-size: 14px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    margin-top: 0;
+    /* text-align: center; */
+
+    & > p:first-child {
+        font-style: italic;
+    }
 
     & > * + * {
-        margin-top: 0.875rem;
+        margin-top: 1rem;
+    }
+
+    & a:not(.social-icon) {
+        color: var(--secondary-text-color-inverted);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-style: wavy;
+        text-decoration-thickness: 1px;
+
+        &:hover {
+            color: var(--primary-text-color-inverted);
+        }
+    }
+    
+    & a.social-icon {
+        & img {
+            height: 2rem;
+            filter: invert(1);
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    & div.socials {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        > * + * {
+            margin-left: 1rem;
+        }
     }
 }
 
