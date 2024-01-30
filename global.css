@@ -42,6 +42,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
     --primary-text-color-inverted: rgba(255, 255, 255, 1);
     --secondary-text-color-inverted: rgba(255, 255, 255, 0.7);
+
+    --max-text-content-width: 496px;
 }
 
 
@@ -86,7 +88,7 @@ main {
 
 .gutter {
     padding-inline: 1rem;
-    max-width: 40rem;
+    max-width: var(--max-text-content-width);
     margin-inline: auto;
 }
 
@@ -112,6 +114,10 @@ marquee > p {
     margin-left: 2rem;
 }
 
+.title, .tickets-banner {
+    background-color: black;
+}
+
 .title {
     font-family: Rubik;
 
@@ -121,12 +127,27 @@ marquee > p {
         padding-block: 1rem;
         margin-bottom: 1rem;
     }
+
+    & img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    & p {
+        color: white;
+        margin-top: 1rem;
+    }
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .tagline {
     font-family: Rubik;
     font-weight: 800;
     text-transform: uppercase;
+    color: white;
 
     & span {
         display: block;
@@ -134,13 +155,16 @@ marquee > p {
 }
 
 .tickets-banner {
+    margin-top: 0;
+
+
     & div {
-        max-width: 40rem;
+        max-width: var(--max-text-content-width);
+        margin-inline: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-inline: auto;
         padding-inline: 1rem;
     }
 
@@ -151,23 +175,22 @@ marquee > p {
     /* background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px); */
-
     padding-block: 1rem;
-    background-color: white;
 
     & p {
         font-size: 16px;
+        color: white;
     }
 
     & a {
         font-size: 14px;
         display: block;
         text-decoration: none;
-        background-color: black;
+        background-color: white;
         border-radius: 50px;
         padding-block: 4px;
         padding-inline: 12px;
-        color: white;
+        color: black;
 
         &:hover {
 
@@ -176,6 +199,9 @@ marquee > p {
 }
 
 section {
+    max-width: var(--max-text-content-width);
+    margin-inline: auto;
+
     font-family: Rubik;
     padding-inline: 1rem;
     line-height: 1.25;
@@ -278,40 +304,54 @@ section#write-ups {
     }
 }
 
-section#code-of-conduct {
-    padding-top: 2rem;
-    background-color: black;
-    color: var(--primary-text-color-inverted);
-
-    & h2 {
-        font-size: 14px;
-    }
-
-    & p {
-        font-size: 14px;
-    }
-
-    & a {
-        color: var(--primary-text-color-inverted);
-    }
-}
-
 footer {
-    background-color: black;
-    color: var(--secondary-text-color-inverted);
     font-family: Rubik;
-    font-size: 14px;
+    background-color: black;
     padding-bottom: 2rem;
     padding-top: 2rem;
-    margin-top: 0;
-    /* text-align: center; */
+    font-size: 14px;
 
-    & > p:first-child {
-        font-style: italic;
+    & > * {
+        max-width: var(--max-text-content-width);
+        margin-inline: auto;
+        padding-inline: 1rem;
     }
 
-    & > * + * {
+    & #code-of-conduct {
+        color: var(--primary-text-color-inverted);
+
+        & p {
+            line-height: 1.25;
+        }
+
+        & > * + * {
+            margin-top: 1rem;
+        }
+
+        & h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    
+        & a {
+            color: var(--primary-text-color-inverted);
+        }
+    }
+
+    & #partners {
+        font-style: italic;
+        color: var(--secondary-text-color-inverted);
+        margin-top: 2rem;
+        line-height: 1.25;
+    }
+
+    & > p {
         margin-top: 1rem;
+    }
+
+    & small {
+        color: var(--secondary-text-color-inverted);
     }
 
     & a:not(.social-icon) {
@@ -325,7 +365,7 @@ footer {
             color: var(--primary-text-color-inverted);
         }
     }
-    
+
     & a.social-icon {
         & img {
             height: 2rem;
@@ -337,7 +377,7 @@ footer {
             }
         }
     }
-
+    
     & div.socials {
         margin-top: 2rem;
         display: flex;
@@ -355,6 +395,10 @@ footer {
         /* background-color: hsla(115, 88%, 45%, 0.2); */
     }
 
+    .title img {
+        max-width: 250px;
+    }
+
     .tagline {
         font-size: 1.75rem;
         line-height: 1;
@@ -364,16 +408,16 @@ footer {
             margin-top: 0.5rem;
         }
     }
+
+    footer #partners {
+        
+    }
 }
 
 @media screen and (width >= 768px) and (width < 1024px) {
-    main {
-        background-color: hsla(205, 88%, 45%, 0.2);
-    }
+    /*  */
 }
 
 @media screen and (width >= 1024px) {
-    main {
-        background-color: hsla(295, 88%, 45%, 0.2);
-    }
+    /*  */
 }
