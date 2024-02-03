@@ -37,13 +37,35 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* CUSTOM PROPERTIES */
 :root {
+    /* hack pompey, default layout, do not remove */
+    --max-text-content-width: 496px;
+
+    /* hack pompey, default colors, do not remove */
     --primary-text-color: rgba(0, 0, 0, 1);
     --secondary-text-color: rgba(0, 0, 0, 0.5);
-
     --primary-text-color-inverted: rgba(255, 255, 255, 1);
     --secondary-text-color-inverted: rgba(255, 255, 255, 0.7);
+    --dark-bg-color: hsl(0, 0%, 0%);
+    --light-bg-color: hsl(0, 0%, 100%);
 
-    --max-text-content-width: 496px;
+    /* hack pompey: move theme overrides */
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: rgba(0, 0, 0, 0.5);
+    --primary-text-color-inverted: hsl(45, 89%, 96%);
+    --secondary-text-color-inverted: hsla(45, 89%, 96%, 70%);
+    --dark-bg-color: hsl(0, 0%, 0%);
+    --light-bg-color: hsl(45, 89%, 96%);
+
+    --accent-blue: #267ae4;
+    --accent-blue-transparent: #267ae499;
+    --accent-green: #09b690;
+    --accent-green-transparent: #09b69099;
+    --accent-yellow: #feac0b;
+    --accent-yellow-transparent: #feac0b99;
+    --accent-pink: #fd629e;
+    --accent-pink-transparent: #fd629e99;
+    --accent-red: #ff5836;
+    --accent-red-transparent: #ff583699;
 }
 
 
@@ -82,6 +104,13 @@ p, h1, h2, h3, h4, h5, h6 {
     src: url('./Rubik-BoldItalic.ttf');
 }
 
+html {
+    background-color: var(--light-bg-color);
+    background-image: url('./banner-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 main {
     
 }
@@ -114,11 +143,9 @@ marquee > p {
     margin-left: 2rem;
 }
 
-.title, .tickets-banner {
-    background-color: black;
-}
-
 .title {
+  
+
     font-family: Rubik;
 
     & h1 {
@@ -135,7 +162,7 @@ marquee > p {
     }
 
     & p {
-        color: white;
+        color: var(--primary-text-color);
         margin-top: 1rem;
     }
 
@@ -155,7 +182,14 @@ marquee > p {
 }
 
 .tickets-banner {
+    background-color: hsla(45, 89%, 96%, 50%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     margin-top: 0;
+    position: sticky;
+    top: 0;
+    font-family: Rubik;
+    padding-block: 1rem;
 
 
     & div {
@@ -168,29 +202,22 @@ marquee > p {
         padding-inline: 1rem;
     }
 
-    position: sticky;
-    top: 0;
-    font-family: Rubik;
-
-    /* background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px); */
-    padding-block: 1rem;
-
     & p {
         font-size: 16px;
-        color: white;
+        color: var(--primary-text-color);
+        font-weight: bold;
     }
 
     & a {
         font-size: 14px;
         display: block;
         text-decoration: none;
-        background-color: white;
+        background-color: var(--accent-blue);
         border-radius: 50px;
         padding-block: 4px;
         padding-inline: 12px;
-        color: black;
+        color: var(--primary-text-color-inverted);
+        font-weight: bold;
 
         &:hover {
 
@@ -199,6 +226,8 @@ marquee > p {
 }
 
 section {
+    
+
     max-width: var(--max-text-content-width);
     margin-inline: auto;
 
@@ -251,7 +280,7 @@ section {
         font-style: italic;
         font-size: 14px;
     }
-
+    
     & blockquote:nth-child(2n) {
         border-bottom-right-radius: 5px;
         text-align: right;
@@ -260,6 +289,21 @@ section {
     & blockquote:nth-child(2n + 1) {
         border-bottom-left-radius: 5px;
         text-align: left;
+    }
+
+    & blockquote:nth-of-type(1) {
+        background-color: var(--accent-green-transparent);
+        color: var(--primary-text-color);
+    }
+
+    & blockquote:nth-of-type(2) {
+        background-color: var(--accent-red-transparent);
+        color: var(--primary-text-color);
+    }
+
+    & blockquote:nth-of-type(3) {
+        background-color: var(--accent-yellow-transparent);
+        color: var(--primary-text-color);
     }
 }
 
@@ -306,7 +350,7 @@ section#write-ups {
 
 footer {
     font-family: Rubik;
-    background-color: black;
+    background-color: var(--accent-yellow);
     padding-bottom: 2rem;
     padding-top: 2rem;
     font-size: 14px;
@@ -318,7 +362,7 @@ footer {
     }
 
     & #code-of-conduct {
-        color: var(--primary-text-color-inverted);
+        color: var(--primary-text-color);
 
         & p {
             line-height: 1.25;
@@ -335,13 +379,13 @@ footer {
         }
     
         & a {
-            color: var(--primary-text-color-inverted);
+            color: var(--primary-text-color);
         }
     }
 
     & #partners {
         font-style: italic;
-        color: var(--secondary-text-color-inverted);
+        color: var(--secondary-text-color);
         margin-top: 2rem;
         line-height: 1.25;
     }
@@ -351,25 +395,25 @@ footer {
     }
 
     & small {
-        color: var(--secondary-text-color-inverted);
+        color: var(--secondary-text-color);
     }
 
     & a:not(.social-icon) {
-        color: var(--secondary-text-color-inverted);
+        color: var(--secondary-text-color);
         text-decoration: underline;
         text-underline-offset: 2px;
         text-decoration-style: wavy;
         text-decoration-thickness: 1px;
 
         &:hover {
-            color: var(--primary-text-color-inverted);
+            color: var(--primary-text-color);
         }
     }
 
     & a.social-icon {
         & img {
             height: 2rem;
-            filter: invert(1);
+            /* filter: invert(1); */
             opacity: 0.7;
 
             &:hover {
@@ -390,7 +434,7 @@ footer {
     }
 }
 
-@media screen and (width < 768px) {
+/* @media screen and (width < 768px) { */
     main {
         /* background-color: hsla(115, 88%, 45%, 0.2); */
     }
@@ -412,7 +456,7 @@ footer {
     footer #partners {
         
     }
-}
+/* } */
 
 @media screen and (width >= 768px) and (width < 1024px) {
     /*  */
