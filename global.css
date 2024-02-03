@@ -226,8 +226,6 @@ marquee > p {
 }
 
 section {
-    
-
     max-width: var(--max-text-content-width);
     margin-inline: auto;
 
@@ -250,7 +248,7 @@ section {
     }
 
     & a {
-        color: black;
+        color: var(--primary-text-color);
         text-decoration: underline;
         text-underline-offset: 2px;
         text-decoration-style: wavy;
@@ -272,7 +270,7 @@ section {
     } */
 
     & blockquote {
-        background-color: black;
+        background-color: var(--dark-bg-color);
         color: white;
         padding: 1rem;
         border: none;
@@ -292,21 +290,78 @@ section {
     }
 
     & blockquote:nth-of-type(1) {
-        background-color: var(--accent-green-transparent);
-        color: var(--primary-text-color);
+        background-color: var(--accent-green);
+        color: var(--primary-text-color-inverted);
     }
 
     & blockquote:nth-of-type(2) {
-        background-color: var(--accent-red-transparent);
-        color: var(--primary-text-color);
+        background-color: var(--accent-red);
+        color: var(--primary-text-color-inverted);
     }
 
     & blockquote:nth-of-type(3) {
-        background-color: var(--accent-yellow-transparent);
-        color: var(--primary-text-color);
+        background-color: var(--accent-yellow);
+        color: var(--primary-text-color-inverted);
     }
 }
 
+section#what-is-hp {
+    background-color: var(--accent-blue);
+    padding: 24px 32px;
+    border-radius: 24px;
+
+    & h2,
+    & p,
+    & a {
+        color: var(--primary-text-color-inverted);
+    }
+}
+
+section#faq-build {
+    background-color: var(--accent-green);
+    padding: 24px 32px;
+    border-radius: 24px;
+
+    & h2,
+    & p,
+    & a {
+        color: var(--primary-text-color-inverted);
+    }
+}
+
+section#faq-team {
+    background-color: var(--accent-red);
+    padding: 24px 32px;
+    border-radius: 24px;
+
+    & h2,
+    & p,
+    & a {
+        color: var(--primary-text-color-inverted);
+    }
+}
+
+section#faq-etc {
+    background-color: var(--accent-pink);
+    padding: 24px 32px;
+    border-radius: 24px;
+
+    & ul,
+    & h2,
+    & p,
+    & a {
+        color: var(--primary-text-color-inverted);
+    }
+}
+
+.second-opinions {
+    background-color: hsla(45, 89%, 96%, 80%);
+    padding-block: 2rem;
+
+    & > * + * {
+        margin-top: 2rem;
+    }
+}
 
 section#what-is-hp p:first-of-type,
 section#faq-build p:first-of-type {
@@ -328,6 +383,22 @@ section#write-ups {
 
     & a {
         font-weight: bold;
+    }
+}
+
+.spacer-graphic {
+    margin-block: 3rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    text-align: center;
+    max-width: var(--max-text-content-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & img {
+        max-width: 80px;
+        text-align: center;
     }
 }
 
@@ -354,6 +425,7 @@ footer {
     padding-bottom: 2rem;
     padding-top: 2rem;
     font-size: 14px;
+    margin-top: 0;
 
     & > * {
         max-width: var(--max-text-content-width);
