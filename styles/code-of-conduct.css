@@ -1,0 +1,30 @@
+html {
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
+    max-width: var(--max-text-content-width);
+    margin: 0 auto;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+
+h1 {
+    font-size: var(--fs-xxlarge);
+}
+
+h2 {
+    font-size: var(--fs-large);
+}
+
+h3, p, a {
+    font-size: var(--fs-body);
+}

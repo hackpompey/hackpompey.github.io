@@ -35,12 +35,47 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END CSS RESET */
 
-/* CUSTOM PROPERTIES */
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: italic;
+    src: url('../fonts/Rubik-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 800;
+    src: url('../fonts/Rubik-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: bold;
+    src: url('../fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: italic;
+    font-weight: bold;
+    src: url('../fonts/Rubik-BoldItalic.ttf');
+}
+
 :root {
-    /* hack pompey, default layout, do not remove */
+    /* DEFAULT CONTENT WIDTH, DO NOT REMOVE */
     --max-text-content-width: 496px;
 
-    /* hack pompey, default colors, do not remove */
+    /* DEFAULT FONT SIZES, DO NOT REMOVE */
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+    --fs-large: 1.125rem;
+    --fs-xxlarge: 1.75rem;
+
+    /* DEFAULT COLOUR SCHEME, DO NOT REMOVE */
     --primary-text-color: rgba(0, 0, 0, 1);
     --secondary-text-color: rgba(0, 0, 0, 0.5);
     --primary-text-color-inverted: rgba(255, 255, 255, 1);
@@ -48,14 +83,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --dark-bg-color: hsl(0, 0%, 0%);
     --light-bg-color: hsl(0, 0%, 100%);
 
-    /* hack pompey: move theme overrides */
-    --primary-text-color: rgba(0, 0, 0, 1);
-    --secondary-text-color: rgba(0, 0, 0, 0.5);
-    --primary-text-color-inverted: hsl(45, 89%, 96%);
-    --secondary-text-color-inverted: hsla(45, 89%, 96%, 70%);
-    --dark-bg-color: hsl(0, 0%, 0%);
-    --light-bg-color: hsl(45, 89%, 96%);
-
+    /* DEFAULT ACCENT COLOURS, DO NOT REMOVE */
     --accent-blue: #267ae4;
     --accent-blue-transparent: #267ae499;
     --accent-green: #09b690;
@@ -68,51 +96,8 @@ p, h1, h2, h3, h4, h5, h6 {
     --accent-red-transparent: #ff583699;
 }
 
-
-@font-face {
-    font-family: 'Shantell Sans';
-    src: url('./shantell-sans_vf_regular.ttf');
-}
-
-@font-face {
-    font-family: 'Rubik';
-    src: url('./Rubik-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Rubik';
-    font-style: italic;
-    src: url('./Rubik-Italic.ttf');
-}
-
-@font-face {
-    font-family: 'Rubik';
-    font-weight: 800;
-    src: url('./Rubik-ExtraBold.ttf');
-}
-
-@font-face {
-    font-family: 'Rubik';
-    font-weight: bold;
-    src: url('./Rubik-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Rubik';
-    font-style: italic;
-    font-weight: bold;
-    src: url('./Rubik-BoldItalic.ttf');
-}
-
-html {
-    background-color: var(--light-bg-color);
-    background-image: url('./banner-bg.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-main {
-    
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: Rubik;
 }
 
 .gutter {
@@ -133,48 +118,43 @@ main > * + * {
     margin-top: 1rem;
 }
 
-blockquote {
-    border-left: 1px solid black;
-    padding-left: 1rem;
-}
-
 marquee > p {
     display: inline-block;
     margin-left: 2rem;
 }
 
 .title {
-  
-
     font-family: Rubik;
-
-    & h1 {
-        background-color: black;
-        color: white;
-        padding-block: 1rem;
-        margin-bottom: 1rem;
-    }
 
     & img {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         margin: 0 auto;
     }
 
     & p {
         color: var(--primary-text-color);
-        margin-top: 1rem;
+        line-height: 1.25;
     }
-
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    
+    > div {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .tagline {
     font-family: Rubik;
     font-weight: 800;
     text-transform: uppercase;
-    color: white;
+    font-size: var(--fs-xxlarge);
+    line-height: 1;
+    text-align: center;
+    margin-top: 1rem;
+
+    & span:last-child {
+        margin-top: 0.5rem;
+    }
 
     & span {
         display: block;
@@ -182,7 +162,6 @@ marquee > p {
 }
 
 .tickets-banner {
-    background-color: hsla(45, 89%, 96%, 50%);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     margin-top: 0;
@@ -203,25 +182,21 @@ marquee > p {
     }
 
     & p {
-        font-size: 16px;
+        font-size: var(--fs-body);
         color: var(--primary-text-color);
         font-weight: bold;
     }
 
     & a {
-        font-size: 14px;
+        font-size: var(--fs-small);
         display: block;
         text-decoration: none;
-        background-color: var(--accent-blue);
+        background-color: var(--primary-text-color);
         border-radius: 50px;
         padding-block: 4px;
         padding-inline: 12px;
         color: var(--primary-text-color-inverted);
         font-weight: bold;
-
-        &:hover {
-
-        }
     }
 }
 
@@ -238,13 +213,13 @@ section {
     }
 
     & h2 {
-        font-size: 18px;
+        font-size: var(--fs-large);
         font-weight: bold;
         text-transform: uppercase;
     }
 
     & p {
-        font-size: 16px;
+        font-size: var(--fs-body);
     }
 
     & a {
@@ -265,10 +240,6 @@ section {
         }
     }
 
-    /* & blockquote {
-        quotes: "\201C""\201D";
-    } */
-
     & blockquote {
         background-color: var(--dark-bg-color);
         color: white;
@@ -276,7 +247,7 @@ section {
         border: none;
         border-radius: 20px;
         font-style: italic;
-        font-size: 14px;
+        font-size: var(--fs-small);
     }
     
     & blockquote:nth-child(2n) {
@@ -288,84 +259,11 @@ section {
         border-bottom-left-radius: 5px;
         text-align: left;
     }
-
-    & blockquote:nth-of-type(1) {
-        background-color: var(--accent-green);
-        color: var(--primary-text-color-inverted);
-    }
-
-    & blockquote:nth-of-type(2) {
-        background-color: var(--accent-red);
-        color: var(--primary-text-color-inverted);
-    }
-
-    & blockquote:nth-of-type(3) {
-        background-color: var(--accent-yellow);
-        color: var(--primary-text-color-inverted);
-    }
-}
-
-section#what-is-hp {
-    background-color: var(--accent-blue);
-    padding: 24px 32px;
-    border-radius: 24px;
-
-    & h2,
-    & p,
-    & a {
-        color: var(--primary-text-color-inverted);
-    }
-}
-
-section#faq-build {
-    background-color: var(--accent-green);
-    padding: 24px 32px;
-    border-radius: 24px;
-
-    & h2,
-    & p,
-    & a {
-        color: var(--primary-text-color-inverted);
-    }
-}
-
-section#faq-team {
-    background-color: var(--accent-red);
-    padding: 24px 32px;
-    border-radius: 24px;
-
-    & h2,
-    & p,
-    & a {
-        color: var(--primary-text-color-inverted);
-    }
-}
-
-section#faq-etc {
-    background-color: var(--accent-pink);
-    padding: 24px 32px;
-    border-radius: 24px;
-
-    & ul,
-    & h2,
-    & p,
-    & a {
-        color: var(--primary-text-color-inverted);
-    }
-}
-
-.second-opinions {
-    background-color: hsla(45, 89%, 96%, 80%);
-    padding-block: 2rem;
-
-    & > * + * {
-        margin-top: 2rem;
-    }
 }
 
 section#what-is-hp p:first-of-type,
 section#faq-build p:first-of-type {
-    font-size: 16px;
+    font-size: var(--fs-body);
     font-weight: bold;
     font-style: italic;
 }
@@ -378,7 +276,7 @@ section#write-ups {
     & span:last-child {
         margin-top: 0.25rem;
         font-style: italic;
-        font-size: 14px;
+        font-size: var(--fs-small);
     }
 
     & a {
@@ -409,23 +307,16 @@ section#write-ups {
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    /* border-top: 2px solid black; */
-    /* border-bottom: 2px solid black; */
-
-    & small {
-        font-size: 12px;
-    }
+    font-size: var(--fs-xxlarge);
+    line-height: 1.125;
 }
 
 footer {
     font-family: Rubik;
-    background-color: var(--accent-yellow);
+    background-color: var(--dark-bg-color);
     padding-bottom: 2rem;
     padding-top: 2rem;
-    font-size: 14px;
-    margin-top: 0;
+    font-size: var(--fs-small);
 
     & > * {
         max-width: var(--max-text-content-width);
@@ -434,7 +325,7 @@ footer {
     }
 
     & #code-of-conduct {
-        color: var(--primary-text-color);
+        color: var(--primary-text-color-inverted);
 
         & p {
             line-height: 1.25;
@@ -445,19 +336,19 @@ footer {
         }
 
         & h2 {
-            font-size: 14px;
+            font-size: var(--fs-small);
             text-transform: uppercase;
             font-weight: bold;
         }
     
         & a {
-            color: var(--primary-text-color);
+            color: var(--primary-text-color-inverted);
         }
     }
 
     & #partners {
         font-style: italic;
-        color: var(--secondary-text-color);
+        color: var(--secondary-text-color-inverted);
         margin-top: 2rem;
         line-height: 1.25;
     }
@@ -467,26 +358,26 @@ footer {
     }
 
     & small {
-        color: var(--secondary-text-color);
+        color: var(--secondary-text-color-inverted);
     }
 
     & a:not(.social-icon) {
-        color: var(--secondary-text-color);
+        color: var(--secondary-text-color-inverted);
         text-decoration: underline;
         text-underline-offset: 2px;
         text-decoration-style: wavy;
         text-decoration-thickness: 1px;
 
         &:hover {
-            color: var(--primary-text-color);
+            color: var(--primary-text-color-inverted);
         }
     }
 
     & a.social-icon {
         & img {
             height: 2rem;
-            /* filter: invert(1); */
             opacity: 0.7;
+            filter: invert(1);
 
             &:hover {
                 opacity: 1;
@@ -506,34 +397,30 @@ footer {
     }
 }
 
-/* @media screen and (width < 768px) { */
-    main {
-        /* background-color: hsla(115, 88%, 45%, 0.2); */
-    }
-
-    .title img {
-        max-width: 250px;
-    }
-
-    .tagline {
-        font-size: 1.75rem;
-        line-height: 1;
-        text-align: center;
-
-        & span:last-child {
-            margin-top: 0.5rem;
-        }
-    }
-
-    footer #partners {
-        
-    }
-/* } */
-
-@media screen and (width >= 768px) and (width < 1024px) {
+@media screen and (width < 767px) {
     /*  */
 }
 
-@media screen and (width >= 1024px) {
+@media screen and (width >= 767px) and (width < 1023px) {
     /*  */
+}
+
+@media screen and (width >= 1023px) {
+    :root {
+        --max-text-content-width: calc(496px * 1.125);
+        --fs-body: calc(1rem * 1.125);
+        --fs-small: calc(0.875rem * 1.125);
+        --fs-large: calc(1.125rem * 1.125);
+        --fs-xxlarge: calc(1.75rem * 1.125);
+    }
+}
+
+@media screen and (width >= 1919px) {
+    :root {
+        --max-text-content-width: calc(496px * 1.5);
+        --fs-body: calc(1rem * 1.5);
+        --fs-small: calc(0.875rem * 1.5);
+        --fs-large: calc(1.125rem * 1.5);
+        --fs-xxlarge: calc(1.75rem * 1.5);
+    }
 }
