@@ -1,55 +1,22 @@
 {
   "name": "hackpompey.github.io",
-  "private": true,
-  "description": "The official website for Hack Pompey",
-  "version": "0.1.0",
-  "author": "David Ralph <David.M.L.Ralph@gmail.com>",
-  "dependencies": {
-    "@emotion/core": "^11.0.0",
-    "@fortawesome/fontawesome-svg-core": "^6.1.2",
-    "@fortawesome/free-brands-svg-icons": "^6.1.2",
-    "@fortawesome/free-regular-svg-icons": "^6.1.2",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "gatsby": "^4.19.2",
-    "gatsby-background-image": "^1.6.0",
-    "gatsby-plugin-emotion": "^7.19.0",
-    "gatsby-plugin-image": "^2.19.0",
-    "gatsby-plugin-manifest": "^4.19.0",
-    "gatsby-plugin-offline": "^5.19.0",
-    "gatsby-plugin-react-helmet-async": "^1.2.2",
-    "gatsby-plugin-sharp": "^4.19.0",
-    "gatsby-plugin-typography": "^4.19.0",
-    "gatsby-remark-images": "^6.19.0",
-    "gatsby-source-filesystem": "^4.19.0",
-    "gatsby-transformer-remark": "^5.19.0",
-    "gatsby-transformer-sharp": "^4.19.0",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-burger-menu": "^3.0.8",
-    "react-dom": "^17.0.2",
-    "react-helmet-async": "^1.3.0",
-    "react-typography": "^0.16.20",
-    "typography": "^0.16.21"
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "prettier": "^2.7.1"
-  },
-  "license": "MIT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "start": "serve ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hackpompey/hackpompey.github.io"
+    "url": "git+https://github.com/hackpompey/hackpompey.github.io.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/hackpompey/hackpompey.github.io/issues"
+  },
+  "homepage": "https://github.com/hackpompey/hackpompey.github.io#readme",
+  "devDependencies": {
+    "serve": "^14.2.1"
   }
 }
