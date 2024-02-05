@@ -260,5 +260,15 @@
             </p>
         </footer>
     </main>
+    <script>
+        // disable old site's service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister()
+                }
+            })
+        }
+    </script>
 </body>
 </html>
