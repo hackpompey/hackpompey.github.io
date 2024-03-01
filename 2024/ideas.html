@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hack Pompey: Move ideas • Hack Pompey</title>
+    <meta name="description" content="An idea board for Hack Pompey: Move">
+
+    <meta property="og:title" content="Hack Pompey: Move ideas">
+    <meta property="og:description" content="An idea board for Hack Pompey: Move">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@hackpompey">
+    <meta name="twitter:title" content="Hack Pompey: Move ideas">
+    <meta name="twitter:description" content="An idea board for Hack Pompey: Move">
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link href="../styles/global.css" rel="stylesheet" type="text/css">
+
+    <style>
+        @font-face {
+            font-family: 'Permanent Marker';
+            src: url('../fonts/PermanentMarker-Regular.ttf');
+        }
+
+        html {
+            background-color: var(--light-bg-color);
+            background-image: url('../images/banner-bg.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        body {
+            background: hsla(45, 89%, 96%, 90%);
+            min-height: 100vh;
+        }
+
+        main {
+            padding-block: 3rem;
+            padding-inline: 3rem;
+            margin-inline: auto;
+        }
+
+        a {
+            color: var(--primary-text-color);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 1px;
+        }
+
+        .idea-grid {
+            margin-block: 3rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .idea {
+            padding: 16px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            aspect-ratio: 1;
+            height: 100%;
+            width: 100%;
+
+            p {
+                text-align: center;
+                font-family: 'Permanent Marker';
+            }
+
+            a {
+                text-decoration-style: solid;
+                text-decoration-thickness: 3px;
+            }
+        }
+
+        .idea:nth-child(3n - 3) {
+            transform: rotate(0deg) translateX(3px) translateY(1px);
+            background-color: var(--accent-blue-light);
+        }
+
+        .idea:nth-child(3n - 2) {
+            transform: rotate(1deg) translateX(2px) translateY(-2px);
+            background-color: var(--accent-green-light);
+        }
+
+        .idea:nth-child(3n - 1) {
+            transform: rotate(-1deg) translateX(0px) translateY(0px);
+            background-color: var(--accent-yellow-light);
+        }
+
+        .idea:nth-child(7n) {
+            transform: rotate(-2deg) translateX(-2px) translateY(2px);
+            background-color: var(--accent-pink-light);
+          
+        }
+
+        .idea:nth-child(7n - 4) {
+            transform: rotate(2deg) translateX(1px) translateY(-1px);
+            background-color: var(--accent-red-light);
+        }
+
+        @media screen and (width < 400px) {
+            main {
+                padding-block: 2rem;
+                padding-inline: 1rem;
+            }
+
+            .idea-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                margin-block: 3rem;
+            }
+
+            .idea {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media screen and (width >= 400px) and (width < 767px) {
+            main {
+                padding-inline: 2rem;
+            }
+
+            .idea-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                margin-block: 2rem;
+            }
+
+            .idea {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+
+        @media screen and (width >= 767px) and (width < 1023px) {
+            .idea-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .idea {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (width >= 1023px) {
+            main {
+                max-width: max(80vw, 1023px);
+            }
+
+            .idea-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .idea {
+                font-size: max(18px, 1.2vw);
+            }
+        }
+
+        @media screen and (width >= 1919px) {
+            .idea-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Hack Pompey: Move ideas</h1>
+        <div class="idea-grid">
+            <div class="idea"><p>
+                The environment moves the players (or the players move the environment)
+            </p></div>
+            <div class="idea"><p>
+                Make the world easier to navigate for people with physical limitations
+            </p></div>
+            <div class="idea"><p>
+                What if a lazy susan moved instead of spun?
+            </p></div>
+            <div class="idea"><p>
+                Gamify exercise
+            </p></div>
+            <div class="idea"><p>
+                Pinball, but with unconventional materials
+            </p></div>
+            <div class="idea"><p>
+                Interactive visualiser for data flow (think <a target="blank" href="https://github.blog/2020-12-21-how-we-built-the-github-globe/">Github Globe</a>)
+            </p></div>
+            <div class="idea"><p>
+                <a href="https://youtu.be/IwjZ1J2b8UY?si=Vh7HATrM1JEFZFTc&t=22" target="_blank">Wizard’s Chess</a>
+            </p></div>
+            <div class="idea"><p>
+                Tool to raise awareness and engagement of social movements
+            </p></div>
+            <div class="idea"><p>
+                Doodle Jump, Angry Birds or Flappy Bird with a twist
+            </p></div>
+            <div class="idea"><p>
+                Interactive map and story of historic migrations
+            </p></div>
+            <div class="idea"><p>
+                Helicopter hat
+            </p></div>
+            <div class="idea"><p>
+                Translate movement into music or art
+            </p></div>
+            <div class="idea"><p>
+                The best routes for skating, managed by the community
+            </p></div>
+            <div class="idea"><p>
+                P2P web application for sharing things
+            </p></div>
+            <div class="idea"><p>
+                Battle bots; battle it out during the show and tell
+            </p></div>
+            <div class="idea"><p>
+                Gyroscopic mouse pointer
+            </p></div>
+            <div class="idea"><p>
+                Model car that moves in mysterious ways
+            </p></div>
+            <div class="idea"><p>
+                Chain reaction machine
+            </p></div>
+        </div>
+        <p>
+            <a href="/">&#8592; back to the homepage</a>
+        </p>
+    </main>
+</body>

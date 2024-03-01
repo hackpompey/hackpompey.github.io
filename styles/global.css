@@ -86,14 +86,19 @@ p, h1, h2, h3, h4, h5, h6 {
     /* DEFAULT ACCENT COLOURS, DO NOT REMOVE */
     --accent-blue: #267ae4;
     --accent-blue-transparent: #267ae499;
+    --accent-blue-light: hsl(213, 78%, 72%);
     --accent-green: #09b690;
     --accent-green-transparent: #09b69099;
+    --accent-green-light: hsl(167, 91%, 47%);
     --accent-yellow: #feac0b;
     --accent-yellow-transparent: #feac0b99;
+    --accent-yellow-light: hsl(40, 99%, 65%);
     --accent-pink: #fd629e;
     --accent-pink-transparent: #fd629e99;
+    --accent-pink-light: hsl(337, 97%, 80%);
     --accent-red: #ff5836;
     --accent-red-transparent: #ff583699;
+    --accent-red-light: hsl(10, 100%, 67%);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
