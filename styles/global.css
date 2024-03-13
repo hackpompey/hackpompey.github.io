@@ -131,7 +131,7 @@ marquee > p {
 .title {
     font-family: Rubik;
 
-    & img {
+    .logo {
         width: 100%;
         max-width: 250px;
         margin: 0 auto;
@@ -144,7 +144,6 @@ marquee > p {
     
     > div {
         padding-top: 2rem;
-        padding-bottom: 2rem;
     }
 }
 
@@ -156,6 +155,7 @@ marquee > p {
     line-height: 1;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
     & span:last-child {
         margin-top: 0.5rem;
