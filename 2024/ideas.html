@@ -40,6 +40,7 @@
             padding-block: 3rem;
             padding-inline: 3rem;
             margin-inline: auto;
+            max-width: 1024px;
         }
 
         a {
@@ -52,9 +53,8 @@
 
         .idea-grid {
             margin-block: 3rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .idea {
@@ -112,14 +112,13 @@
             }
 
             .idea-grid {
-                grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
-                margin-block: 3rem;
             }
 
             .idea {
-                font-size: 14px;
+                font-size: 12px;
                 padding: 8px;
+                max-width: calc(50% - 0.5rem);
             }
         }
 
@@ -129,44 +128,39 @@
             }
 
             .idea-grid {
-                grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
-                margin-block: 2rem;
             }
 
             .idea {
                 font-size: 16px;
                 padding: 8px;
+                max-width: calc(50% - 1rem);
             }
         }
 
         @media screen and (width >= 767px) and (width < 1023px) {
             .idea-grid {
-                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
             }
 
             .idea {
                 font-size: 18px;
+                max-width: calc(33% - (2 * 2rem / 3));
             }
         }
 
         @media screen and (width >= 1023px) {
             main {
-                max-width: max(80vw, 1023px);
+                max-width: 1024px;
             }
 
             .idea-grid {
-                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
             }
 
             .idea {
-                font-size: max(18px, 1.2vw);
-            }
-        }
-
-        @media screen and (width >= 1919px) {
-            .idea-grid {
-                grid-template-columns: repeat(5, 1fr);
+                font-size: 18px;
+                max-width: calc(25% - (3 * 2rem / 4));
             }
         }
 
