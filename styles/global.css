@@ -101,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --accent-red-light: hsl(10, 100%, 67%);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, ul, li, a {
     font-family: Rubik;
 }
 

@@ -74,6 +74,7 @@
             }
 
             & a {
+                font-family: 'Permanent Marker';
                 text-decoration-style: solid;
                 text-decoration-thickness: 3px;
             }
@@ -168,11 +169,79 @@
                 grid-template-columns: repeat(5, 1fr);
             }
         }
+
+        .challenge > * + * {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
     <main>
-        <h1>Hack Pompey: Move ideas</h1>
+        <center><h1>Hack Pompey: Move ideas</h1></center>
+        <div class="challenge">
+        <center><h2>Computer Vision Challenge: Eyes on the Ball!</h2></center>
+        <p>
+            Using computer vision, can you build a tool that is able to recognise the elevation of the ball in a screenshot or live stream of a football match?
+        </p>
+        <h3>Getting Started</h3>
+        <p>
+        It’s possible to train a computer vision model to "see" features of an
+        image to then classify or bucket them as appropriate. This kind of
+        problem is called "Image Classification".
+        </p><p>
+        In this challenge, you will be training a computer vision model to
+        distinguish whether the football in a match screenshot is <strong>on the ground</strong>,
+        in <strong>mid-elevation</strong>, or at a <strong>high-elevation</strong>.
+        </p><p>
+        We’ve provided the labelled data that you will need to train your model.
+        The data has already been split into "train", "validation" and "test" sets.
+        In the labelled data, the 1st number is the class, and the other 4 are bounding-box
+        co-ordinates of the ball. The classes are: 0 - ball on the ground,
+        1 - ball is mid-elevation, 2 - ball is high-elevation.
+        </p><p>
+        You can download the labelled training data from
+        <a href="https://drive.google.com/file/d/1lm-XeXbGehLp92DalyCWw3DyG-gZ1kTR/view?pli=1" target="_blank">this Google Drive page</a>
+        (It’s a 500Mb zip file).
+        </p>
+        <h3>Tips</h3>
+        <p>
+            <ul>
+                <li>
+                    <a href="https://www.kaggle.com/models?datatype=14102" target="_blank">TensorFlow Hub</a>
+                    and <a href="https://keras.io/api/applications/" target="_blank">Keras Applications</a>
+                    have pre-trained computer vision models. These models
+                    have already been taught to “see”, some could be fine-tuned
+                    for the task or you could use their outputs (observations
+                    or image features) as inputs for your own logic or model.
+                </li>
+                <li>
+                    <a href="https://docs.opencv.org/4.x/d9/df8/tutorial_root.html" target="_blank">OpenCV</a>
+                    and <a href="https://keras.io/examples/vision/" target="_blank">Keras</a>
+                    have powerful tools for image processing and data augmentation.
+                </li>
+                <li>
+                    <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html" target="_blank">Pandas</a>
+                    and <a href="https://scikit-learn.org/stable/user_guide.html" target="_blank">sci-kit-learn</a> are great for general data
+                    handling and evaluation. (<strong>hint</strong>: you might want
+                    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html" target="_blank">
+                        ski-kit-learn classification_report
+                    </a>)
+                </li>
+                <li>
+                    <a href="https://colab.research.google.com/" target="_blank">Google Colab</a>
+                    lets you run Python scripts in the cloud using a GPU for free.
+                    Many tutorials and libraries provide Jupyter notebooks you
+                    can open, run, and customise in Colab.
+                </li>
+            </ul>
+        </p><p>
+            If you’re stuck on where to start or need help getting over any hurdles,
+            you can tag our resident AI Expert Sage Ralph (<strong>@growingsage</strong>)
+            on our <a href="https://discord.gg/QuSCczME7H?event=1075406096828731412" target="_blank">Discord</a>,
+            or speak to one of the Hack Pompey Staff and we’ll be happy to help!
+        </p>
+        </div>
+        <center><h2>Idea Board</h2></center>
         <div class="idea-grid">
             <div class="idea"><p>
                 The environment moves the players (or the players move the environment)
