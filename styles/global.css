@@ -67,7 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 :root {
     /* DEFAULT CONTENT WIDTH, DO NOT REMOVE */
-    --max-text-content-width: 496px;
+    --max-text-content-width: 66ch;
 
     /* DEFAULT FONT SIZES, DO NOT REMOVE */
     --fs-body: 1rem;
@@ -264,6 +264,10 @@ section {
         border-bottom-left-radius: 5px;
         text-align: left;
     }
+
+    .center {
+        text-align: center;
+    }
 }
 
 section#what-is-hp p:first-of-type,
@@ -412,7 +416,7 @@ footer {
 
 @media screen and (width >= 1023px) {
     :root {
-        --max-text-content-width: calc(496px * 1.125);
+        --max-text-content-width: 66ch;
         --fs-body: calc(1rem * 1.125);
         --fs-small: calc(0.875rem * 1.125);
         --fs-large: calc(1.125rem * 1.125);
@@ -422,7 +426,7 @@ footer {
 
 @media screen and (width >= 1919px) {
     :root {
-        --max-text-content-width: calc(496px * 1.5);
+        --max-text-content-width: 66ch;
         --fs-body: calc(1rem * 1.5);
         --fs-small: calc(0.875rem * 1.5);
         --fs-large: calc(1.125rem * 1.5);

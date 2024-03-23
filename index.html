@@ -28,7 +28,7 @@
             <div class="mask">
                 <div>
                     <img class="logo" src="./images/2024-logotype.svg" />
-                    <p>Free Hackathon<br>March 16th • Portsmouth</p>
+                    <p>Free Hackathon<br>March 16th 2024 • Portsmouth</p>
                 </div>
                 <div>
                     <p class="tagline gutter">
@@ -50,18 +50,252 @@
                 </div>
             </div>
         </div>
-        <div class="tickets-banner">
+        <!-- <div class="tickets-banner">
             <div>
                 <p>Tickets now available</p>
                 <a href="https://www.eventbrite.co.uk/e/hack-pompey-move-tickets-821697979777" target="_blank">Get Tickets</a>
             </div>
-        </div>
+        </div> -->
+        <style>
+            #write-up .projects-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                > div {
+                    width: calc(100% / 3 - (2rem / 3));
+                }
+            }
+        </style>
+        <section id="write-up">
+            <h2 class="center">We celebrated our 10 year anniversary on Saturday with the best Hack Pompey to date!</h2>
+            <!-- <p  style="font-size: var(--fs-large);">
+                We were blown away by how many hackers turned up (almost 100!), amazed at the things people made (29 projects worked on!), and honoured to be the very first hackathon for so many of our attendees.
+            </p> -->
+            <p>
+                Doors opened at 9 and we welcomed almost a <em> hundred</em> hackers
+                in for coffee and croissants. We then had a short but sweet
+                opening talk where <a href="https://www.linkedin.com/in/ryan-thickett-80474754" target="_blank">Ryan Thickett</a>
+                led with the necessities, handing over to
+                <a href="https://www.linkedin.com/in/mrmcwu/" target="_blank">Ming Wu</a>
+                who encouraged us to use the day as an opportunity to stress-test <em>ourselves</em>.
+                Motivating stuff!
+            </p>
+            <p>
+                Everyone then settled in for what would be over <em>500 collective hours of making stuff!</em> 🤯🤯🤯
+            </p>
+            <h2 class="center">What did people make?</h2>
+            <h3>Dance for Pompey</h3>
+            <p>
+                Our runner-up for the People’s Choice Award this year (as voted
+                for by attendees) was “Dance for Pompey”, made by a team
+                comprising <a href="https://www.linkedin.com/in/kane-swartz-68b75311a/" target="_blank">Kane</a>,
+                David, Charlotte, Rob, Artur and Sam.
+            </p>
+            <p>
+                When writing software, programmers have a plethora of tools at
+                their fingertips... but not many at their feet! Dance for Pompey
+                fixed this gross oversight by introducing a Dancemat integration
+                for Vim.
+            </p>
+            <p>The jury’s still out on whether the crowd was more impressed by
+                the idea execution or Kane’s riverdance. 🕺
+            </p>
+            <h3>Hamtracker</h3>
+            <p>
+                This year's winner for the People’s Choice Award,
+                presented by <a href="https://rknight.me" target="_blank">Robb Knight</a> of
+                <a href="https://radweb.com/careers/" target="_blank">Radweb</a>, was the one and only
+                <a href="https://www.linkedin.com/in/nathan-gaskin-2b206a7" target="_blank">Nathan Gaskin</a>!
+                His project was the “Hamtracker”
+            </p>
+            <p>
+                Nathan’s entered into competition with his hamster (Teddy) to
+                see who can run from Land’s End to John O’Groates first.
+            </p>
+            <p>
+                To work out who‘s winning, he hooked up a sensor to Teddy’s
+                hamster wheel to track the wheel's revolutions and work out the
+                distance Teddy runs throughout the night, then overlaying that
+                data with his own exercise tracking data onto a Google Maps
+                route set from Land’s End to John O’Groates.
+            </p>
+            <p>
+                🐹 Teddy’s currently passing Truro, leaving Nathan in the dust… 💨
+            </p>
+            <p class="center">···</p>
+            <p>
+                Here’s a few more that performed well in the votes:
+            </p>
+            <p><strong>Runtime Terr0rs</strong> (Ethan, Jack and Oliver) made a virtual
+                <a href="https://en.wikipedia.org/wiki/Theremin" target="_blank">theramin</a>
+                using hand tracking software! They’ve published the code
+                <a href="https://github.com/runtime-terr0rs/hack-pompey-2024" target="_blank">
+                here</a>.
+            </p>
+            <p>
+                <strong>Do androids dream of electric ducks</strong> (Alex, Felix, Nikhil, Fin, Eleanor)
+                hooked up one of the team to a controlled
+                <a href="https://www.nhs.uk/conditions/transcutaneous-electrical-nerve-stimulation-tens/" target="_blank">
+                TENS machine</a> to create a sort of mild-electrocution-driven
+                Claw Crane/human hybrid with the goal of dropping the duck in
+                the cup!
+            </p>
+            <p>
+                <strong>Your Move</strong> (James, Josh, Ysanne) brought our childhood dreams
+                one step closer to reality by creating a virtual Yu-gi-oh!
+                Dueling game on the web that’s able to recognise real cards
+                that you show it. (It could even recognise Josh's knock-off fakes!)
+            </p>
+            <p class="center">···</p>
+            <p>
+                This is just a teeny snapshot of what people got up to on the
+                day. In fact, there were 24 other projects people worked on! 😅
+            </p>
+            <p>Here’s several more – some of which weren’t able to demo at the
+                show & tell because there were just so many!
+            </p>
+            <div class="projects-list">
+                <div>
+                    <strong>LeftMove</strong>
+                    <p>
+                        An app that recommends Zoopla properties based on your
+                        profile
+                    </p>
+                </div>
+                <div>
+                    <strong>GameCube</strong>
+                    <p>
+                        Dan hooked up a Wii remote via bluetooth to
+                        control a cube in the browser
+                    </p>
+                </div>
+                <div>
+                    <strong>Python</strong>
+                    <p>
+                        A voice assistant that you can ask questions to about
+                        University staff (and for jokes)
+                    </p>
+                </div>
+                <div>
+                    <strong>We don’t have a name</strong>
+                    <p>Federated social media, but Tumblr style</p>
+                </div>
+                <div>
+                    <strong>Dance-Dance Music Video</strong>
+                    <p>
+                        Create a dance-dance style rhythm game to go with a
+                        music video of your choosing
+                    </p>
+                </div>
+                <div>
+                    <strong>Rate my circle</strong>
+                    <p>
+                        An app that rates you on your ability to draw a circle
+                        in the air, like you would with a sparkler
+                    </p>
+                </div>
+                <div>
+                    <strong>The robot that doesn’t fall off</strong>
+                    <p>
+                        A robot that was able to follow the edge of the table
+                        without falling off
+                    </p>
+                </div>
+                <div>
+                    <strong>Migration Maps</strong>
+                    <p>
+                        An interactive website which visualized mass migration
+                        events throughout history
+                    </p>
+                </div>
+                <div>
+                    <strong>The Egusi Camera</strong>
+                    <p>
+                        A mobile app that was able to take photos by tracking
+                        your posture
+                    </p>
+                </div>
+                <div>
+                    <strong>Hole in the Sky</strong>
+                    <p>
+                        A multiplayer,
+                        <a href="https://en.wikipedia.org/wiki/Three-legged_race" target="_blank">
+                        three-legged race</a>
+                        style game where you have to work together to
+                        dodge obstacles
+                    </p>
+                </div>
+                <div>
+                    <strong>flappyterm</strong>
+                    <p>
+                        Flappy Bird, but in your terminal!
+                    </p>
+                </div>
+                <div>
+                    <strong>Data Scientists do themselves out of a job</strong>
+                    <p>
+                        Completely sidestepped our Computer Vision challenge of
+                        creating a tool to work out how high a football is in a
+                        match screenshot by using Google’s Gemini
+                    </p>
+                </div>
+            </div>
+            <p>What an incredible list! – and there were still others too. Well done all!</p>
+            <p class="center">···</p>
+            <p>
+                Hack Pompey: Move couldn’t have happened without the support of
+                our sponsors. We’re incredibly grateful to
+                <a href="https://radweb.com" target="_blank">Radweb</a>,
+                <a href="https://underonecloud.com" target="_blank">Under One Cloud</a>,
+                <a href="https://habitatlearn.com" target="_blank">Habitat Learn</a>,
+                <a href="https://www.linkedin.com/company/wafflestudiodev/" target="_blank">Waffle Studio</a>,
+                and the <a href="https://www.port.ac.uk" target="_blank">University of Portsmouth</a>
+                for enabling us to bring so many great people together under
+                one roof for such a fun day.
+            </p>
+            <p>
+                We’d like to especially thank Charlotte Simonsen for designing
+                the artwork for the event posters, t-shirts, stickers, photos and
+                social media.
+                Check out her <a href="https://charlottesimonsen.com" target="_blank">freelance website</a>
+                if you’re looking for a talented graphic designer/social media manager.
+            </p>
+            <p>
+                Shoutout to Hannah Kenyon for photographing the event!
+                Hannah’s available to hire for any gigs/events/weddings – checkout
+                her <a href="https://www.facebook.com/heartandanchorphotography" target="_blank">facebook page.</a>
+            </p>
+            <p>
+                We’re so grateful to our volunteers who helped us to make the
+                day a smooth operation! Sage Ralph, Ming Wu, Tom Apter,
+                Florence Hutchins, Rhys Parsons, Charlotte and Hannah – thank you!
+            </p>
+            <p>
+                To all our hackers, thank you for your enthusiasm, creativity
+                and willingness to try something new – you’re all amazing!
+                We're so impressed with what people were able to make and we
+                hope the day has inspired you, knowing that you can achieve so
+                much in just a short period of time.
+            </p>
+            <p>
+                We can’t wait to see you all again next year for Hack Pompey 2025,
+                but in the meantime, keep on hacking!
+            </p>
+            <p class="center">
+                ❤️<br>The Hack Pompey Team
+            </p>
+            <div>
+                <br><hr><br>
+            </div>
+        </section>
         <section id="what-is-hp">
             <h2>What is Hack Pompey?</h2>
             <p>
                 Hack Pompey is a FREE social
                 <a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank">hackathon</a>
-                taking place on Saturday March 16th at the <a href="https://maps.app.goo.gl/fgybFZYS3Y4jmY5J9" target="blank">University of Portsmouth</a>.
+                that takes place every spring at the <a href="https://maps.app.goo.gl/fgybFZYS3Y4jmY5J9" target="blank">University of Portsmouth</a>.
             </p>
             <p>
                 We welcome people from all backgrounds and disciplines to join us,
@@ -178,8 +412,8 @@
         <div class="spacer-shoutout">
             <p>
                 Sound good?<br>
-                Grab your tickets,<br>
-                we’ll see you March 16th
+                <!-- Grab your tickets,<br> -->
+                we’ll see you spring 2025!
             </p>
         </div>
         <section>
