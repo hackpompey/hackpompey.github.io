@@ -1,0 +1,137 @@
+:root {
+  /* theme overrides */
+  --primary-text-color: rgb(22, 33, 115);
+  --secondary-text-color: rgba(0, 0, 0, 0.5);
+  --primary-text-color-inverted: hsl(0, 100%, 100%);
+  --secondary-text-color-inverted: hsl(0, 100%, 100%, 40%);
+  --dark-bg-color: rgb(22, 33, 115);
+  --light-bg-color: rgb(250, 246, 219);
+
+  --accent-red: color-mix(in hsl, #e18c9f 100%, #fff 30%);
+  --accent-blue: color-mix(in hsl, #56a8f4 100%, #fff 30%);
+  --accent-yellow: color-mix(in hsl, #f9bd21 100%, #fff 30%);
+}
+
+html {
+  background-color: var(--light-bg-color);
+  background-image: url("./banner-bg-sm.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  background: linear-gradient(white, rgba(250, 246, 219, 85%));
+}
+
+.title {
+  background-image: url("./banner-bg-sm.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & p {
+    color: var(--light-bg-color);
+  }
+}
+
+.tagline {
+  margin-bottom: 2rem;
+}
+
+.sponsors {
+  background: linear-gradient(hsla(45, 89%, 96%, 80%), var(--light-bg-color));
+  padding-block: 1rem;
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.premier-sponsor {
+  margin-top: 0.5rem;
+
+  .seachange-logo {
+    width: min(1000px, 200px);
+  }
+}
+
+.other-sponsors {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 0.5rem;
+
+  .innovate-uk-logo {
+    width: min(1000px, 150px);
+  }
+}
+
+.tickets-banner {
+  background-color: var(--light-bg-color);
+  z-index: 1;
+}
+
+.tickets-banner a:hover {
+  transform: scale(1.2);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+}
+
+section {
+  & blockquote:hover {
+    transform: scale(1.05);
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+  }
+
+  & blockquote:nth-of-type(1) {
+    background-color: var(--accent-blue);
+    color: var(--primary-text-color);
+    filter: brightness(110%);
+  }
+
+  & blockquote:nth-of-type(2) {
+    background-color: var(--accent-red);
+    color: var(--primary-text-color);
+    filter: brightness(110%);
+  }
+
+  & blockquote:nth-of-type(3) {
+    background-color: var(--accent-yellow);
+    color: var(--primary-text-color);
+    filter: brightness(110%);
+  }
+}
+
+@media screen and (width >= 576px) {
+  .title .logo {
+    max-width: max(35vw, 250px);
+  }
+
+  .premier-sponsor .seachange-logo {
+    width: max(200px, 20vw);
+  }
+
+  .other-sponsors .innovate-uk-logo {
+    width: max(150px, 12vw);
+  }
+
+  .title {
+    background-image: url("./banner-bg-md.svg");
+  }
+}
+
+@media screen and (width >= 768px) {
+  .key-info {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .title {
+    background-image: url("./banner-bg-lg.svg");
+  }
+}
