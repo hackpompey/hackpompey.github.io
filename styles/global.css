@@ -297,6 +297,25 @@ section {
   }
 }
 
+div:has(#announcement) {
+  margin-block: 3rem;
+}
+
+section#announcement {
+  background-color: var(--dark-bg-color);
+  border-radius: 20px;
+  rotate: 0deg;
+  color: var(--primary-text-color-inverted);
+  padding: 1rem;
+  text-align: center;
+  animation: announcement 5000ms infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  a {
+    color: var(--primary-text-color-inverted);
+    font-weight: bold;
+  }
+}
+
 section#what-is-hp p:first-of-type,
 section#faq-build p:first-of-type {
   font-size: var(--fs-body);
@@ -458,5 +477,32 @@ footer {
     --fs-small: calc(0.875rem * 1.5);
     --fs-large: calc(1.125rem * 1.5);
     --fs-xxlarge: calc(1.75rem * 1.5);
+  }
+}
+
+@keyframes announcement {
+  0% {
+    rotate: 0deg;
+    scale: 1;
+  }
+
+  25% {
+    rotate: -1deg;
+    scale: 1.025;
+  }
+
+  50% {
+    rotate: 0deg;
+    scale: 1;
+  }
+
+  75% {
+    rotate: 1deg;
+    scale: 1.025;
+  }
+
+  100% {
+    rotate: 0deg;
+    scale: 1;
   }
 }

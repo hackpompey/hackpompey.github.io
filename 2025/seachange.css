@@ -1,7 +1,7 @@
 :root {
   /* theme overrides */
   --primary-text-color: rgb(22, 33, 115);
-  --secondary-text-color: rgba(0, 0, 0, 0.5);
+  --secondary-text-color: rgba(22, 33, 115, 0.4);
   --primary-text-color-inverted: hsl(0, 100%, 100%);
   --secondary-text-color-inverted: hsl(0, 100%, 100%, 40%);
   --dark-bg-color: rgb(22, 33, 115);
