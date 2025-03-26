@@ -66,7 +66,7 @@ body {
   align-items: center; */
   margin-top: 0.5rem;
 
-  .innovate-uk-logo {
+  .uk-gov-fund-logo {
     width: min(1000px, 150px);
   }
 }
@@ -115,7 +115,7 @@ section {
     width: max(200px, 20vw);
   }
 
-  .other-sponsors .innovate-uk-logo {
+  .other-sponsors .uk-gov-fund-logo {
     width: max(150px, 12vw);
   }
 
