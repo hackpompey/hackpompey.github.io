@@ -467,6 +467,7 @@ footer {
     --fs-body: calc(1rem * 1.125);
     --fs-small: calc(0.875rem * 1.125);
     --fs-large: calc(1.125rem * 1.125);
+    --fs-xlarge: calc(1.375rem * 1.125);
     --fs-xxlarge: calc(1.75rem * 1.125);
   }
 }
@@ -477,6 +478,7 @@ footer {
     --fs-body: calc(1rem * 1.5);
     --fs-small: calc(0.875rem * 1.5);
     --fs-large: calc(1.125rem * 1.5);
+    --fs-xlarge: calc(1.375rem * 1.5);
     --fs-xxlarge: calc(1.75rem * 1.5);
   }
 }
