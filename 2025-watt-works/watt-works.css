@@ -7,7 +7,7 @@
 	--primary-text-color: black;
 	--primary-text-color: color-mix(in srgb, black 50%, #003e66 50%);
 	--dark-bg-color: var(--ssen-dark-blue);
-	--light-bg-color: color-mix(in srgb, var(--ssen-yellow), white 80%);
+	--light-bg-color: color-mix(in srgb, var(--ssen-yellow), white 90%);
 
 	--accent-red: var(--ssen-aqua);
 	--accent-blue: var(--ssen-blue);
@@ -16,13 +16,13 @@
 
 html {
 	background-color: var(--light-bg-color);
-	background-image: url('./web-banner-sm.svg');
+	background-image: url('./web-bg.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 body {
-	background: linear-gradient(var(--light-bg-color), hsla(45, 89%, 96%, 95%));
+	background: linear-gradient(var(--light-bg-color), hsla(45, 89%, 96%, 93%));
 }
 
 .sponsors {
@@ -62,8 +62,13 @@ body {
 	transform: scale(1.2);
 }
 
+#event-tagline {
+	margin-top: 4rem;
+}
+
 section#event-intro {
 	margin-top: 0;
+	margin-bottom: 4rem;
 	text-align: center;
 	text-wrap: balance;
 
@@ -81,15 +86,59 @@ section#challenges {
 	}
 
 	.challenge-grid > div {
-		/* background-color: var(--ssen-aqua); */
-		border-radius: 4px;
-		padding-inline: 8px;
-		padding-block: 8px;
-		width: calc(50% - 8px);
 		transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+
+		border-left: 8px solid var(--ssen-blue);
+		padding-left: 16px;
+		padding-right: 8px;
+		padding-block: 16px;
+		background-color: color-mix(in srgb, var(--ssen-blue) 15%, #fff 85%);
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+
+		h3 {
+			margin-bottom: 4px;
+			color: var(--ssen-blue);
+		}
 
 		&:hover {
 			transform: scale(1.05);
+		}
+	}
+
+	.challenge-grid > div:nth-child(1) {
+		--challenge: #1e28b5;
+		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
+		border-left: 8px solid var(--challenge);
+		h3 {
+			color: var(--challenge);
+		}
+	}
+
+	.challenge-grid > div:nth-child(2) {
+		--challenge: #227a10;
+		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
+		border-left: 8px solid var(--challenge);
+		h3 {
+			color: var(--challenge);
+		}
+	}
+
+	.challenge-grid > div:nth-child(3) {
+		--challenge: #e00a0a;
+		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
+		border-left: 8px solid var(--challenge);
+		h3 {
+			color: var(--challenge);
+		}
+	}
+
+	.challenge-grid > div:nth-child(4) {
+		--challenge: #9001b6;
+		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
+		border-left: 8px solid var(--challenge);
+		h3 {
+			color: var(--challenge);
 		}
 	}
 }
@@ -145,12 +194,23 @@ footer {
 	.tagline {
 		font-size: var(--fs-xlarge);
 	}
+
+	html {
+		background-color: var(--light-bg-color);
+		background-image: url('./web-banner-sm.svg');
+	}
 }
 
 @media (min-width: 521px) {
 	.title {
 		aspect-ratio: 5/2;
 		background-image: url('./web-banner-md.svg');
+	}
+}
+
+@media (min-width: 768px) {
+	.challenge-grid > div {
+		width: calc(50% - 8px);
 	}
 }
 
