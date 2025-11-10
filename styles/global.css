@@ -257,7 +257,8 @@ section {
 	}
 
 	p,
-	ul {
+	ul,
+	ol {
 		font-size: var(--fs-body);
 	}
 
@@ -269,7 +270,8 @@ section {
 		text-decoration-thickness: 1px;
 	}
 
-	& ul {
+	& ul,
+	& ol {
 		list-style: none;
 		padding: 0;
 		list-style-position: outside;

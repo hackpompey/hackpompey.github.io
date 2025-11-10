@@ -110,16 +110,18 @@ section#challenges {
 		--challenge: #1e28b5;
 		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
 		border-left: 8px solid var(--challenge);
-		h3 {
+		h3,
+		a {
 			color: var(--challenge);
 		}
 	}
 
-	.challenge-grid > div:nth-child(2) {
+	.challenge-grid > div:nth-child(4) {
 		--challenge: #227a10;
 		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
 		border-left: 8px solid var(--challenge);
-		h3 {
+		h3,
+		a {
 			color: var(--challenge);
 		}
 	}
@@ -128,16 +130,18 @@ section#challenges {
 		--challenge: #e00a0a;
 		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
 		border-left: 8px solid var(--challenge);
-		h3 {
+		h3,
+		a {
 			color: var(--challenge);
 		}
 	}
 
-	.challenge-grid > div:nth-child(4) {
+	.challenge-grid > div:nth-child(2) {
 		--challenge: #9001b6;
 		background-color: color-mix(in srgb, var(--challenge), #fff 87%);
 		border-left: 8px solid var(--challenge);
-		h3 {
+		h3,
+		a {
 			color: var(--challenge);
 		}
 	}
@@ -218,5 +222,272 @@ footer {
 	.title {
 		aspect-ratio: 4/1;
 		background-image: url('./web-banner-lg.svg');
+	}
+}
+
+html:has(.resource-page) {
+	background: none;
+	body,
+	main {
+		min-height: 200vh;
+	}
+}
+
+.rp {
+	p {
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+}
+
+.rp-nav {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	margin-top: 0;
+	padding-block: 1rem;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+	> div {
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	a {
+		font-size: var(--fs-small);
+		display: block;
+		text-decoration: none;
+		background-color: var(--primary-text-color);
+		border-radius: 50px;
+		padding-block: 4px;
+		padding-inline: 12px;
+		color: var(--primary-text-color-inverted);
+		font-weight: bold;
+		transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+	}
+
+	a:hover {
+		transform: scale(1.2);
+	}
+}
+
+.anchor-offset {
+	padding-top: 4rem;
+	margin-top: -4rem;
+}
+
+.rp-challenge {
+	--ssen-faded-blue: color-mix(in srgb, var(--ssen-blue) 80%, #fff 20%);
+	--flex-quest-purple: #9001b6;
+	--flex-quest-faded-purple: color-mix(in srgb, var(--flex-quest-purple) 80%, #fff 20%);
+
+	border-top: 6px solid var(--ssen-blue);
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-block: 16px;
+	background-color: color-mix(in srgb, var(--ssen-blue) 15%, #fff 85%);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	margin-top: 2rem;
+
+	.rp-challenge__subline {
+		font-family: Rubik;
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 16px;
+		opacity: 0.4;
+	}
+
+	.rp-challenge__title {
+		font-family: Rubik;
+		font-weight: 900;
+		font-size: 24px;
+		text-transform: uppercase;
+		line-height: 32px;
+	}
+
+	.rp-challenge__desc {
+		margin-top: 2px;
+		line-height: 1.2;
+		font-weight: 600;
+		font-style: italic;
+	}
+
+	.rp-challenge__todo {
+		margin-top: 1rem;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 14px;
+	}
+
+	details {
+		margin-top: 1rem;
+		border-radius: 12px;
+		color: white;
+		padding-block: 8px;
+		padding-inline: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 14px;
+	}
+
+	details:has(summary:hover) {
+	}
+
+	details summary {
+		cursor: pointer;
+		list-style: none;
+		color: white;
+		font-family: Rubik;
+		font-weight: bold;
+	}
+
+	details p + p {
+		margin-top: 14px;
+	}
+
+	details[open] summary {
+		padding-bottom: 8px;
+	}
+}
+
+.rp-challenge#watts-happening {
+	--challenge-color: var(--ssen-blue);
+	--challenge-faded-color: color-mix(in srgb, var(--ssen-blue) 80%, #fff 20%);
+	--challenge-bg-color: color-mix(in srgb, var(--ssen-blue) 15%, #fff 85%);
+
+	border-top-color: var(--challenge-color);
+	background-color: var(--challenge-bg-color);
+
+	.rp-challenge__subline,
+	.rp-challenge__title {
+		color: var(--challenge-color);
+	}
+
+	.rp-challenge__desc {
+		color: var(--challenge-faded-color);
+	}
+
+	details {
+		background-color: var(--challenge-color);
+	}
+
+	details:has(summary:hover) {
+		background-color: var(--challenge-faded-color);
+	}
+}
+
+.rp-challenge#flex-quest {
+	--challenge-color: #8003a2;
+	--challenge-faded-color: color-mix(in srgb, var(--challenge-color) 80%, #fff 20%);
+	--challenge-bg-color: color-mix(in srgb, var(--challenge-color) 15%, #fff 85%);
+
+	border-top-color: var(--challenge-color);
+	background-color: var(--challenge-bg-color);
+
+	.rp-challenge__subline,
+	.rp-challenge__title {
+		color: var(--challenge-color);
+	}
+
+	.rp-challenge__desc {
+		color: var(--challenge-faded-color);
+	}
+
+	details {
+		background-color: var(--challenge-color);
+	}
+
+	details:has(summary:hover) {
+		background-color: var(--challenge-faded-color);
+	}
+}
+
+.challenges-link,
+#announcement {
+	background: linear-gradient(45deg, #2140c1 50%, #9001b6 50%);
+}
+
+.data-block {
+	padding-block: 16px;
+	padding-inline: 16px;
+	border-top: 6px solid black;
+	background-color: #eee;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	h3 {
+		text-transform: uppercase;
+	}
+	p {
+		margin-top: 1rem;
+		font-size: 14px;
+	}
+	.data-block__link {
+		display: inline-block;
+		/* padding-inline: 12px; */
+		/* padding-block: 2px; */
+		/* border: 1px solid black; */
+		/* border-radius: 32px; */
+		/* text-decoration: none; */
+		font-size: 14px;
+		/* background-color: black; */
+		/* color: white; */
+		margin-top: 1rem;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		text-decoration-style: solid;
+		text-decoration-thickness: 1px;
+		/* font-weight: bold; */
+		color: black;
+	}
+}
+
+.data-block + .data-block {
+	margin-top: 2rem;
+}
+
+.rp .spacer-shoutout {
+	margin-bottom: 0;
+	margin-top: -2rem;
+	p {
+		font-family: Rubik;
+	}
+}
+
+.rp {
+	padding-bottom: 3rem;
+}
+
+.data-block-overview {
+	border-top: none;
+	background-color: black;
+	color: white;
+	.data-block__link {
+		color: white;
+		/* font-weight: bold; */
+	}
+
+	p {
+		margin-top: 0;
+	}
+}
+
+.section-intro {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 66ch) {
+	.data-block,
+	.rp-challenge {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }
