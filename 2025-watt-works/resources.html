@@ -152,6 +152,93 @@
 					</a>
 				</div>
 				<div class="data-block gutter">
+					<h3>Near Real-time Data Access (NeRDA)</h3>
+					<p>
+						NeRDA provides live electricity demand and network health measurements from
+						substations across high and low voltage networks (updated every 3-10
+						minutes). You can use this for getting grid conditions in near real-time to
+						identify flexibility opportunities, forecast constraints, and build
+						applications that respond to actual network supply and demand.
+					</p>
+					<p>
+						There are two parts. The Portal (or Dashboard) which provides a GUI over the
+						API, and then the API itself. We recommend using the GUI to find areas and
+						substations of interest, then taking the substation id from the URL to query
+						the API as per the API guides linked below.
+					</p>
+					<p>Useful links:</p>
+					<ul>
+						<li>
+							<a
+								target="_blank"
+								href="https://ssen-innovation.co.uk/watt-works-hack-pompey/datasets-descriptions-and-attributes/#near-real-time-data-access-nerda"
+								>SSEN’S overview of NeRDA</a
+							>
+						</li>
+						<li>
+							<a
+								target="_blank"
+								href="https://www.ssen.co.uk/our-services/tools-and-maps/near-real-time-data-access-nerda-portal/"
+								>API User Guide, Data Definitions and more</a
+							>
+						</li>
+						<li>
+							<a target="_blank" href="https://nerda.ssen.co.uk/nerda"
+								>The NeRDA Portal</a
+							>
+						</li>
+					</ul>
+					<details>
+						<summary>Hack Pompey’s Technical Notes on the API</summary>
+						<p>
+							<strong>Request authentication</strong>
+						</p>
+						<p>
+							We recommend authenticating API requests using the "Short-Term API Key"
+							by including the
+							<code>{ Authorization: Bearer YOUR_API_KEY }</code> request header.
+						</p>
+						<p>
+							The "Long-Term API Key" requires making <code>GET</code> requests with a
+							<code>body</code> which is not supported by most request libraries or
+							apis, including the native <code>fetch</code> api in JavaScript.
+						</p>
+						<p>
+							Just keep in mind that the short-term api key will expire after a
+							session, so it is wise to grab a new short-term api key before demoing
+							your app for example.
+						</p>
+						<p>
+							<strong>CORS issues</strong>
+						</p>
+						<p>
+							If you are calling the NeRDA directly from the frontend of your app or
+							website, you will likely encounter CORS errors. (<a
+								href="https://www.youtube.com/watch?v=4KHiSt0oLJ0"
+								>CORS explained in 100 seconds on Youtube.</a
+							>)
+						</p>
+						<p>
+							Calls to NeRDA are okay from a server however. To save you the trouble
+							of setting up a server if you don't need one, we’ve created a proxy
+							server to forward your requests for you so that you can avoid CORS
+							errors and call NeRDA from the frontend.
+						</p>
+						<p>
+							It’s a drop in replacement, you just need to swap out the domain segment
+							of the API URL as follows:<br /><br />
+							<strong>Before:</strong><br />
+							https://<span style="text-decoration: underline"
+								>nerda-prod-apis-v2.azurewebsites.net</span
+							>/api/ApiNerdaStatic?substation=74f42299-9f8e-4cb4-922c-0e3273bff4c7
+							<br /><br /><strong>After:</strong><br />
+							https://<span style="text-decoration: underline"
+								>nerda.hackathons.dev</span
+							>/api/ApiNerdaStatic?substation=74f42299-9f8e-4cb4-922c-0e3273bff4c7
+						</p>
+					</details>
+				</div>
+				<div class="data-block gutter">
 					<h3>Smart Meter Data</h3>
 					<p>
 						Electricity consumption data from neighbourhoods (aggregated from 5+
