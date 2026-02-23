@@ -54,12 +54,14 @@ section#faq-build p:first-child {
 
 .event-intro-content {
 	padding-top: 20px;
+	padding-inline: 20px;
 	padding-bottom: 40px;
 	border-radius: 16px;
 	animation: announcement 5000ms infinite cubic-bezier(0.075, 0.82, 0.165, 1);
 	margin-inline: 2rem;
 	overflow: hidden;
 	position: relative;
+	text-align: center;
 
 	.ticket-shoutout {
 		display: inline-block;
