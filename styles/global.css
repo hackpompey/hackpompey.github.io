@@ -315,6 +315,17 @@ div:has(#announcement) {
 	margin-block: 3rem;
 }
 
+section#event-intro {
+	margin-top: 0;
+	margin-bottom: 4rem;
+	text-align: center;
+	text-wrap: balance;
+
+	p {
+		font-size: var(--fs-large);
+	}
+}
+
 section#announcement {
 	background-color: var(--dark-bg-color);
 	border-radius: 20px;
@@ -353,6 +364,10 @@ section#write-ups {
 	}
 }
 
+section#questions {
+	text-align: center;
+}
+
 .spacer-graphic {
 	margin-block: 3rem;
 	margin-inline: auto;
@@ -378,6 +393,21 @@ section#write-ups {
 	text-align: center;
 	font-size: var(--fs-xxlarge);
 	line-height: 1.125;
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		background-color: var(--primary-text-color);
+		padding-block: 4px;
+		padding-inline: 12px;
+		color: var(--primary-text-color-inverted);
+		border-radius: 50px;
+		transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
 }
 
 footer {
