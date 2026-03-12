@@ -80,7 +80,7 @@ h6 {
 
 :root {
 	/* DEFAULT CONTENT WIDTH, DO NOT REMOVE */
-	--max-text-content-width: 66ch;
+	--max-text-content-width: 628px;
 
 	/* DEFAULT FONT SIZES, DO NOT REMOVE */
 	--fs-body: 1rem;
@@ -513,7 +513,6 @@ footer {
 
 @media screen and (width >= 1023px) {
 	:root {
-		--max-text-content-width: 66ch;
 		--fs-body: calc(1rem * 1.125);
 		--fs-small: calc(0.875rem * 1.125);
 		--fs-large: calc(1.125rem * 1.125);
@@ -524,7 +523,6 @@ footer {
 
 @media screen and (width >= 1919px) {
 	:root {
-		--max-text-content-width: 66ch;
 		--fs-body: calc(1rem * 1.5);
 		--fs-small: calc(0.875rem * 1.5);
 		--fs-large: calc(1.125rem * 1.5);

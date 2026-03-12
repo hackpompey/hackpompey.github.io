@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Century Hack ideas and prompts | Hack Pompey</title>
+		<meta name="description" content="Century Hack ideas and prompts | Hack Pompey" />
+
+		<meta property="og:title" content="Hack Pompey" />
+		<meta property="og:description" content="Century Hack ideas and prompts | Hack Pompey" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@hackpompey" />
+		<meta name="twitter:title" content="Hack Pompey" />
+		<meta name="twitter:description" content="Century Hack ideas and prompts | Hack Pompey" />
+
+		<link rel="icon" href="/favicon.png" type="image/png" />
+		<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+		<link href="/2026-century-hack/century-hack.css?v=1" rel="stylesheet" type="text/css" />
+		<style>
+			/* ── RESET ── */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+			* {
+				margin: 0;
+			}
+			body {
+				line-height: 1.5;
+				-webkit-font-smoothing: antialiased;
+			}
+			img,
+			picture,
+			video,
+			canvas,
+			svg {
+				display: block;
+				max-width: 100%;
+			}
+			input,
+			button,
+			textarea,
+			select {
+				font: inherit;
+			}
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				overflow-wrap: break-word;
+			}
+
+			/* ── TOKENS ── */
+			:root {
+				--primary-text-color: #fff;
+				--primary-text-color-inverted: #000;
+				--secondary-text-color-inverted: rgba(255, 255, 255, 0.7);
+				--dark-bg-color: #090a2a;
+				--light-bg-color: hsl(220, 80%, 46%);
+				--century-blue-dark: #090a2a;
+				--century-blue-light: #0e459f;
+				--century-blue-bright: #bde8f5;
+
+				/* per-challenge accents — drawn from global.css accent palette */
+				--social-accent: #00e8b0; /* accent-green, boosted */
+				--social-accent-dim: #00e8b033;
+				--hundred-accent: #feac0b; /* accent-yellow */
+				--hundred-accent-dim: #feac0b33;
+				--future-accent: #fd629e; /* accent-pink */
+				--future-accent-dim: #fd629e33;
+
+				--max-text-content-width: 66ch;
+				--fs-body: 1rem;
+				--fs-small: 0.875rem;
+				--fs-large: 1.125rem;
+				--fs-xlarge: 1.375rem;
+				--fs-xxlarge: 1.75rem;
+			}
+
+			@media screen and (width >= 1023px) {
+				:root {
+					--fs-body: calc(1rem * 1.125);
+					--fs-small: calc(0.875rem * 1.125);
+					--fs-large: calc(1.125rem * 1.125);
+					--fs-xlarge: calc(1.375rem * 1.125);
+					--fs-xxlarge: calc(1.75rem * 1.125);
+				}
+			}
+
+			/* ── BASE ── */
+			html {
+				background-color: var(--dark-bg-color);
+				background-image:
+					radial-gradient(ellipse at 20% 30%, #0e459f44 0%, transparent 60%),
+					radial-gradient(ellipse at 80% 70%, #bde8f511 0%, transparent 50%);
+				background-attachment: fixed;
+				color: var(--primary-text-color);
+			}
+
+			body {
+				font-family: Rubik, system-ui, sans-serif;
+				min-height: 100vh;
+			}
+
+			a {
+				color: var(--primary-text-color);
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-style: wavy;
+				text-decoration-thickness: 1px;
+			}
+
+			/* ── RUBIK via Google Fonts ── */
+			@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+
+			/* ── STICKY NAV ── */
+			.challenge-nav {
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				background: linear-gradient(#090a2a88, #2f5ebc88);
+				display: flex;
+				justify-content: center;
+				padding-inline: 1rem;
+				border-bottom: 1px solid rgba(189, 232, 245, 0.15);
+			}
+
+			.challenge-nav button {
+				background: none;
+				border: none;
+				border-bottom: 3px solid transparent;
+				color: var(--secondary-text-color-inverted);
+				cursor: pointer;
+				font-family: Rubik, system-ui, sans-serif;
+				font-size: var(--fs-small);
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				padding: 1rem 1.5rem 0.75rem;
+				transition:
+					color 200ms cubic-bezier(0.215, 0.61, 0.355, 1),
+					border-color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+				white-space: nowrap;
+			}
+
+			.challenge-nav button.active {
+				color: var(--century-blue-bright);
+				border-bottom-color: var(--century-blue-bright);
+			}
+			.challenge-nav button.active[data-challenge='social-good'] {
+				color: var(--social-accent);
+				border-bottom-color: var(--social-accent);
+			}
+			.challenge-nav button.active[data-challenge='100'] {
+				color: var(--hundred-accent);
+				border-bottom-color: var(--hundred-accent);
+			}
+			.challenge-nav button.active[data-challenge='portsmouth-2126'] {
+				color: var(--future-accent);
+				border-bottom-color: var(--future-accent);
+			}
+
+			.challenge-nav button:hover {
+				color: var(--primary-text-color);
+			}
+
+			/* ── SPACER SHOUTOUT ── */
+			.spacer-shoutout {
+				margin-block: 2.5rem;
+				padding-inline: 1rem;
+				font-family: Rubik, system-ui, sans-serif;
+				font-weight: 800;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: var(--fs-xxlarge);
+				line-height: 1.125;
+			}
+
+			/* ── PANELS ── */
+			.challenge-panel {
+				display: none;
+			}
+			.challenge-panel.active {
+				display: block;
+			}
+
+			/* ── DESCRIPTION ── */
+			.challenge-description {
+				max-width: var(--max-text-content-width);
+				margin-inline: auto;
+				padding-inline: 1rem;
+				font-family: Rubik, system-ui, sans-serif;
+				font-size: var(--fs-body);
+				font-style: italic;
+				color: var(--secondary-text-color-inverted);
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+
+			/* ── PROMPTS GRID ── */
+			section.challenge-panel {
+				max-width: 900px;
+			}
+
+			.prompts-grid {
+				max-width: 900px;
+				margin-inline: auto;
+				padding-inline: 1rem;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+				gap: 0.75rem;
+			}
+
+			.prompt-card {
+				background-color: var(--light-bg-color);
+				color: white;
+				padding: 1rem;
+				border: none;
+				border-radius: 20px;
+				cursor: pointer;
+				transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				animation:
+					fadeIn 0.3s ease both,
+					slideUp 0.3s ease both;
+			}
+
+			.prompt-card:hover {
+				transform: scale(1.03);
+			}
+
+			.prompt-card.highlighted {
+				background: linear-gradient(135deg, var(--century-blue-light), #1a6abf);
+				outline: 2px solid var(--century-blue-bright);
+				outline-offset: 2px;
+			}
+
+			/* alternating corners, mirroring the blockquote style on the site */
+			.prompt-card:nth-child(2n) {
+				border-bottom-right-radius: 5px;
+			}
+			.prompt-card:nth-child(2n + 1) {
+				border-bottom-left-radius: 5px;
+			}
+
+			.prompt-number {
+				font-size: var(--fs-small);
+				font-weight: 800;
+				opacity: 0.35;
+				line-height: 1;
+			}
+
+			.prompt-text {
+				font-size: var(--fs-body);
+				font-weight: 700;
+				line-height: 1.25;
+			}
+
+			.prompt-card.copied {
+				transform: scale(1.05);
+			}
+
+			.prompt-card.copied .prompt-text::after {
+				content: 'Copied!';
+				display: block;
+				margin-top: 0.4rem;
+				font-size: var(--fs-small);
+				font-weight: 400;
+				font-style: italic;
+				opacity: 0.75;
+			}
+
+			/* ── RANDOM BUTTON ── */
+			.panel-footer {
+				max-width: 900px;
+				margin-inline: auto;
+				padding: 2rem 1rem 2rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			.btn-random {
+				display: inline-block;
+				background-color: var(--primary-text-color);
+				border: none;
+				border-radius: 50px;
+				padding-block: 4px;
+				padding-inline: 12px;
+				color: var(--primary-text-color-inverted);
+				font-family: Rubik, system-ui, sans-serif;
+				font-weight: bold;
+				font-size: var(--fs-small);
+				cursor: pointer;
+				transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+
+			.btn-random:hover {
+				transform: scale(1.2);
+			}
+
+			.btn-hint {
+				font-size: var(--fs-small);
+				color: var(--secondary-text-color-inverted);
+				font-style: italic;
+			}
+
+			/* ── PER-CHALLENGE CARD COLOURS ── */
+			#panel-social-good .prompt-card {
+				background-color: #00e8b033;
+				border: 1px solid #00e8b055;
+			}
+			#panel-social-good .prompt-card:hover {
+				background-color: #00e8b055;
+				transform: scale(1.03);
+			}
+			#panel-social-good .prompt-card.highlighted {
+				background: linear-gradient(135deg, #00e8b0aa, #00e8b066);
+				outline-color: var(--social-accent);
+			}
+			#panel-social-good .spacer-shoutout {
+				color: var(--social-accent);
+			}
+			#panel-social-good .prompt-number {
+				color: var(--social-accent);
+				opacity: 1;
+			}
+
+			#panel-100 .prompt-card {
+				background-color: #feac0b33;
+				border: 1px solid #feac0b55;
+			}
+			#panel-100 .prompt-card:hover {
+				background-color: #feac0b55;
+				transform: scale(1.03);
+			}
+			#panel-100 .prompt-card.highlighted {
+				background: linear-gradient(135deg, #feac0baa, #feac0b66);
+				outline-color: var(--hundred-accent);
+			}
+			#panel-100 .spacer-shoutout {
+				color: var(--hundred-accent);
+			}
+			#panel-100 .prompt-number {
+				color: var(--hundred-accent);
+				opacity: 1;
+			}
+
+			#panel-portsmouth-2126 .prompt-card {
+				background-color: #fd629e33;
+				border: 1px solid #fd629e55;
+			}
+			#panel-portsmouth-2126 .prompt-card:hover {
+				background-color: #fd629e55;
+				transform: scale(1.03);
+			}
+			#panel-portsmouth-2126 .prompt-card.highlighted {
+				background: linear-gradient(135deg, #fd629eaa, #fd629e66);
+				outline-color: var(--future-accent);
+			}
+			#panel-portsmouth-2126 .spacer-shoutout {
+				color: var(--future-accent);
+			}
+			#panel-portsmouth-2126 .prompt-number {
+				color: var(--future-accent);
+				opacity: 1;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			@keyframes slideUp {
+				from {
+					translate: 0 10px;
+				}
+				to {
+					translate: 0 0;
+				}
+			}
+
+			.prompts-grid .prompt-card:nth-child(1) {
+				animation-delay: 0.02s, 0.02s;
+			}
+			.prompts-grid .prompt-card:nth-child(2) {
+				animation-delay: 0.04s, 0.04s;
+			}
+			.prompts-grid .prompt-card:nth-child(3) {
+				animation-delay: 0.06s, 0.06s;
+			}
+			.prompts-grid .prompt-card:nth-child(4) {
+				animation-delay: 0.08s, 0.08s;
+			}
+			.prompts-grid .prompt-card:nth-child(5) {
+				animation-delay: 0.1s, 0.1s;
+			}
+			.prompts-grid .prompt-card:nth-child(6) {
+				animation-delay: 0.12s, 0.12s;
+			}
+			.prompts-grid .prompt-card:nth-child(7) {
+				animation-delay: 0.14s, 0.14s;
+			}
+			.prompts-grid .prompt-card:nth-child(8) {
+				animation-delay: 0.16s, 0.16s;
+			}
+			.prompts-grid .prompt-card:nth-child(9) {
+				animation-delay: 0.18s, 0.18s;
+			}
+			.prompts-grid .prompt-card:nth-child(10) {
+				animation-delay: 0.2s, 0.2s;
+			}
+			.prompts-grid .prompt-card:nth-child(11) {
+				animation-delay: 0.22s, 0.22s;
+			}
+			.prompts-grid .prompt-card:nth-child(12) {
+				animation-delay: 0.24s, 0.24s;
+			}
+			.prompts-grid .prompt-card:nth-child(13) {
+				animation-delay: 0.26s, 0.26s;
+			}
+			.prompts-grid .prompt-card:nth-child(14) {
+				animation-delay: 0.28s, 0.28s;
+			}
+			.prompts-grid .prompt-card:nth-child(15) {
+				animation-delay: 0.3s, 0.3s;
+			}
+			.prompts-grid .prompt-card:nth-child(16) {
+				animation-delay: 0.32s, 0.32s;
+			}
+			.prompts-grid .prompt-card:nth-child(17) {
+				animation-delay: 0.34s, 0.34s;
+			}
+			.prompts-grid .prompt-card:nth-child(18) {
+				animation-delay: 0.36s, 0.36s;
+			}
+			.prompts-grid .prompt-card:nth-child(19) {
+				animation-delay: 0.38s, 0.38s;
+			}
+			.prompts-grid .prompt-card:nth-child(20) {
+				animation-delay: 0.4s, 0.4s;
+			}
+
+			@media (max-width: 520px) {
+				.challenge-nav button {
+					padding-inline: 0.75rem;
+					font-size: 0.7rem;
+				}
+				.spacer-shoutout {
+					font-size: var(--fs-xlarge);
+					margin-block: 2rem;
+				}
+			}
+
+			.spacer-shoutout--challenges {
+				margin-block: 0;
+				padding-block: 1rem;
+				background-color: var(--century-blue-dark);
+			}
+
+			.challenge-nav {
+				margin-top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<main id="root" class="show-hundo show-social-good show-portsmouth-2126">
+			<div class="title">
+				<img class="logo" src="/2026-century-hack/event-logo.svg?v=2" />
+			</div>
+			<div class="spacer-shoutout spacer-shoutout--challenges">
+				<p>Challenge Ideas</p>
+			</div>
+			<nav class="challenge-nav" id="challenge-nav">
+				<button class="active" data-challenge="social-good">Social Good</button>
+				<button data-challenge="100">100</button>
+				<button data-challenge="portsmouth-2126">Portsmouth 2126</button>
+			</nav>
+
+			<!-- SOCIAL GOOD -->
+			<section
+				class="challenge-panel active"
+				id="panel-social-good"
+				data-challenge="social-good"
+			>
+				<div class="spacer-shoutout"><p>Social Good</p></div>
+				<p class="challenge-description">
+					Identify and come up with solutions for problems in Portsmouth, or cities in
+					general.
+				</p>
+				<div class="prompts-grid" id="grid-social-good">
+					<div class="prompt-card">
+						<div class="prompt-number">01</div>
+						<div class="prompt-text">Surface free support for families</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">02</div>
+						<div class="prompt-text">Improve public transport experience</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">03</div>
+						<div class="prompt-text">Match food bank supply to demand</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">04</div>
+						<div class="prompt-text">Connect lonely neighbours</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">05</div>
+						<div class="prompt-text">Real-time street-level air quality</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">06</div>
+						<div class="prompt-text">Help renters know their rights</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">07</div>
+						<div class="prompt-text">
+							Help communities discover and reuse empty spaces
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">08</div>
+						<div class="prompt-text">
+							Reach veterans who've fallen through the cracks
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">09</div>
+						<div class="prompt-text">Coastal flood preparedness</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">10</div>
+						<div class="prompt-text">
+							Close the gap between residents and councillors
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">11</div>
+						<div class="prompt-text">Encourage healthier lifestyles</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">12</div>
+						<div class="prompt-text">Match non-traditional candidates to jobs</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">13</div>
+						<div class="prompt-text">
+							Community-powered litter and fly-tip reporting
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">14</div>
+						<div class="prompt-text">Better cycling experience in the city</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">15</div>
+						<div class="prompt-text">Bridge the gap between students and the city</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">16</div>
+						<div class="prompt-text">Discreet help for unsafe homes</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">17</div>
+						<div class="prompt-text">Understand and reduce your energy use</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">18</div>
+						<div class="prompt-text">Fix parking in Portsmouth</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">19</div>
+						<div class="prompt-text">What can be recycled?</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">20</div>
+						<div class="prompt-text">
+							Easier to discover Portsmouth Council services
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">21</div>
+						<div class="prompt-text">Reduce dog mess in the streets</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">22</div>
+						<div class="prompt-text">Address homelessness</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">23</div>
+						<div class="prompt-text">Match event organisers with event spaces</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">24</div>
+						<div class="prompt-text">Reduce reliance on cars in the city</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">25</div>
+						<div class="prompt-text">
+							Help people with niche interests find each other
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">26</div>
+						<div class="prompt-text">Find the best price for my groceries</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">27</div>
+						<div class="prompt-text">
+							Better ways for residents to receive useful local updates
+						</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">28</div>
+						<div class="prompt-text">Knowledge of local events</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">29</div>
+						<div class="prompt-text">Community noticeboard</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">30</div>
+						<div class="prompt-text">
+							Make it easier to report and follow up on local issues
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button class="btn-random" data-target="grid-social-good">
+						Pick one for me
+					</button>
+					<span class="btn-hint">or browse and find one that sticks</span>
+				</div>
+			</section>
+
+			<!-- 100 -->
+			<section class="challenge-panel" id="panel-100" data-challenge="100">
+				<div class="spacer-shoutout"><p>100</p></div>
+				<p class="challenge-description">
+					A free-form challenge — build anything that riffs off the idea of 100.
+				</p>
+				<div class="prompts-grid" id="grid-100">
+					<div class="prompt-card">
+						<div class="prompt-number">01</div>
+						<div class="prompt-text">A game that lasts exactly 100 seconds</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">02</div>
+						<div class="prompt-text">100 years of Portsmouth in one scroll</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">03</div>
+						<div class="prompt-text">A 100-day habit builder</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">04</div>
+						<div class="prompt-text">100 things to do in Portsmouth</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">05</div>
+						<div class="prompt-text">100 acts of everyday kindness</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">06</div>
+						<div class="prompt-text">Track progress toward 100 of anything</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">07</div>
+						<div class="prompt-text">Break 100% into surprising parts</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">08</div>
+						<div class="prompt-text">100 languages at once</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">09</div>
+						<div class="prompt-text">One generative artwork per number, 1 to 100</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">10</div>
+						<div class="prompt-text">One decision, made by 100 strangers</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">11</div>
+						<div class="prompt-text">Player only gets 100 interactions to win</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">12</div>
+						<div class="prompt-text">A story written by 100 people</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">13</div>
+						<div class="prompt-text">Do something with only 100 data points</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">14</div>
+						<div class="prompt-text">Only 100 lines of code</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">15</div>
+						<div class="prompt-text">100 local stories</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">16</div>
+						<div class="prompt-text">100 levels</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">17</div>
+						<div class="prompt-text">The 100 pixel challenge</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">18</div>
+						<div class="prompt-text">AI only has 100 tokens of memory</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button class="btn-random" data-target="grid-100">Pick one for me</button>
+					<span class="btn-hint">or browse and find one that sticks</span>
+				</div>
+			</section>
+
+			<!-- PORTSMOUTH 2126 -->
+			<section
+				class="challenge-panel"
+				id="panel-portsmouth-2126"
+				data-challenge="portsmouth-2126"
+			>
+				<div class="spacer-shoutout"><p>Portsmouth 2126</p></div>
+				<p class="challenge-description">
+					Build something for the future Portsmouth — futuristic, utopian, or anything in
+					between.
+				</p>
+				<div class="prompts-grid" id="grid-portsmouth-2126">
+					<div class="prompt-card">
+						<div class="prompt-number">01</div>
+						<div class="prompt-text">Life on a risen waterfront</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">02</div>
+						<div class="prompt-text">The university in 2126</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">03</div>
+						<div class="prompt-text">Sim city, but Portsmouth</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">04</div>
+						<div class="prompt-text">What replaced the high street</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">05</div>
+						<div class="prompt-text">A tour of 2126 from a local</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">06</div>
+						<div class="prompt-text">Spitbank Fort's second life</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">07</div>
+						<div class="prompt-text">Interactive model of Portsmouth in 2126</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">08</div>
+						<div class="prompt-text">A day in 2126</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">09</div>
+						<div class="prompt-text">Confused historians look back at 2026</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">10</div>
+						<div class="prompt-text">Future communication</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">11</div>
+						<div class="prompt-text">Portsmouth 2126: The Game</div>
+					</div>
+					<div class="prompt-card">
+						<div class="prompt-number">12</div>
+						<div class="prompt-text">The council website, but in 2126</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button class="btn-random" data-target="grid-portsmouth-2126">
+						Pick one for me
+					</button>
+					<span class="btn-hint">or browse and find one that sticks</span>
+				</div>
+			</section>
+
+			<footer>
+				<div>
+					<div id="code-of-conduct">
+						<h2>Code of Conduct</h2>
+						<p>
+							We are dedicated to providing a safe, comfortable and harassment-free
+							experience for everyone regardless of their background.
+						</p>
+						<p>
+							By attending Hack Pompey, you agree to our
+							<a href="/code-of-conduct">Code of Conduct</a>.
+						</p>
+					</div>
+					<p id="partners">
+						Hack Pompey LTD is a non-profit organisation funded by partners and
+						sponsors. If you would like to partner with or support us, please contact us
+						at
+						<a href="mailto:partners@hackpompey.co.uk">partners@hackpompey.co.uk</a>.
+					</p>
+				</div>
+				<div class="socials">
+					<a
+						title="Join Hack Pompey on Discord"
+						href="https://discord.gg/QuSCczME7H"
+						class="social-icon"
+						target="_blank"
+					>
+						<img src="/images/icon-discord.svg" />
+					</a>
+					<a
+						title="Instagram"
+						href="http://www.instagram.com/hackpompey"
+						class="social-icon"
+						target="_blank"
+					>
+						<img src="/images/icon-instagram.svg" />
+					</a>
+					<a
+						title="Facebook"
+						href="https://www.facebook.com/HackPompeyOfficial/"
+						class="social-icon"
+						target="_blank"
+					>
+						<img src="/images/icon-facebook.svg" />
+					</a>
+					<a
+						title="Contact us by email"
+						href="mailto:contact@hackpompey.co.uk"
+						class="social-icon"
+						target="_blank"
+					>
+						<img src="/images/icon-email.svg" />
+					</a>
+				</div>
+				<p>
+					<small>UK Company Number 11486057 (England & Wales)</small>
+				</p>
+			</footer>
+		</main>
+		<script>
+			const navBtns = document.querySelectorAll('#challenge-nav button')
+			const panels = document.querySelectorAll('.challenge-panel')
+
+			navBtns.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const target = btn.dataset.challenge
+					navBtns.forEach(b => b.classList.remove('active'))
+					btn.classList.add('active')
+					panels.forEach(p => {
+						p.classList.remove('active')
+						if (p.id === `panel-${target}`) {
+							p.classList.add('active')
+							p.querySelectorAll('.prompt-card').forEach(c => {
+								c.classList.remove('highlighted')
+								c.style.animation = 'none'
+								c.offsetHeight
+								c.style.animation = ''
+							})
+						}
+					})
+				})
+			})
+
+			document.querySelectorAll('.btn-random').forEach(btn => {
+				btn.addEventListener('click', () => {
+					const grid = document.getElementById(btn.dataset.target)
+					const cards = grid.querySelectorAll('.prompt-card')
+					cards.forEach(c => c.classList.remove('highlighted'))
+					const pick = cards[Math.floor(Math.random() * cards.length)]
+					pick.classList.add('highlighted')
+					pick.scrollIntoView({ behavior: 'smooth', block: 'center' })
+				})
+			})
+
+			// Click any card to copy its text to clipboard
+			function copyText(text) {
+				if (navigator.clipboard && window.isSecureContext) {
+					return navigator.clipboard.writeText(text)
+				}
+				// Fallback for non-secure contexts (e.g. preview iframes)
+				const ta = document.createElement('textarea')
+				ta.value = text
+				ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;'
+				document.body.appendChild(ta)
+				ta.focus()
+				ta.select()
+				document.execCommand('copy')
+				document.body.removeChild(ta)
+				return Promise.resolve()
+			}
+
+			let copyTimeout
+			document.querySelectorAll('.prompts-grid').forEach(grid => {
+				grid.addEventListener('click', e => {
+					const card = e.target.closest('.prompt-card')
+					if (!card) return
+					const text = card.querySelector('.prompt-text').textContent.trim()
+					copyText(text).then(() => {
+						document
+							.querySelectorAll('.prompt-card.copied')
+							.forEach(c => c.classList.remove('copied'))
+						card.classList.add('copied')
+						clearTimeout(copyTimeout)
+						copyTimeout = setTimeout(() => card.classList.remove('copied'), 2000)
+					})
+				})
+			})
+		</script>
+	</body>
+</html>

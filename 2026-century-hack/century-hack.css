@@ -37,7 +37,23 @@ html {
 	line-height: 1.25;
 	font-size: 18px;
 	font-weight: bold;
-	padding-bottom: 20px;
+	padding-bottom: 1rem;
+}
+
+.sponsors {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0;
+	background-color: var(--dark-bg-color);
+	p {
+		font-size: var(--fs-small);
+		opacity: 0.8;
+	}
+	img {
+		max-width: 200px;
+		margin-top: -10px;
+	}
 }
 
 .tickets-banner {
@@ -48,8 +64,33 @@ section#event-intro {
 	margin-top: 3rem;
 }
 
-section#faq-build p:first-child {
-	font-size: var(--fs-large);
+section#faq-build {
+	.resources-shoutout {
+		text-align: center;
+
+		a {
+			font-size: var(--fs-small);
+			display: inline-block;
+			text-decoration: none;
+			background-color: var(--primary-text-color);
+			border-radius: 50px;
+			padding-block: 4px;
+			padding-inline: 12px;
+			color: var(--primary-text-color-inverted);
+			font-weight: bold;
+			transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+			margin-top: 1rem;
+			animation: announcement 5000ms infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+
+		a:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	p:first-child {
+		font-size: var(--fs-large);
+	}
 }
 
 .event-intro-content {
@@ -212,5 +253,10 @@ section#past-events {
 
 	.event-date {
 		font-size: 20px;
+		padding-top: 1rem;
+	}
+
+	.sponsors img {
+		max-width: 240px;
 	}
 }
