@@ -260,3 +260,8 @@ section#past-events {
 		max-width: 240px;
 	}
 }
+
+.spacer-shoutout {
+	max-width: var(--max-text-content-width);
+	margin-inline: auto;
+}

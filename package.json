@@ -1,22 +1,22 @@
 {
-  "name": "hackpompey.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "serve ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hackpompey/hackpompey.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hackpompey/hackpompey.github.io/issues"
-  },
-  "homepage": "https://github.com/hackpompey/hackpompey.github.io#readme",
-  "devDependencies": {
-    "serve": "^14.2.1"
-  }
+	"name": "hackpompey.github.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "browser-sync start --server --files \"./**/*\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hackpompey/hackpompey.github.io.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hackpompey/hackpompey.github.io/issues"
+	},
+	"homepage": "https://github.com/hackpompey/hackpompey.github.io#readme",
+	"devDependencies": {
+		"browser-sync": "^3.0.4"
+	}
 }
