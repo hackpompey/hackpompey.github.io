@@ -351,6 +351,23 @@ section#past-events p {
 	font-size: var(--fs-small);
 }
 
+section#testimonials blockquote p {
+	font-size: var(--fs-small);
+}
+
+section#testimonials blockquote p + p {
+	margin-top: var(--fs-small);
+}
+
+section#testimonials blockquote p:last-child {
+	margin-top: 0;
+}
+
+.spacer-shoutout p:last-child {
+	font-size: var(--fs-large);
+	margin-top: 10px;
+}
+
 @media (min-width: 521px) {
 	.event-date {
 		font-size: 18px;
