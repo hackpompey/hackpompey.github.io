@@ -35,8 +35,6 @@ html {
 	background-color: var(--dark-bg-color);
 	text-align: center;
 	line-height: 1.25;
-	font-size: 18px;
-	font-weight: bold;
 	padding-bottom: 1rem;
 }
 
@@ -47,7 +45,6 @@ html {
 	margin-top: 0;
 	background-color: var(--dark-bg-color);
 	p {
-		font-size: var(--fs-small);
 		opacity: 0.8;
 	}
 	img {
@@ -69,7 +66,6 @@ section#faq-build {
 		text-align: center;
 
 		a {
-			font-size: var(--fs-small);
 			display: inline-block;
 			text-decoration: none;
 			background-color: var(--primary-text-color);
@@ -77,19 +73,15 @@ section#faq-build {
 			padding-block: 4px;
 			padding-inline: 12px;
 			color: var(--primary-text-color-inverted);
-			font-weight: bold;
 			transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
 			margin-top: 1rem;
-			animation: announcement 5000ms infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+			animation: announcement 5000ms infinite
+				cubic-bezier(0.075, 0.82, 0.165, 1);
 		}
 
 		a:hover {
 			transform: scale(1.2);
 		}
-	}
-
-	p:first-child {
-		font-size: var(--fs-large);
 	}
 }
 
@@ -113,8 +105,6 @@ section#faq-build {
 		color: var(--primary-text-color-inverted);
 		border-radius: 50px;
 		transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
-		font-weight: bold;
-		font-size: 1.5rem;
 		margin-top: 2rem;
 
 		&:hover {
@@ -197,6 +187,46 @@ section blockquote {
 	background-color: var(--light-bg-color);
 }
 
+section#projects {
+	& h3 {
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--century-blue-bright);
+		margin-top: 2.5rem;
+	}
+
+	& h2:not(:first-child) {
+		margin-top: 2.5rem;
+	}
+}
+
+.project {
+	border-left: 4px solid var(--century-blue-bright);
+	background-color: rgba(189, 232, 245, 0.05);
+	border-radius: 0 12px 12px 0;
+	padding: 1.25rem 1.25rem 1.5rem;
+	overflow: hidden;
+
+	& > * + * {
+		margin-top: 0.75rem;
+	}
+
+	& > img {
+		width: calc(100% + 2.5rem);
+		max-width: calc(100% + 2.5rem);
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		margin-inline: -1.25rem;
+		margin-top: -1.25rem;
+		margin-bottom: 0;
+		border-radius: 0;
+	}
+
+	& h4 {
+		line-height: 1.2;
+	}
+}
+
 section#past-events {
 	.past-events__cards {
 		display: flex;
@@ -204,7 +234,6 @@ section#past-events {
 	}
 
 	p {
-		font-size: var(--fs-small);
 		text-align: center;
 	}
 
@@ -236,11 +265,8 @@ section#past-events {
 			max-height: 80%;
 		}
 	}
-
-	.event-date {
-		font-size: 18px;
-	}
 }
+
 @media (min-width: 1024px) {
 	.title {
 		aspect-ratio: 4/1;
@@ -252,7 +278,6 @@ section#past-events {
 	}
 
 	.event-date {
-		font-size: 20px;
 		padding-top: 1rem;
 	}
 
@@ -264,4 +289,76 @@ section#past-events {
 .spacer-shoutout {
 	max-width: var(--max-text-content-width);
 	margin-inline: auto;
+}
+
+/* =====================
+   Typography / Font Sizes
+   ===================== */
+
+.event-date {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.sponsors p {
+	font-size: var(--fs-small);
+}
+
+section#faq-build .resources-shoutout a {
+	font-size: var(--fs-small);
+}
+
+section#faq-build p:first-child {
+	font-size: var(--fs-large);
+}
+
+.event-intro-content .ticket-shoutout {
+	font-size: 1.5rem;
+}
+
+section h2 {
+	font-size: var(--fs-xlarge);
+	text-align: center;
+}
+
+section h3 {
+	font-size: var(--fs-body);
+}
+
+section h4 {
+	font-size: var(--fs-body);
+}
+
+section#projects {
+	h3 {
+		font-size: var(--fs-large);
+		text-align: center;
+	}
+}
+
+.project {
+	h4 {
+		font-size: var(--fs-body);
+	}
+
+	.project-team,
+	p {
+		font-size: var(--fs-small);
+	}
+}
+
+section#past-events p {
+	font-size: var(--fs-small);
+}
+
+@media (min-width: 521px) {
+	.event-date {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.event-date {
+		font-size: 20px;
+	}
 }
