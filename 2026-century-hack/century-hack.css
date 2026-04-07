@@ -47,9 +47,22 @@ html {
 	p {
 		opacity: 0.8;
 	}
-	img {
+
+	> a > img {
 		max-width: 200px;
 		margin-top: -10px;
+	}
+
+	.other-sponsors {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+
+		> img {
+			height: 40px;
+		}
+
+		padding-block: 5px 20px;
 	}
 }
 
@@ -203,7 +216,7 @@ section#projects {
 .project {
 	border-left: 4px solid var(--century-blue-bright);
 	background-color: rgba(189, 232, 245, 0.05);
-	border-radius: 0 12px 12px 0;
+	border-radius: 0 20px 20px 0;
 	padding: 1.25rem 1.25rem 1.5rem;
 	overflow: hidden;
 
@@ -378,4 +391,15 @@ section#testimonials blockquote p:last-child {
 	.event-date {
 		font-size: 20px;
 	}
+}
+
+section#intro p:first-child {
+	font-size: var(--fs-xlarge);
+	text-align: center;
+	text-wrap: pretty;
+	padding-block: 1rem;
+}
+
+section > img {
+	border-radius: 20px;
 }
