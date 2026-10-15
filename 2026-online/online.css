@@ -1,0 +1,630 @@
+/*
+ * Hack Pompey Online, November 2026.
+ *
+ * Loaded after /styles/global.css, the shared template, and overrides it the
+ * way each event's own stylesheet does. This one takes the look of the event
+ * platform it sends people to: blue-black ink, a faint grid like the
+ * platform's plane, outlined blocks with amber corner marks, and IBM Plex.
+ * The fonts are served from here rather than from Google, for the same
+ * reason the platform does: a font request tells Google who is reading.
+ */
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-sans-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-sans-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-sans-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Sans Condensed';
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-sans-condensed-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'IBM Plex Sans Condensed';
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/ibm-plex/ibm-plex-sans-condensed-latin-700-normal.woff2') format('woff2');
+}
+
+:root {
+	/* The platform's palette. */
+	--ink-975: #0b1017;
+	--ink-950: #10161f;
+	--ink-900: #161e29;
+	--ink-800: #253140;
+	--ink-700: #3a4757;
+	--ink-500: #7f8b98;
+	--ink-400: #949fab;
+	--ink-300: #b4bcc5;
+	--ink-200: #cfd5dc;
+	--ink-50: #f3f5f7;
+	--signal-300: #f7cf7a;
+	--signal-400: #f0b24a;
+	--signal-500: #e39a2c;
+	--sea-400: #5cc3d6;
+
+	--display: 'IBM Plex Sans Condensed', 'IBM Plex Sans', system-ui, sans-serif;
+	--body: 'IBM Plex Sans', system-ui, sans-serif;
+	--mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+	/* The template's own tokens, pointed at the dark palette, so anything
+	   of the template's that is left unstyled here still reads. */
+	--primary-text-color: var(--ink-200);
+	--secondary-text-color: var(--ink-500);
+	--primary-text-color-inverted: var(--ink-50);
+	--secondary-text-color-inverted: var(--ink-400);
+	--dark-bg-color: var(--ink-975);
+	--light-bg-color: var(--ink-950);
+
+	/* One cell of the grid, as on the platform. */
+	--cell: 48px;
+	--max-text-content-width: 960px;
+	color-scheme: dark;
+}
+
+html {
+	background-color: var(--ink-975);
+	/* The platform's plane: a hairline grid that runs under everything. */
+	background-image:
+		linear-gradient(to right, rgb(255 255 255 / 0.045) 0 1px, transparent 1px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.045) 0 1px, transparent 1px);
+	background-size: var(--cell) var(--cell);
+}
+
+body {
+	color: var(--ink-200);
+	font-family: var(--body);
+}
+
+/* The template sets Rubik on every text element by name, so this has to
+   name them too. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+dt,
+dd,
+small {
+	font-family: var(--body);
+}
+
+a {
+	color: var(--signal-400);
+}
+
+a:focus-visible,
+.button:focus-visible {
+	outline: 2px solid var(--signal-400);
+	outline-offset: 3px;
+}
+
+main {
+	padding-block: 0;
+}
+
+/* Clear of the pinned bar. */
+main > .masthead {
+	margin-top: calc(var(--cell) * 1.5);
+}
+
+main > * + * {
+	margin-top: var(--cell);
+}
+
+/* --- blocks ---------------------------------------------------------------- */
+
+section,
+.masthead {
+	max-width: var(--max-text-content-width);
+	margin-inline: auto;
+	padding-inline: 1rem;
+	line-height: 1.55;
+}
+
+/* A block on the plane: an edge, a slightly lighter ground, and the four
+   corner marks the platform puts on every block. */
+.block {
+	position: relative;
+	background: var(--ink-950);
+	outline: 1px solid rgb(227 154 44 / 0.4);
+	padding: calc(var(--cell) / 2);
+}
+
+/* Holds the bottom two marks. Out of the layout, or a grid block counts it
+   as its first cell and everything else moves along one. */
+.block > .corners {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+
+.block::before,
+.block::after,
+.block > .corners::before,
+.block > .corners::after {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: var(--signal-400);
+}
+.block::before {
+	top: -4px;
+	left: -4px;
+}
+.block::after {
+	top: -4px;
+	right: -4px;
+}
+.block > .corners::before {
+	bottom: -4px;
+	left: -4px;
+}
+.block > .corners::after {
+	bottom: -4px;
+	right: -4px;
+}
+
+.label {
+	font-family: var(--mono);
+	font-size: 0.6875rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--ink-500);
+}
+
+.label.lit {
+	color: var(--signal-400);
+}
+
+section h2 {
+	font-family: var(--display);
+	font-weight: 600;
+	font-size: clamp(1.75rem, 4vw, 2.25rem);
+	line-height: 1.1;
+	text-transform: none;
+	color: var(--ink-50);
+	text-wrap: balance;
+}
+
+section p,
+section li {
+	font-size: 1rem;
+	color: var(--ink-300);
+}
+
+section a {
+	color: var(--signal-400);
+	text-decoration-style: solid;
+}
+
+/* --- masthead -------------------------------------------------------------- */
+
+.masthead {
+	display: grid;
+	gap: 1rem;
+}
+
+.masthead h1 {
+	font-family: var(--display);
+	font-weight: 700;
+	font-size: clamp(3.5rem, 13vw, 8rem);
+	line-height: 0.88;
+	letter-spacing: -0.01em;
+	color: var(--ink-50);
+	text-transform: uppercase;
+}
+
+.masthead h1 span {
+	display: block;
+	color: var(--signal-400);
+}
+
+.masthead .when {
+	font-family: var(--mono);
+	font-size: 0.875rem;
+	color: var(--ink-300);
+}
+
+/* The way in, right under the name. */
+.hero-cta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem 1.5rem;
+	margin-top: 1rem;
+}
+
+.hero-cta p {
+	font-family: var(--mono);
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: var(--ink-400);
+}
+
+.hero-cta strong {
+	color: var(--ink-50);
+	font-weight: 500;
+}
+
+.button.big {
+	font-size: 1.125rem;
+	font-weight: 600;
+	padding: 1rem 1.75rem;
+}
+
+/* --- the bar pinned to the top --------------------------------------------- */
+
+/* The template's ticket banner, dark and squared off to match. */
+.tickets-banner {
+	background: rgb(11 16 23 / 0.82);
+	border-bottom: 1px solid rgb(227 154 44 / 0.4);
+	padding-block: 0.75rem;
+	text-align: left;
+}
+
+.tickets-banner div {
+	max-width: var(--max-text-content-width);
+}
+
+.tickets-banner p {
+	font-family: var(--mono);
+	font-weight: 500;
+	font-size: 0.8125rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--signal-400);
+}
+
+.tickets-banner a {
+	font-family: var(--body);
+	font-size: 0.875rem;
+	font-weight: 600;
+	border-radius: 0;
+	padding: 0.5rem 1rem;
+	background-color: var(--signal-500);
+	color: var(--ink-975);
+	transition: background-color 150ms;
+}
+
+/* The template grows this button on hover. Everything else here stays put. */
+.tickets-banner a:hover {
+	transform: none;
+	background-color: var(--signal-400);
+}
+
+/* --- what this is ---------------------------------------------------------- */
+
+.lede {
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+	gap: 2rem;
+	align-items: start;
+}
+
+.lede > p {
+	font-size: 1.125rem;
+	color: var(--ink-200);
+	line-height: 1.6;
+}
+
+.facts {
+	display: grid;
+	gap: 0.875rem;
+	margin: 0;
+}
+
+.facts div {
+	display: grid;
+	gap: 0.125rem;
+}
+
+.facts dd {
+	margin: 0;
+	color: var(--ink-200);
+}
+
+/* --- sign-up --------------------------------------------------------------- */
+
+.signup {
+	display: grid;
+	gap: 1rem;
+}
+
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.button {
+	display: inline-block;
+	font-family: var(--body);
+	font-weight: 500;
+	font-size: 0.9375rem;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	border: 1px solid var(--ink-700);
+	color: var(--ink-50);
+	transition:
+		background-color 150ms,
+		border-color 150ms;
+}
+
+.button:hover {
+	border-color: var(--ink-500);
+}
+
+.button.primary {
+	background: var(--signal-500);
+	border-color: var(--signal-500);
+	color: var(--ink-975);
+}
+
+.button.primary:hover {
+	background: var(--signal-400);
+	border-color: var(--signal-400);
+}
+
+/* --- the week -------------------------------------------------------------- */
+
+ol.steps {
+	list-style: none;
+	padding: 0;
+	/* Set here because this rule outranks the template's spacing between a
+	   section's children, which would otherwise have given it this gap. */
+	margin: 1.75rem 0 0;
+	display: grid;
+	gap: 0;
+}
+
+ol.steps li {
+	display: grid;
+	grid-template-columns: 3rem minmax(0, 1fr);
+	gap: 1rem;
+	padding-block: 1.25rem;
+	border-top: 1px solid var(--ink-800);
+	margin: 0;
+}
+
+ol.steps li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+ol.steps .n {
+	font-family: var(--mono);
+	font-size: 0.875rem;
+	color: var(--signal-400);
+	padding-top: 0.2rem;
+}
+
+ol.steps h3 {
+	font-family: var(--body);
+	font-weight: 600;
+	font-size: 1.0625rem;
+	color: var(--ink-50);
+	text-transform: none;
+}
+
+ol.steps p {
+	margin-top: 0.375rem;
+}
+
+/* --- prizes and questions -------------------------------------------------- */
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: calc(var(--cell) / 2);
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: calc(var(--cell) / 2);
+}
+
+.card h3 {
+	font-family: var(--body);
+	font-weight: 600;
+	font-size: 1rem;
+	color: var(--ink-50);
+	text-transform: none;
+}
+
+.card p {
+	margin-top: 0.5rem;
+	font-size: 0.9375rem;
+}
+
+.card .note {
+	font-size: 0.8125rem;
+	color: var(--ink-500);
+}
+
+/* --- testimonials ---------------------------------------------------------- */
+
+/* The template styles every quote as a black speech bubble that tilts on
+   hover. Here they are blocks like everything else. */
+section#testimonials blockquote {
+	background: var(--ink-950);
+	color: var(--ink-300);
+	border-radius: 0;
+	font-size: 0.9375rem;
+	font-style: normal;
+	text-align: left;
+	margin: 0;
+	transform: none;
+}
+
+section#testimonials blockquote:hover {
+	transform: none;
+}
+
+section#testimonials blockquote strong {
+	color: var(--ink-50);
+}
+
+/* --- past events ----------------------------------------------------------- */
+
+.past-events__cards {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.75rem;
+}
+
+.past-events__cards a {
+	display: block;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	outline: 1px solid var(--ink-800);
+	transition: outline-color 150ms;
+}
+
+.past-events__cards a:hover {
+	outline-color: var(--signal-500);
+}
+
+.past-events__cards img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Century Hack has no tile of its own, so its logo on its own ground:
+   the gradient its page used, from century-hack.css. */
+.past-events__cards a.logo-tile {
+	display: grid;
+	place-items: center;
+	background: linear-gradient(#090a2a, #0e459f);
+	padding: 1rem;
+}
+
+.past-events__cards a.logo-tile img {
+	object-fit: contain;
+}
+
+/* --- the template's questions and footer, on the dark ground --------------- */
+
+section#questions p {
+	color: var(--ink-400);
+}
+
+footer {
+	margin-top: calc(var(--cell) * 2);
+	background-color: var(--ink-950);
+	border-top: 1px solid var(--ink-800);
+}
+
+footer > * {
+	max-width: var(--max-text-content-width);
+}
+
+/* --- the privacy and terms pages ------------------------------------------- */
+
+/* /privacy/ and /terms/ use this stylesheet too. Their name is smaller than
+   the front page's, so the text starts on the first screen. */
+.masthead.doc h1 {
+	font-size: clamp(2.75rem, 9vw, 5rem);
+}
+
+/* Long text in a column about 68 characters wide. The section keeps the
+   front page's width, so labels and headings still line up with it. */
+section.prose > * {
+	max-width: 68ch;
+}
+
+section.prose h3 {
+	font-family: var(--body);
+	font-weight: 600;
+	font-size: 1.0625rem;
+	color: var(--ink-50);
+	text-transform: none;
+	margin-top: 1.75rem;
+}
+
+/* The template takes the bullets off every list. A notice needs them. */
+section.prose ul {
+	list-style: disc;
+	padding-left: 1.25rem;
+}
+
+section.prose li {
+	margin-top: 0.5rem;
+}
+
+section.prose li::marker {
+	color: var(--signal-400);
+}
+
+section.prose strong {
+	color: var(--ink-50);
+	font-weight: 600;
+}
+
+/* A fact the team still has to fill in. Loud on purpose, so a page with
+   one left in it is obvious to anybody proofreading. */
+mark.to-confirm {
+	background: rgb(240 178 74 / 0.12);
+	color: var(--signal-300);
+	outline: 1px dashed var(--signal-400);
+	outline-offset: 1px;
+	padding: 0 0.25em;
+	font-family: var(--mono);
+	font-size: 0.875em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.button,
+	.past-events__cards a {
+		transition: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.lede,
+	.grid-2,
+	.grid-3 {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.past-events__cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
