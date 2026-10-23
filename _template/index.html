@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--
+			The skeleton every Hack Pompey event page shares. Copy this file to
+			the site root as index.html when a new event starts, and copy
+			event.css into the event's own folder. See _template/README.md.
+
+			Everything in [square brackets] is a placeholder. The stylesheet, the
+			logo and the past event tiles point at real files, so the template
+			previews properly at /_template/; swap them for the event's own.
+		-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- While the template is published (see /_config.yml), keep it out of
+		     search results. Remove this line from a real event page. -->
+		<meta name="robots" content="noindex" />
+
+		<title>Hack Pompey: [Event name]</title>
+		<meta name="description" content="[One sentence about the event.]" />
+
+		<meta property="og:title" content="Hack Pompey: [Event name]" />
+		<meta property="og:description" content="[One sentence about the event.]" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@hackpompey" />
+		<meta name="twitter:title" content="Hack Pompey: [Event name]" />
+		<meta name="twitter:description" content="[One sentence about the event.]" />
+
+		<link rel="icon" href="/favicon.png" type="image/png" />
+		<!-- The shared reset, type scale and footer. Every event loads it. -->
+		<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+		<!-- The event's own look, overriding the shared one. In a real event,
+		     this is /[event-folder]/event.css. -->
+		<link href="/_template/event.css?v=1" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<main>
+			<!-- The event's logo, or the Hack Pompey one, which is what is here.
+			     In a real event, /[event-folder]/event-logo.svg. -->
+			<div class="title">
+				<img class="logo" src="/images/hack-pompey-logo-white.png" alt="Hack Pompey" />
+			</div>
+
+			<!-- When and where. For an online event, say so here. -->
+			<div class="event-date">
+				<p>[Tagline]</p>
+				<p>[Date] • [Place, or Online]</p>
+			</div>
+
+			<!-- Sponsors, if the event has any. Delete the block if not. -->
+			<div class="sponsors">
+				<p>Presented by</p>
+				<!-- In a real event, an <img> of the sponsor's logo inside the link. -->
+				<a href="[sponsor link]" target="_blank" rel="noopener noreferrer" class="placeholder"
+					>[Sponsor logo]</a
+				>
+			</div>
+
+			<section id="intro">
+				<p>[What the event is, in a short paragraph.]</p>
+			</section>
+
+			<!--
+				The event's own sections go here: how to take part, the
+				schedule, prizes, questions. Each is a <section> with an <h2>.
+				After the event, this is where the write-up and winners go.
+			-->
+			<section>
+				<h2>[Section]</h2>
+				<p>[Text]</p>
+			</section>
+
+			<!--
+				Past events. Add the event that has just moved out of the root
+				as the first tile, and keep the rest.
+			-->
+			<section id="past-events">
+				<h2 style="text-align: center">Past events</h2>
+				<!-- The real tiles, so the row previews properly. The newest event
+				     goes first. -->
+				<div class="past-events__cards">
+					<a href="/2025-watt-works/index.html"
+						><img src="/2026-century-hack/hp-watt-works.png" alt="Watt Works, 2025"
+					/></a>
+					<a href="/2025-sea-change/index.html"
+						><img src="/2026-century-hack/hp-sea-change.png" alt="Sea Change, 2025"
+					/></a>
+					<a href="/2024/index.html"
+						><img src="/2026-century-hack/hp-move-tile.png" alt="Hack Pompey 2024"
+					/></a>
+				</div>
+				<p>
+					We’ve been running Hack Pompey events for over 10 years! Some
+					other events we’ve done include
+					<strong>Hack the Unexpected</strong>,
+					<strong>Good Vibes</strong>,
+					<strong>Sustainability</strong>,
+					<strong>Hack the Home</strong>,
+					<strong>Fashion Hack</strong>, <strong>Wearables</strong>,
+					<strong>Open Data</strong>, and the original
+					<strong>Hack Pompey</strong> way back in 2014!
+				</p>
+			</section>
+
+			<section id="questions">
+				<p>
+					If you have any questions at all, please drop us a line at
+					<a href="mailto:contact@hackpompey.co.uk">contact@hackpompey.co.uk</a>
+					or on our
+					<a href="https://discord.gg/QuSCczME7H" target="_blank">Discord</a>.
+				</p>
+			</section>
+
+			<!-- The same on every event. -->
+			<footer>
+				<div>
+					<div id="code-of-conduct">
+						<h2>Code of Conduct</h2>
+						<p>
+							We are dedicated to providing a safe, comfortable and
+							harassment-free experience for everyone regardless of
+							their background.
+						</p>
+						<p>
+							By taking part in Hack Pompey, you agree to our
+							<a href="/code-of-conduct">Code of Conduct</a> and our
+							<a href="/terms/">Terms</a>. Our
+							<a href="/privacy/">Privacy</a> page says what we do
+							with your information.
+						</p>
+					</div>
+					<p id="partners">
+						Hack Pompey LTD is a non-profit organisation funded by
+						partners and sponsors. If you would like to partner with or
+						support us, please contact us at
+						<a href="mailto:partners@hackpompey.co.uk">partners@hackpompey.co.uk</a>.
+					</p>
+				</div>
+				<div class="socials">
+					<a title="Join Hack Pompey on Discord" href="https://discord.gg/QuSCczME7H" class="social-icon" target="_blank">
+						<img src="/images/icon-discord.svg" alt="Discord" />
+					</a>
+					<a title="Instagram" href="http://www.instagram.com/hackpompey" class="social-icon" target="_blank">
+						<img src="/images/icon-instagram.svg" alt="Instagram" />
+					</a>
+					<a title="Facebook" href="https://www.facebook.com/HackPompeyOfficial/" class="social-icon" target="_blank">
+						<img src="/images/icon-facebook.svg" alt="Facebook" />
+					</a>
+					<a title="Contact us by email" href="mailto:contact@hackpompey.co.uk" class="social-icon" target="_blank">
+						<img src="/images/icon-email.svg" alt="Email" />
+					</a>
+				</div>
+				<p>
+					<small>UK Company Number 11486057 (England & Wales)</small>
+				</p>
+			</footer>
+		</main>
+	</body>
+</html>
