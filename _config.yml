@@ -1,0 +1,7 @@
+# GitHub Pages builds this site with Jekyll, which skips any folder whose name
+# starts with an underscore. Temporarily, the event page template is published
+# anyway, so it can be looked at on the live site at /_template/ (or /default/,
+# which forwards there). Delete this file and the default/ folder to hide it
+# again.
+include:
+  - _template

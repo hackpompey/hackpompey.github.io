@@ -1,0 +1,57 @@
+/*
+ * An event's own stylesheet, loaded after /styles/global.css.
+ *
+ * Copy this into the event's folder. Override the shared tokens here rather
+ * than editing global.css, which every past event page still loads: a change
+ * there changes all of them.
+ */
+
+:root {
+	/* The event's colours. The names come from global.css. */
+	--primary-text-color: rgba(0, 0, 0, 1);
+	--secondary-text-color: rgba(0, 0, 0, 0.5);
+	--dark-bg-color: hsl(0, 0%, 0%);
+	--light-bg-color: hsl(0, 0%, 100%);
+}
+
+body {
+	background-color: var(--light-bg-color);
+}
+
+/* The logo sits on a dark band, since the Hack Pompey logo is white. */
+.title {
+	background-color: var(--dark-bg-color);
+	padding-block: 2rem;
+}
+
+.event-date {
+	text-align: center;
+}
+
+/* Marks where something goes in the template. Not for a real event. */
+.placeholder {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border: 2px dashed var(--secondary-text-color);
+	color: var(--secondary-text-color);
+	text-decoration: none;
+}
+
+.sponsors {
+	text-align: center;
+}
+
+.sponsors img {
+	max-width: 200px;
+	margin-inline: auto;
+}
+
+.past-events__cards {
+	display: flex;
+	gap: 1rem;
+}
+
+.past-events__cards a {
+	flex: 1;
+	aspect-ratio: 1 / 1;
+}
